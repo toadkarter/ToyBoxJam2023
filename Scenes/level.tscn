@@ -183,41 +183,6 @@ scroll_speed = 10.0
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("2_kb2gi")]
 position = Vector2(36, 263)
 
-[node name="DroppableBlock" parent="." instance=ExtResource("3_erwvd")]
-position = Vector2(120, 216)
-
-[node name="DroppableBlock2" parent="." instance=ExtResource("3_erwvd")]
-position = Vector2(152, 216)
-
-[node name="DroppableBlock3" parent="." instance=ExtResource("3_erwvd")]
-position = Vector2(136, 216)
-
-[node name="DroppableBlock4" parent="." instance=ExtResource("3_erwvd")]
-position = Vector2(168, 216)
-
-[node name="DroppableBlock5" parent="." instance=ExtResource("3_erwvd")]
-position = Vector2(200, 216)
-
-[node name="DroppableBlock6" parent="." instance=ExtResource("3_erwvd")]
-position = Vector2(184, 216)
-
-[node name="DroppableBlock7" parent="." instance=ExtResource("3_erwvd")]
-position = Vector2(216, 216)
-
-[node name="DroppableBlock8" parent="." instance=ExtResource("3_erwvd")]
-position = Vector2(248, 216)
-
-[node name="DroppableBlock9" parent="." instance=ExtResource("3_erwvd")]
-position = Vector2(232, 216)
-
-[node name="skull" parent="." instance=ExtResource("4_uxhqa")]
-position = Vector2(456, 256)
-scale = Vector2(-1, 1)
-seconds_before_starting_emissions = 1.7
-
-[node name="skull2" parent="." instance=ExtResource("4_uxhqa")]
-position = Vector2(8, 176)
-
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(240, 232)
 
@@ -510,3 +475,43 @@ position = Vector2(256, 152)
 
 [node name="Firewall96" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
 position = Vector2(248, 152)
+
+[node name="Skulls" type="Node2D" parent="."]
+
+[node name="skull" parent="Skulls" instance=ExtResource("4_uxhqa")]
+position = Vector2(456, 256)
+rotation = 3.14159
+scale = Vector2(1, -1)
+
+[node name="skull2" parent="Skulls" instance=ExtResource("4_uxhqa")]
+position = Vector2(8, 176)
+seconds_before_starting_emissions = 1.7
+
+[node name="DroppableBlocks" type="Node2D" parent="."]
+
+[node name="DroppableBlock" parent="DroppableBlocks" instance=ExtResource("3_erwvd")]
+position = Vector2(120, 216)
+
+[node name="DroppableBlock2" parent="DroppableBlocks" instance=ExtResource("3_erwvd")]
+position = Vector2(152, 216)
+
+[node name="DroppableBlock3" parent="DroppableBlocks" instance=ExtResource("3_erwvd")]
+position = Vector2(136, 216)
+
+[node name="DroppableBlock4" parent="DroppableBlocks" instance=ExtResource("3_erwvd")]
+position = Vector2(168, 216)
+
+[node name="DroppableBlock5" parent="DroppableBlocks" instance=ExtResource("3_erwvd")]
+position = Vector2(200, 216)
+
+[node name="DroppableBlock6" parent="DroppableBlocks" instance=ExtResource("3_erwvd")]
+position = Vector2(184, 216)
+
+[node name="DroppableBlock7" parent="DroppableBlocks" instance=ExtResource("3_erwvd")]
+position = Vector2(216, 216)
+
+[node name="DroppableBlock8" parent="DroppableBlocks" instance=ExtResource("3_erwvd")]
+position = Vector2(248, 216)
+
+[node name="DroppableBlock9" parent="DroppableBlocks" instance=ExtResource("3_erwvd")]
+position = Vector2(232, 216)
