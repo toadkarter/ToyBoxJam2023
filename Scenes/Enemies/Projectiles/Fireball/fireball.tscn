@@ -39,19 +39,20 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_aiby0"]
-size = Vector2(8, 12)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xhush"]
+radius = 4.0
+height = 12.0
 
-[node name="Fireball" type="RigidBody2D" groups=["Enemy"]]
+[node name="Fireball" type="Area2D" groups=["Enemy"]]
 collision_layer = 2
 collision_mask = 3
-lock_rotation = true
 script = ExtResource("1_clvry")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_f83pt")
-frame_progress = 0.639045
+frame_progress = 0.105415
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 2)
-shape = SubResource("RectangleShape2D_aiby0")
+position = Vector2(0, -6)
+shape = SubResource("CapsuleShape2D_xhush")

@@ -207,4 +207,4 @@ position = Vector2(248, 216)
 position = Vector2(232, 216)
 
 [node name="skull" parent="." instance=ExtResource("4_uxhqa")]
-position = Vector2(168, 264)
+position = Vector2(168, 192)
