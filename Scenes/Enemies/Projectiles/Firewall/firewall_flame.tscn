@@ -1,22 +1,22 @@
-[gd_scene load_steps=9 format=3 uid="uid://b4oqsl24gjuye"]
+[gd_scene load_steps=8 format=3 uid="uid://b4oqsl24gjuye"]
 
-[ext_resource type="Texture2D" uid="uid://br3238kxwqemf" path="res://Art/Sprites/tbj2_startcart2spr.png" id="1_jsq1i"]
-[ext_resource type="Script" path="res://Scenes/Enemies/Projectiles/Firewall/firewall.gd" id="1_q8pna"]
+[ext_resource type="Script" path="res://Scenes/Enemies/Projectiles/Firewall/firewall_flame.gd" id="1_4jlf5"]
+[ext_resource type="Texture2D" uid="uid://br3238kxwqemf" path="res://Art/Sprites/tbj2_startcart2spr.png" id="2_kbawq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lyjxc"]
-atlas = ExtResource("1_jsq1i")
+atlas = ExtResource("2_kbawq")
 region = Rect2(48, 105, 8, 15)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v6hjl"]
-atlas = ExtResource("1_jsq1i")
+atlas = ExtResource("2_kbawq")
 region = Rect2(56, 105, 8, 15)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_20p74"]
-atlas = ExtResource("1_jsq1i")
+atlas = ExtResource("2_kbawq")
 region = Rect2(64, 105, 8, 15)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s2un8"]
-atlas = ExtResource("1_jsq1i")
+atlas = ExtResource("2_kbawq")
 region = Rect2(72, 105, 8, 15)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nb6b2"]
@@ -39,18 +39,9 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nq6nt"]
-size = Vector2(8, 12.5)
-
-[node name="Firewall" type="RigidBody2D" groups=["Enemy"]]
-collision_layer = 2
-gravity_scale = 0.0
-script = ExtResource("1_q8pna")
+[node name="FirewallFlame" type="Node2D" groups=["Enemy"]]
+script = ExtResource("1_4jlf5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_nb6b2")
 frame_progress = 0.349629
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1.25)
-shape = SubResource("RectangleShape2D_nq6nt")

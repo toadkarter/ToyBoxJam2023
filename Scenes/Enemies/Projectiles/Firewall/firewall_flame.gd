@@ -1,4 +1,4 @@
-extends RigidBody2D
+extends Node2D
 
 
 @onready var animations: AnimatedSprite2D = $AnimatedSprite2D
@@ -6,8 +6,5 @@ extends RigidBody2D
 
 func _ready() -> void:
 	animations.play("default")
-
-func _process(delta: float) -> void:
-	pass
 	
 

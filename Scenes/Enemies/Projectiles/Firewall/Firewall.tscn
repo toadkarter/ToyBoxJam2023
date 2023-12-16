@@ -1,0 +1,158 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4imq877em6ya"]
+
+[ext_resource type="PackedScene" uid="uid://b4oqsl24gjuye" path="res://Scenes/Enemies/Projectiles/Firewall/firewall_flame.tscn" id="1_40e5a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bm36b"]
+size = Vector2(390, 15)
+
+[node name="Firewall" type="StaticBody2D" groups=["Enemy"]]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(189, 2.5)
+shape = SubResource("RectangleShape2D_bm36b")
+
+[node name="Flames" type="Node2D" parent="." groups=["Enemy"]]
+
+[node name="FirewallFlame" parent="Flames" instance=ExtResource("1_40e5a")]
+
+[node name="FirewallFlame2" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(8, 0)
+
+[node name="FirewallFlame3" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(16, 0)
+
+[node name="FirewallFlame4" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(24, 0)
+
+[node name="FirewallFlame5" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(32, 0)
+
+[node name="FirewallFlame6" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(40, 0)
+
+[node name="FirewallFlame7" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(48, 0)
+
+[node name="FirewallFlame8" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(56, 0)
+
+[node name="FirewallFlame9" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(64, 0)
+
+[node name="FirewallFlame10" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(72, 0)
+
+[node name="FirewallFlame11" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(80, 0)
+
+[node name="FirewallFlame12" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(88, 0)
+
+[node name="FirewallFlame13" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(96, 0)
+
+[node name="FirewallFlame14" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(104, 0)
+
+[node name="FirewallFlame15" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(112, 0)
+
+[node name="FirewallFlame16" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(120, 0)
+
+[node name="FirewallFlame17" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(128, 0)
+
+[node name="FirewallFlame18" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(136, 0)
+
+[node name="FirewallFlame19" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(144, 0)
+
+[node name="FirewallFlame20" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(152, 0)
+
+[node name="FirewallFlame21" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(160, 0)
+
+[node name="FirewallFlame22" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(168, 0)
+
+[node name="FirewallFlame23" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(176, 0)
+
+[node name="FirewallFlame24" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(184, 0)
+
+[node name="FirewallFlame25" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(192, 0)
+
+[node name="FirewallFlame26" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(200, 0)
+
+[node name="FirewallFlame27" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(208, 0)
+
+[node name="FirewallFlame28" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(216, 0)
+
+[node name="FirewallFlame29" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(224, 0)
+
+[node name="FirewallFlame30" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(232, 0)
+
+[node name="FirewallFlame31" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(240, 0)
+
+[node name="FirewallFlame32" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(248, 0)
+
+[node name="FirewallFlame33" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(256, 0)
+
+[node name="FirewallFlame34" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(264, 0)
+
+[node name="FirewallFlame35" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(272, 0)
+
+[node name="FirewallFlame36" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(280, 0)
+
+[node name="FirewallFlame37" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(288, 0)
+
+[node name="FirewallFlame38" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(296, 0)
+
+[node name="FirewallFlame39" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(304, 0)
+
+[node name="FirewallFlame40" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(312, 0)
+
+[node name="FirewallFlame41" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(320, 0)
+
+[node name="FirewallFlame42" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(328, 0)
+
+[node name="FirewallFlame43" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(336, 0)
+
+[node name="FirewallFlame44" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(344, 0)
+
+[node name="FirewallFlame45" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(352, 0)
+
+[node name="FirewallFlame46" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(360, 0)
+
+[node name="FirewallFlame47" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(368, 0)
+
+[node name="FirewallFlame48" parent="Flames" instance=ExtResource("1_40e5a")]
+position = Vector2(376, 0)
