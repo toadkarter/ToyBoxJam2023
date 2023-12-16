@@ -1,6 +1,9 @@
 extends CharacterBody2D
 
 
+signal on_death
+
+
 @export var speed: float = 300.0
 @export var jump_velocity: float = -400.0
 
@@ -22,6 +25,8 @@ func _physics_process(delta: float) -> void:
 	_handle_animations()
 
 	move_and_slide()
+
+	_handle_collisions()
 
 
 func _handle_move_input() -> void:
@@ -46,3 +51,17 @@ func _handle_animations() -> void:
 		animations.play("default")
 	else:
 		animations.play("run")
+
+
+func _handle_collisions() -> void:
+	for index in get_slide_collision_count():
+		var collision: KinematicCollision2D = get_slide_collision(index)
+		var collided_object: Object = collision.get_collider()
+
+		if collided_object.is_in_group("Enemy"):
+			_die()
+
+
+func _die():
+	on_death.emit()
+	print("You have died")
