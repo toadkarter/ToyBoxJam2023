@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dpb656nt13lxy"]
+[gd_scene load_steps=8 format=3 uid="uid://dpb656nt13lxy"]
 
 [ext_resource type="Texture2D" uid="uid://br3238kxwqemf" path="res://Art/Sprites/tbj2_startcart2spr.png" id="1_58vo4"]
 [ext_resource type="Script" path="res://Scenes/level.gd" id="2_7nbtq"]
 [ext_resource type="PackedScene" uid="uid://ctn5h44wck1vy" path="res://Scenes/Player/player.tscn" id="2_kb2gi"]
+[ext_resource type="PackedScene" uid="uid://bg13eeaihn685" path="res://Scenes/Enemies/Bat/bat.tscn" id="5_05hpr"]
 [ext_resource type="PackedScene" uid="uid://b4oqsl24gjuye" path="res://Scenes/Enemies/Projectiles/Firewall/firewall.tscn" id="6_6kv43"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qdxlv"]
@@ -409,3 +410,6 @@ angular_damp_mode = 1
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_kb2gi")]
 position = Vector2(96, 264)
+
+[node name="bat" parent="." instance=ExtResource("5_05hpr")]
+position = Vector2(152, 248)
