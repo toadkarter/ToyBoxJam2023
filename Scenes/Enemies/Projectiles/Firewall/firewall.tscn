@@ -42,7 +42,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nq6nt"]
 size = Vector2(8, 12.5)
 
-[node name="Firewall" type="RigidBody2D"]
+[node name="Firewall" type="RigidBody2D" groups=["Enemy"]]
 collision_layer = 2
 gravity_scale = 0.0
 script = ExtResource("1_q8pna")
