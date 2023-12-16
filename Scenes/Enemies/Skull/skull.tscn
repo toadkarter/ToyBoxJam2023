@@ -1,6 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bhct83woj4glf"]
+[gd_scene load_steps=9 format=3 uid="uid://bhct83woj4glf"]
 
+[ext_resource type="Script" path="res://Scenes/Enemies/Skull/skull.gd" id="1_a8cha"]
 [ext_resource type="Texture2D" uid="uid://br3238kxwqemf" path="res://Art/Sprites/tbj2_startcart2spr.png" id="1_k53sx"]
+[ext_resource type="PackedScene" uid="uid://c158ajm5u5jvh" path="res://Scenes/Enemies/Projectiles/Fireball/fireball.tscn" id="2_4tnh8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jil3y"]
 atlas = ExtResource("1_k53sx")
@@ -48,6 +50,8 @@ height = 18.0
 
 [node name="Skull" type="StaticBody2D" groups=["Enemy"]]
 collision_layer = 2
+script = ExtResource("1_a8cha")
+projectile_scene = ExtResource("2_4tnh8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_dkxe4")
@@ -58,3 +62,6 @@ frame_progress = 0.749647
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -1)
 shape = SubResource("CapsuleShape2D_wvktg")
+
+[node name="ProjectileSpawnLocation" type="Node2D" parent="."]
+position = Vector2(3, 8)

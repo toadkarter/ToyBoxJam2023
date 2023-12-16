@@ -1,0 +1,57 @@
+[gd_scene load_steps=9 format=3 uid="uid://c158ajm5u5jvh"]
+
+[ext_resource type="Texture2D" uid="uid://br3238kxwqemf" path="res://Art/Sprites/tbj2_startcart2spr.png" id="1_4a3u4"]
+[ext_resource type="Script" path="res://Scenes/Enemies/Projectiles/Fireball/fireball.gd" id="1_clvry"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wd5iv"]
+atlas = ExtResource("1_4a3u4")
+region = Rect2(72, 104, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ie4a3"]
+atlas = ExtResource("1_4a3u4")
+region = Rect2(64, 104, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t84xt"]
+atlas = ExtResource("1_4a3u4")
+region = Rect2(56, 104, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gpo4b"]
+atlas = ExtResource("1_4a3u4")
+region = Rect2(48, 104, 8, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f83pt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wd5iv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ie4a3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t84xt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gpo4b")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aiby0"]
+size = Vector2(8, 12)
+
+[node name="Fireball" type="RigidBody2D" groups=["Enemy"]]
+collision_layer = 2
+collision_mask = 3
+lock_rotation = true
+script = ExtResource("1_clvry")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_f83pt")
+frame_progress = 0.639045
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_aiby0")

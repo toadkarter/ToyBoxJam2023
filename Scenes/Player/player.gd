@@ -12,6 +12,7 @@ signal on_death
 var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 var is_dying: bool = false
 
+
 func _physics_process(delta: float) -> void:
 	if is_dying:
 		return
@@ -65,10 +66,14 @@ func _handle_collisions() -> void:
 			_die()
 
 
-func _die():
+func _freeze_player() -> void:
 	is_dying = true
 	animations.stop()
 	velocity.x = 0
 	velocity.y = 0
+	
+
+func _die():
+	_freeze_player()
 	on_death.emit()
 	print("You have died")
