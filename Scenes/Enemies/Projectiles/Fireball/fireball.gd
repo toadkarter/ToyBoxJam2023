@@ -1,4 +1,4 @@
-extends Area2D
+extends StaticBody2D
 
 
 @onready var animations: AnimatedSprite2D = $AnimatedSprite2D
@@ -16,4 +16,3 @@ func _process(delta: float) -> void:
 
 func push(speed_to_set: float):
 	speed = speed_to_set
-

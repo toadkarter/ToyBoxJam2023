@@ -61,7 +61,6 @@ func _handle_collisions() -> void:
 	for index in get_slide_collision_count():
 		var collision: KinematicCollision2D = get_slide_collision(index)
 		var collided_object: Object = collision.get_collider()
-		print(collided_object)
 		if collided_object.is_in_group("Enemy"):
 			_die()
 
