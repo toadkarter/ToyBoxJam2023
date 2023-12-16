@@ -11,10 +11,21 @@ config_version=5
 [application]
 
 config/name="ToyBoxJam2023"
+run/main_scene="res://Scenes/level.tscn"
 config/features=PackedStringArray("4.1", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/scale=2.0
+
+[layer_names]
+
+2d_physics/layer_1="player"
+2d_physics/layer_2="ground"
 
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
