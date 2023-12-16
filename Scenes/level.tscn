@@ -1,12 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://dpb656nt13lxy"]
+[gd_scene load_steps=7 format=3 uid="uid://dpb656nt13lxy"]
 
 [ext_resource type="Texture2D" uid="uid://br3238kxwqemf" path="res://Art/Sprites/tbj2_startcart2spr.png" id="1_58vo4"]
 [ext_resource type="Script" path="res://Scenes/level.gd" id="2_7nbtq"]
 [ext_resource type="PackedScene" uid="uid://ctn5h44wck1vy" path="res://Scenes/Player/player.tscn" id="2_kb2gi"]
-[ext_resource type="PackedScene" uid="uid://b66s52nkr67ui" path="res://Scenes/Blocks/Droppable/droppable_block.tscn" id="3_erwvd"]
-[ext_resource type="PackedScene" uid="uid://bhct83woj4glf" path="res://Scenes/Enemies/Skull/skull.tscn" id="4_uxhqa"]
 [ext_resource type="PackedScene" uid="uid://b4oqsl24gjuye" path="res://Scenes/Enemies/Projectiles/Firewall/firewall.tscn" id="6_6kv43"]
-[ext_resource type="PackedScene" uid="uid://dd0rki4hvdmcb" path="res://Scenes/Blocks/Regular/regular_body.tscn" id="7_e0ir6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qdxlv"]
 texture = ExtResource("1_58vo4")
@@ -410,58 +407,5 @@ angular_damp_mode = 1
 position = Vector2(157, 162)
 angular_damp_mode = 1
 
-[node name="Skulls" type="Node2D" parent="."]
-
-[node name="skull" parent="Skulls" instance=ExtResource("4_uxhqa")]
-position = Vector2(392, 256)
-rotation = 3.14159
-scale = Vector2(1, -1)
-
-[node name="skull3" parent="Skulls" instance=ExtResource("4_uxhqa")]
-position = Vector2(392, 72)
-rotation = 3.14159
-scale = Vector2(1, -1)
-
-[node name="skull2" parent="Skulls" instance=ExtResource("4_uxhqa")]
-position = Vector2(88, 176)
-seconds_before_starting_emissions = 1.7
-
-[node name="skull4" parent="Skulls" instance=ExtResource("4_uxhqa")]
-position = Vector2(88, -16)
-seconds_before_starting_emissions = 1.7
-
-[node name="DroppableBlocks" type="Node2D" parent="."]
-position = Vector2(240, 104)
-
-[node name="DroppableBlock" parent="DroppableBlocks" instance=ExtResource("3_erwvd")]
-position = Vector2(-64, 0)
-
-[node name="DroppableBlock2" parent="DroppableBlocks" instance=ExtResource("3_erwvd")]
-position = Vector2(-32, 0)
-
-[node name="DroppableBlock3" parent="DroppableBlocks" instance=ExtResource("3_erwvd")]
-position = Vector2(-48, 0)
-
-[node name="DroppableBlock4" parent="DroppableBlocks" instance=ExtResource("3_erwvd")]
-position = Vector2(-16, 0)
-
-[node name="DroppableBlock5" parent="DroppableBlocks" instance=ExtResource("3_erwvd")]
-position = Vector2(16, 0)
-
-[node name="DroppableBlock6" parent="DroppableBlocks" instance=ExtResource("3_erwvd")]
-
-[node name="DroppableBlock7" parent="DroppableBlocks" instance=ExtResource("3_erwvd")]
-position = Vector2(32, 0)
-
-[node name="DroppableBlock8" parent="DroppableBlocks" instance=ExtResource("3_erwvd")]
-position = Vector2(64, 0)
-
-[node name="DroppableBlock9" parent="DroppableBlocks" instance=ExtResource("3_erwvd")]
-position = Vector2(48, 0)
-metadata/_edit_group_ = true
-
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_kb2gi")]
 position = Vector2(96, 264)
-
-[node name="regular_body" parent="." instance=ExtResource("7_e0ir6")]
-position = Vector2(160, 240)
