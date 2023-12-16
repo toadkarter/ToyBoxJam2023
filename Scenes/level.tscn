@@ -177,7 +177,7 @@ sources/0 = SubResource("TileSetAtlasSource_qdxlv")
 [node name="Level" type="TileMap"]
 tile_set = SubResource("TileSet_ygvbg")
 format = 2
-layer_0/tile_data = PackedInt32Array(1114116, 65536, 0, 1114117, 65536, 0, 1114118, 65536, 0, 1114119, 65536, 0, 1114120, 65536, 0, 1114121, 65536, 0, 1114122, 65536, 0, 1114123, 65536, 0, 1114124, 65536, 0, 1114125, 65536, 0, 1114126, 65536, 0, 1114127, 65536, 0, 1114128, 65536, 0, 1114129, 65536, 0, 1114130, 65536, 0, 1114131, 65536, 0, 1114132, 65536, 0, 1114133, 65536, 0, 1114134, 65536, 0, 1114135, 65536, 0, 1114136, 65536, 0, 1114137, 65536, 0, 1048580, 327680, 0, 983044, 327680, 0, 917508, 327680, 0, 851972, 327680, 0, 786436, 327680, 0, 720900, 327680, 0, 655364, 327680, 0, 589828, 327680, 0, 524292, 327680, 0, 458756, 327680, 0, 393220, 327680, 0, 327684, 327680, 0, 262148, 327680, 0, 196612, 327680, 0, 131076, 327680, 0, 65540, 327680, 0, 4, 327680, 0, -196604, 327680, 0, -262140, 327680, 0, -327676, 327680, 0, -393212, 327680, 0, 1048601, 327680, 0, 983065, 327680, 0, 917529, 327680, 0, 851993, 327680, 0, 786457, 327680, 0, 720921, 327680, 0, 655385, 327680, 0, 589849, 327680, 0, 524313, 327680, 0, 458777, 327680, 0, 393241, 327680, 0, 327705, 327680, 0, 262169, 327680, 0, 196633, 327680, 0, 131097, 327680, 0, 65561, 327680, 0, 25, 327680, 0, -65511, 327680, 0, -131047, 327680, 0, -196583, 327680, 0, -262119, 327680, 0, -327655, 327680, 0, -393191, 327680, 0, -131068, 327680, 0, -65532, 327680, 0, -458748, 327680, 0, -524284, 327680, 0, -589820, 327680, 0, -655356, 327680, 0, -720892, 327680, 0, -786428, 327680, 0, -851964, 327680, 0, -917500, 327680, 0, -983036, 327680, 0, -1048572, 327680, 0, -1114108, 327680, 0, -1179644, 327680, 0, -1245180, 327680, 0, -1310716, 327680, 0, -1376252, 327680, 0, -1441788, 327680, 0, -1507324, 327680, 0, -1572860, 327680, 0, -1638396, 327680, 0, -1703932, 327680, 0, -1769468, 327680, 0, -1835004, 327680, 0, -1900540, 327680, 0, -1966076, 327680, 0, -2031612, 327680, 0, -2097148, 327680, 0, -2162684, 327680, 0, -2228220, 327680, 0, -2293756, 327680, 0, -2359292, 327680, 0, -458727, 327680, 0, -524263, 327680, 0, -589799, 327680, 0, -655335, 327680, 0, -720871, 327680, 0, -786407, 327680, 0, -851943, 327680, 0, -917479, 327680, 0, -983015, 327680, 0, -1048551, 327680, 0, -1114087, 327680, 0, -1179623, 327680, 0, -1245159, 327680, 0, -1310695, 327680, 0, -1376231, 327680, 0, -1441767, 327680, 0, -1507303, 327680, 0, -1572839, 327680, 0, -1638375, 327680, 0, -1703911, 327680, 0, -1769447, 327680, 0, -1834983, 327680, 0, -1900519, 327680, 0, -1966055, 327680, 0, -2031591, 327680, 0, -2097127, 327680, 0, -2162663, 327680, 0, -2228199, 327680, 0, -2293735, 327680, 0, -2359271, 327680, 0, -2424807, 327680, 0, -2490343, 327680, 0, -2555879, 327680, 0, -2621415, 327680, 0, -2686951, 327680, 0, -2752487, 327680, 0, -2818023, 327680, 0, -2883559, 327680, 0, -2949095, 327680, 0, -3014631, 327680, 0, -3080167, 327680, 0, -3145703, 327680, 0, -3211239, 327680, 0, -3276775, 327680, 0, -3342311, 327680, 0, -3407847, 327680, 0, -3473383, 327680, 0, -3538919, 327680, 0, -3604455, 327680, 0, -3669991, 327680, 0, -3735527, 327680, 0, -3801063, 327680, 0, -3866599, 327680, 0, -3932135, 327680, 0, -3997671, 327680, 0, -4063207, 327680, 0, -4128743, 327680, 0, -4194279, 327680, 0, -2424828, 327680, 0, -2490364, 327680, 0, -2555900, 327680, 0, -2621436, 327680, 0, -2686972, 327680, 0, -2752508, 327680, 0, -2818044, 327680, 0, -2883580, 327680, 0, -2949116, 327680, 0, -3014652, 327680, 0, -3080188, 327680, 0, -3145724, 327680, 0, -3211260, 327680, 0, -3276796, 327680, 0, -3342332, 327680, 0, -3407868, 327680, 0, -3473404, 327680, 0, -3538940, 327680, 0, -3604476, 327680, 0, -3670012, 327680, 0, -3735548, 327680, 0, -3801084, 327680, 0, -3866620, 327680, 0, -3932156, 327680, 0, -3997692, 327680, 0, -4063228, 327680, 0, -4128764, 327680, 0, -4194300, 327680, 0)
+layer_0/tile_data = PackedInt32Array(1114116, 65536, 0, 1114117, 65536, 0, 1114118, 65536, 0, 1114119, 65536, 0, 1114120, 65536, 0, 1114121, 65536, 0, 1114122, 65536, 0, 1114123, 65536, 0, 1114124, 65536, 0, 1114125, 65536, 0, 1114126, 65536, 0, 1114127, 65536, 0, 1114128, 65536, 0, 1114129, 65536, 0, 1114130, 65536, 0, 1114131, 65536, 0, 1114132, 65536, 0, 1114133, 65536, 0, 1114134, 65536, 0, 1114135, 65536, 0, 1114136, 65536, 0, 1114137, 65536, 0, 1048580, 327680, 0, 983044, 327680, 0, 917508, 327680, 0, 851972, 327680, 0, 786436, 327680, 0, 720900, 327680, 0, 655364, 327680, 0, 589828, 327680, 0, 524292, 327680, 0, 458756, 327680, 0, 393220, 327680, 0, 327684, 327680, 0, 262148, 327680, 0, 196612, 327680, 0, 131076, 327680, 0, 65540, 327680, 0, 4, 327680, 0, -196604, 327680, 0, -262140, 327680, 0, -327676, 327680, 0, -393212, 327680, 0, 1048601, 327680, 0, 983065, 327680, 0, 917529, 327680, 0, 851993, 327680, 0, 786457, 327680, 0, 720921, 327680, 0, 655385, 327680, 0, 589849, 327680, 0, 524313, 327680, 0, 458777, 327680, 0, 393241, 327680, 0, 327705, 327680, 0, 262169, 327680, 0, 196633, 327680, 0, 131097, 327680, 0, 65561, 327680, 0, 25, 327680, 0, -65511, 327680, 0, -131047, 327680, 0, -196583, 327680, 0, -262119, 327680, 0, -327655, 327680, 0, -393191, 327680, 0, -131068, 327680, 0, -65532, 327680, 0, -458748, 327680, 0, -524284, 327680, 0, -589820, 327680, 0, -655356, 327680, 0, -720892, 327680, 0, -786428, 327680, 0, -851964, 327680, 0, -917500, 327680, 0, -983036, 327680, 0, -1048572, 327680, 0, -1114108, 327680, 0, -1179644, 327680, 0, -1245180, 327680, 0, -1310716, 327680, 0, -1376252, 327680, 0, -1441788, 327680, 0, -1507324, 327680, 0, -1572860, 327680, 0, -1638396, 327680, 0, -1703932, 327680, 0, -1769468, 327680, 0, -1835004, 327680, 0, -1900540, 327680, 0, -1966076, 327680, 0, -2031612, 327680, 0, -2097148, 327680, 0, -2162684, 327680, 0, -2228220, 327680, 0, -2293756, 327680, 0, -2359292, 327680, 0, -458727, 327680, 0, -524263, 327680, 0, -589799, 327680, 0, -655335, 327680, 0, -720871, 327680, 0, -786407, 327680, 0, -851943, 327680, 0, -917479, 327680, 0, -983015, 327680, 0, -1048551, 327680, 0, -1114087, 327680, 0, -1179623, 327680, 0, -1245159, 327680, 0, -1310695, 327680, 0, -1376231, 327680, 0, -1441767, 327680, 0, -1507303, 327680, 0, -1572839, 327680, 0, -1638375, 327680, 0, -1703911, 327680, 0, -1769447, 327680, 0, -1834983, 327680, 0, -1900519, 327680, 0, -1966055, 327680, 0, -2031591, 327680, 0, -2097127, 327680, 0, -2162663, 327680, 0, -2228199, 327680, 0, -2293735, 327680, 0, -2359271, 327680, 0, -2424807, 327680, 0, -2490343, 327680, 0, -2555879, 327680, 0, -2621415, 327680, 0, -2686951, 327680, 0, -2752487, 327680, 0, -2818023, 327680, 0, -2883559, 327680, 0, -2949095, 327680, 0, -3014631, 327680, 0, -3080167, 327680, 0, -3145703, 327680, 0, -3211239, 327680, 0, -3276775, 327680, 0, -3342311, 327680, 0, -3407847, 327680, 0, -3473383, 327680, 0, -3538919, 327680, 0, -3604455, 327680, 0, -3669991, 327680, 0, -3735527, 327680, 0, -3801063, 327680, 0, -3866599, 327680, 0, -3932135, 327680, 0, -3997671, 327680, 0, -4063207, 327680, 0, -4128743, 327680, 0, -4194279, 327680, 0, -2424828, 327680, 0, -2490364, 327680, 0, -2555900, 327680, 0, -2621436, 327680, 0, -2686972, 327680, 0, -2752508, 327680, 0, -2818044, 327680, 0, -2883580, 327680, 0, -2949116, 327680, 0, -3014652, 327680, 0, -3080188, 327680, 0, -3145724, 327680, 0, -3211260, 327680, 0, -3276796, 327680, 0, -3342332, 327680, 0, -3407868, 327680, 0, -3473404, 327680, 0, -3538940, 327680, 0, -3604476, 327680, 0, -3670012, 327680, 0, -3735548, 327680, 0, -3801084, 327680, 0, -3866620, 327680, 0, -3932156, 327680, 0, -3997692, 327680, 0, -4063228, 327680, 0, -4128764, 327680, 0, -4194300, 327680, 0, -4259836, 327680, 0, -4325372, 327680, 0, -4390908, 327680, 0, -4456444, 327680, 0, -4521980, 327680, 0, -4587516, 327680, 0, -4653052, 327680, 0, -4718588, 327680, 0, -4784124, 327680, 0, -4849660, 327680, 0, -4915196, 327680, 0, -4980732, 327680, 0, -5046268, 327680, 0, -5111804, 327680, 0, -5177340, 327680, 0, -5242876, 327680, 0, -5308412, 327680, 0, -5373948, 327680, 0, -5439484, 327680, 0, -5505020, 327680, 0, -5570556, 327680, 0, -5636092, 327680, 0, -5701628, 327680, 0, -5767164, 327680, 0, -5832700, 327680, 0, -5898236, 327680, 0, -5963772, 327680, 0, -6029308, 327680, 0, -6094844, 327680, 0, -6160380, 327680, 0, -6225916, 327680, 0, -6291452, 327680, 0, -6356988, 327680, 0, -6422524, 327680, 0, -6488060, 327680, 0, -6553596, 327680, 0, -6619132, 327680, 0, -6684668, 327680, 0, -6750204, 327680, 0, -6815740, 327680, 0, -6881276, 327680, 0, -6946812, 327680, 0, -7012348, 327680, 0, -7077884, 327680, 0, -7143420, 327680, 0, -7208956, 327680, 0, -7274492, 327680, 0, -7340028, 327680, 0, -7405564, 327680, 0, -7471100, 327680, 0, -7536636, 327680, 0, -7602172, 327680, 0, -7667708, 327680, 0, -7733244, 327680, 0, -7798780, 327680, 0, -7864316, 327680, 0, -7929852, 327680, 0, -7995388, 327680, 0, -8060924, 327680, 0, -8126460, 327680, 0, -8191996, 327680, 0, -8257532, 327680, 0, -8323068, 327680, 0, -8388604, 327680, 0, -8454140, 327680, 0, -8519676, 327680, 0, -8585212, 327680, 0, -8650748, 327680, 0, -8716284, 327680, 0, -8781820, 327680, 0, -8847356, 327680, 0, -8912892, 327680, 0, -8978428, 327680, 0, -9043964, 327680, 0, -9109500, 327680, 0, -9175036, 327680, 0, -9240572, 327680, 0, -9306108, 327680, 0, -9371644, 327680, 0, -9437180, 327680, 0, -9502716, 327680, 0, -9568252, 327680, 0, -9633788, 327680, 0, -9699324, 327680, 0, -9764860, 327680, 0, -9830396, 327680, 0, -9895932, 327680, 0, -9961468, 327680, 0, -10027004, 327680, 0, -10092540, 327680, 0, -10158076, 327680, 0, -10223612, 327680, 0, -10289148, 327680, 0, -10354684, 327680, 0, -10420220, 327680, 0, -10485756, 327680, 0, -10551292, 327680, 0, -10616828, 327680, 0, -10682364, 327680, 0, -10747900, 327680, 0, -4259815, 327680, 0, -4325351, 327680, 0, -4390887, 327680, 0, -4456423, 327680, 0, -4521959, 327680, 0, -4587495, 327680, 0, -4653031, 327680, 0, -4718567, 327680, 0, -4784103, 327680, 0, -4849639, 327680, 0, -4915175, 327680, 0, -4980711, 327680, 0, -5046247, 327680, 0, -5111783, 327680, 0, -5177319, 327680, 0, -5242855, 327680, 0, -5308391, 327680, 0, -5373927, 327680, 0, -5439463, 327680, 0, -5504999, 327680, 0, -5570535, 327680, 0, -5636071, 327680, 0, -5701607, 327680, 0, -5767143, 327680, 0, -5832679, 327680, 0, -5898215, 327680, 0, -5963751, 327680, 0, -6029287, 327680, 0, -6094823, 327680, 0, -6160359, 327680, 0, -6225895, 327680, 0, -6291431, 327680, 0, -6356967, 327680, 0, -6422503, 327680, 0, -6488039, 327680, 0, -6553575, 327680, 0, -6619111, 327680, 0, -6684647, 327680, 0, -6750183, 327680, 0, -6815719, 327680, 0, -6881255, 327680, 0, -6946791, 327680, 0, -7012327, 327680, 0, -7077863, 327680, 0, -7143399, 327680, 0, -7208935, 327680, 0, -7274471, 327680, 0, -7340007, 327680, 0, -7405543, 327680, 0, -7471079, 327680, 0, -7536615, 327680, 0, -7602151, 327680, 0, -7667687, 327680, 0, -7733223, 327680, 0, -7798759, 327680, 0, -7864295, 327680, 0, -7929831, 327680, 0, -7995367, 327680, 0, -8060903, 327680, 0, -8191975, 327680, 0, -8257511, 327680, 0, -8323047, 327680, 0, -8388583, 327680, 0, -8454119, 327680, 0, -8519655, 327680, 0, -8585191, 327680, 0, -8650727, 327680, 0, -8716263, 327680, 0, -8781799, 327680, 0, -8847335, 327680, 0, -8912871, 327680, 0, -8978407, 327680, 0, -9043943, 327680, 0, -9109479, 327680, 0, -9175015, 327680, 0, -9240551, 327680, 0, -9306087, 327680, 0, -9371623, 327680, 0, -9437159, 327680, 0, -9502695, 327680, 0, -9568231, 327680, 0, -9633767, 327680, 0, -9699303, 327680, 0, -9764839, 327680, 0, -9830375, 327680, 0, -9895911, 327680, 0, -9961447, 327680, 0, -10026983, 327680, 0, -10092519, 327680, 0, -10158055, 327680, 0, -10223591, 327680, 0, -10289127, 327680, 0, -10354663, 327680, 0, -10420199, 327680, 0, -10485735, 327680, 0, -10551271, 327680, 0, -10616807, 327680, 0, -10682343, 327680, 0, -10747879, 327680, 0, -8126439, 327680, 0)
 script = ExtResource("2_7nbtq")
 scroll_speed = 35.0
 
@@ -637,123 +637,204 @@ angular_damp_mode = 1
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_kb2gi")]
 position = Vector2(96, 264)
 
-[node name="Segment1" type="Node2D" parent="."]
-metadata/_edit_group_ = true
+[node name="FirstTimeDroppableBlocks" type="Node2D" parent="."]
+position = Vector2(0, -320)
 
-[node name="DroppableBlocks" type="Node2D" parent="Segment1"]
+[node name="DroppableBlocks" type="Node2D" parent="FirstTimeDroppableBlocks"]
 
-[node name="DroppableBlock" parent="Segment1/DroppableBlocks" instance=ExtResource("3_erwvd")]
+[node name="DroppableBlock" parent="FirstTimeDroppableBlocks/DroppableBlocks" instance=ExtResource("3_erwvd")]
 position = Vector2(296, 40)
 
-[node name="DroppableBlock7" parent="Segment1/DroppableBlocks" instance=ExtResource("3_erwvd")]
+[node name="DroppableBlock7" parent="FirstTimeDroppableBlocks/DroppableBlocks" instance=ExtResource("3_erwvd")]
 position = Vector2(312, 40)
 
-[node name="DroppableBlock8" parent="Segment1/DroppableBlocks" instance=ExtResource("3_erwvd")]
+[node name="DroppableBlock8" parent="FirstTimeDroppableBlocks/DroppableBlocks" instance=ExtResource("3_erwvd")]
 position = Vector2(328, 40)
 
-[node name="DroppableBlock2" parent="Segment1/DroppableBlocks" instance=ExtResource("3_erwvd")]
+[node name="DroppableBlock2" parent="FirstTimeDroppableBlocks/DroppableBlocks" instance=ExtResource("3_erwvd")]
 position = Vector2(280, 40)
 
-[node name="DroppableBlock3" parent="Segment1/DroppableBlocks" instance=ExtResource("3_erwvd")]
+[node name="DroppableBlock3" parent="FirstTimeDroppableBlocks/DroppableBlocks" instance=ExtResource("3_erwvd")]
 position = Vector2(264, 40)
 
-[node name="DroppableBlock4" parent="Segment1/DroppableBlocks" instance=ExtResource("3_erwvd")]
+[node name="DroppableBlock4" parent="FirstTimeDroppableBlocks/DroppableBlocks" instance=ExtResource("3_erwvd")]
 position = Vector2(184, 40)
 
-[node name="DroppableBlock9" parent="Segment1/DroppableBlocks" instance=ExtResource("3_erwvd")]
+[node name="DroppableBlock9" parent="FirstTimeDroppableBlocks/DroppableBlocks" instance=ExtResource("3_erwvd")]
 position = Vector2(168, 40)
 
-[node name="DroppableBlock10" parent="Segment1/DroppableBlocks" instance=ExtResource("3_erwvd")]
+[node name="DroppableBlock10" parent="FirstTimeDroppableBlocks/DroppableBlocks" instance=ExtResource("3_erwvd")]
 position = Vector2(152, 40)
 
-[node name="DroppableBlock5" parent="Segment1/DroppableBlocks" instance=ExtResource("3_erwvd")]
+[node name="DroppableBlock5" parent="FirstTimeDroppableBlocks/DroppableBlocks" instance=ExtResource("3_erwvd")]
 position = Vector2(216, 40)
 
-[node name="DroppableBlock6" parent="Segment1/DroppableBlocks" instance=ExtResource("3_erwvd")]
+[node name="DroppableBlock6" parent="FirstTimeDroppableBlocks/DroppableBlocks" instance=ExtResource("3_erwvd")]
 position = Vector2(200, 40)
 
-[node name="RegularBlocks" type="Node2D" parent="Segment1"]
+[node name="RegularBlocks" type="Node2D" parent="FirstTimeDroppableBlocks"]
 
-[node name="regular_body" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+[node name="regular_body" parent="FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(216, 200)
 
-[node name="regular_body2" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+[node name="regular_body2" parent="FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(232, 200)
 
-[node name="regular_body9" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+[node name="regular_body9" parent="FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(240, 40)
 
-[node name="regular_body10" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+[node name="regular_body10" parent="FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(240, 56)
 
-[node name="regular_body11" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+[node name="regular_body11" parent="FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(240, 72)
 
-[node name="regular_body15" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+[node name="regular_body15" parent="FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(240, 88)
 
-[node name="regular_body12" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+[node name="regular_body12" parent="FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(240, 24)
 
-[node name="regular_body13" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+[node name="regular_body13" parent="FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(240, 8)
 
-[node name="regular_body14" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+[node name="regular_body14" parent="FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(240, -8)
 
-[node name="regular_body3" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+[node name="regular_body3" parent="FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(248, 200)
 
-[node name="regular_body4" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+[node name="regular_body32" parent="FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(264, 200)
+
+[node name="regular_body4" parent="FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(192, -40)
 
-[node name="regular_body20" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+[node name="regular_body20" parent="FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(192, -56)
 
-[node name="regular_body21" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+[node name="regular_body21" parent="FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(192, -72)
 
-[node name="regular_body22" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+[node name="regular_body22" parent="FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(192, -88)
 
-[node name="regular_body23" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+[node name="regular_body23" parent="FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(192, -104)
 
-[node name="regular_body24" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+[node name="regular_body24" parent="FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(192, -120)
 
-[node name="regular_body16" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+[node name="regular_body29" parent="FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(208, -120)
+
+[node name="regular_body30" parent="FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(224, -120)
+
+[node name="regular_body31" parent="FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(224, -136)
+
+[node name="regular_body16" parent="FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(88, -40)
 
-[node name="regular_body17" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+[node name="regular_body17" parent="FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(104, -40)
 
-[node name="regular_body18" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+[node name="regular_body18" parent="FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(120, -40)
 
-[node name="regular_body19" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+[node name="regular_body19" parent="FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(136, -40)
 
-[node name="regular_body5" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+[node name="regular_body5" parent="FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(344, 120)
 
-[node name="regular_body6" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+[node name="regular_body6" parent="FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(360, 120)
 
-[node name="regular_body7" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+[node name="regular_body7" parent="FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(376, 120)
 
-[node name="regular_body8" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+[node name="regular_body8" parent="FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(392, 120)
 
-[node name="regular_body25" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+[node name="regular_body25" parent="FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(344, -200)
 
-[node name="regular_body26" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+[node name="regular_body26" parent="FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(360, -200)
 
-[node name="regular_body27" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+[node name="regular_body27" parent="FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(376, -200)
 
-[node name="regular_body28" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+[node name="regular_body28" parent="FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(392, -200)
+
+[node name="Start" type="Line2D" parent="FirstTimeDroppableBlocks"]
+points = PackedVector2Array(80, 272, 400, 272)
+width = 1.0
+
+[node name="Finish" type="Line2D" parent="FirstTimeDroppableBlocks"]
+points = PackedVector2Array(400, -208, 80, -208)
+width = 1.0
+
+[node name="Beginner" type="Node2D" parent="."]
+
+[node name="Start" type="Line2D" parent="Beginner"]
+points = PackedVector2Array(80, 272, 400, 272)
+width = 1.0
+
+[node name="Start2" type="Line2D" parent="Beginner"]
+position = Vector2(0, -320)
+points = PackedVector2Array(80, 272, 400, 272)
+width = 1.0
+
+[node name="RegularBlocks" type="Node2D" parent="Beginner"]
+
+[node name="regular_body" parent="Beginner/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(216, 200)
+
+[node name="regular_body2" parent="Beginner/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(232, 200)
+
+[node name="regular_body3" parent="Beginner/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(248, 200)
+
+[node name="regular_body4" parent="Beginner/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(264, 200)
+
+[node name="regular_body5" parent="Beginner/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(344, 120)
+
+[node name="regular_body6" parent="Beginner/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(360, 120)
+
+[node name="regular_body7" parent="Beginner/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(376, 120)
+
+[node name="regular_body8" parent="Beginner/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(392, 120)
+
+[node name="regular_body9" parent="Beginner/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(216, 40)
+
+[node name="regular_body10" parent="Beginner/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(232, 40)
+
+[node name="regular_body11" parent="Beginner/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(248, 40)
+
+[node name="regular_body12" parent="Beginner/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(264, 40)
+
+[node name="regular_body13" parent="Beginner/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(88, -40)
+
+[node name="regular_body14" parent="Beginner/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(104, -40)
+
+[node name="regular_body15" parent="Beginner/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(120, -40)
+
+[node name="regular_body16" parent="Beginner/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(136, -40)
