@@ -176,342 +176,288 @@ sources/0 = SubResource("TileSetAtlasSource_qdxlv")
 [node name="level" type="TileMap"]
 tile_set = SubResource("TileSet_ygvbg")
 format = 2
-layer_0/tile_data = PackedInt32Array(1114112, 65536, 0, 1114113, 65536, 0, 1114114, 65536, 0, 1114115, 65536, 0, 1114116, 65536, 0, 1114117, 65536, 0, 1114118, 65536, 0, 1114119, 65536, 0, 1114120, 65536, 0, 1114121, 65536, 0, 1114122, 65536, 0, 1114123, 65536, 0, 1114124, 65536, 0, 1114125, 65536, 0, 1114126, 65536, 0, 1114127, 65536, 0, 1114128, 65536, 0, 1114129, 65536, 0, 1114130, 65536, 0, 1114131, 65536, 0, 1114132, 65536, 0, 1114133, 65536, 0, 1114134, 65536, 0, 1114135, 65536, 0, 1114136, 65536, 0, 1114137, 65536, 0, 1114138, 65536, 0, 1114139, 65536, 0, 1114140, 65536, 0)
+layer_0/tile_data = PackedInt32Array(1114116, 65536, 0, 1114117, 65536, 0, 1114118, 65536, 0, 1114119, 65536, 0, 1114120, 65536, 0, 1114121, 65536, 0, 1114122, 65536, 0, 1114123, 65536, 0, 1114124, 65536, 0, 1114125, 65536, 0, 1114126, 65536, 0, 1114127, 65536, 0, 1114128, 65536, 0, 1114129, 65536, 0, 1114130, 65536, 0, 1114131, 65536, 0, 1114132, 65536, 0, 1114133, 65536, 0, 1114134, 65536, 0, 1114135, 65536, 0, 1114136, 65536, 0, 1114137, 65536, 0, 1048580, 327680, 0, 983044, 327680, 0, 917508, 327680, 0, 851972, 327680, 0, 786436, 327680, 0, 720900, 327680, 0, 655364, 327680, 0, 589828, 327680, 0, 524292, 327680, 0, 458756, 327680, 0, 393220, 327680, 0, 327684, 327680, 0, 262148, 327680, 0, 196612, 327680, 0, 131076, 327680, 0, 65540, 327680, 0, 4, 327680, 0, -65532, 327680, 0, -131068, 327680, 0, -196604, 327680, 0, -262140, 327680, 0, -327676, 327680, 0, -393212, 327680, 0, 1048601, 327680, 0, 983065, 327680, 0, 917529, 327680, 0, 851993, 327680, 0, 786457, 327680, 0, 720921, 327680, 0, 655385, 327680, 0, 589849, 327680, 0, 524313, 327680, 0, 458777, 327680, 0, 393241, 327680, 0, 327705, 327680, 0, 262169, 327680, 0, 196633, 327680, 0, 131097, 327680, 0, 65561, 327680, 0, 25, 327680, 0, -65511, 327680, 0, -131047, 327680, 0, -196583, 327680, 0, -262119, 327680, 0, -327655, 327680, 0, -393191, 327680, 0)
 script = ExtResource("2_7nbtq")
 scroll_speed = 10.0
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("2_kb2gi")]
-position = Vector2(36, 263)
+position = Vector2(88, 263)
 
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(240, 232)
 
 [node name="FirewallScenes" type="Node2D" parent="Camera"]
 
-[node name="Firewall" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-232, 152)
-
-[node name="Firewall2" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-240, 152)
-
-[node name="Firewall3" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-248, 152)
-
-[node name="Firewall4" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-256, 152)
-
-[node name="Firewall5" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-256, 152)
-
-[node name="Firewall6" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-264, 152)
-
-[node name="Firewall7" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-272, 152)
-
-[node name="Firewall8" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-280, 152)
-
-[node name="Firewall9" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-288, 152)
-
-[node name="Firewall10" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-296, 152)
-
-[node name="Firewall11" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-296, 152)
-
-[node name="Firewall12" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-304, 152)
-
 [node name="Firewall13" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-152, 152)
+position = Vector2(-163, 162)
+angular_damp_mode = 1
 
 [node name="Firewall14" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-160, 152)
+position = Vector2(-171, 162)
+angular_damp_mode = 1
 
 [node name="Firewall15" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-168, 152)
-
-[node name="Firewall16" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-176, 152)
-
-[node name="Firewall17" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-176, 152)
-
-[node name="Firewall18" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-184, 152)
-
-[node name="Firewall19" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-192, 152)
-
-[node name="Firewall20" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-200, 152)
-
-[node name="Firewall21" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-208, 152)
-
-[node name="Firewall22" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-216, 152)
-
-[node name="Firewall23" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-216, 152)
-
-[node name="Firewall24" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-224, 152)
+position = Vector2(-179, 162)
+angular_damp_mode = 1
 
 [node name="Firewall25" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-72, 152)
+position = Vector2(-83, 162)
+angular_damp_mode = 1
 
 [node name="Firewall26" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-80, 152)
+position = Vector2(-91, 162)
+angular_damp_mode = 1
 
 [node name="Firewall27" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-88, 152)
+position = Vector2(-99, 162)
+angular_damp_mode = 1
 
 [node name="Firewall28" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-96, 152)
+position = Vector2(-107, 162)
+angular_damp_mode = 1
 
 [node name="Firewall29" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-96, 152)
+position = Vector2(-107, 162)
+angular_damp_mode = 1
 
 [node name="Firewall30" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-104, 152)
+position = Vector2(-115, 162)
+angular_damp_mode = 1
 
 [node name="Firewall31" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-112, 152)
+position = Vector2(-123, 162)
+angular_damp_mode = 1
 
 [node name="Firewall32" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-120, 152)
+position = Vector2(-131, 162)
+angular_damp_mode = 1
 
 [node name="Firewall33" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-128, 152)
+position = Vector2(-139, 162)
+angular_damp_mode = 1
 
 [node name="Firewall34" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-136, 152)
+position = Vector2(-147, 162)
+angular_damp_mode = 1
 
 [node name="Firewall35" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-136, 152)
+position = Vector2(-147, 162)
+angular_damp_mode = 1
 
 [node name="Firewall36" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-144, 152)
+position = Vector2(-155, 162)
+angular_damp_mode = 1
 
 [node name="Firewall37" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(0, 152)
+position = Vector2(-11, 162)
+angular_damp_mode = 1
 
 [node name="Firewall38" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-8, 152)
+position = Vector2(-19, 162)
+angular_damp_mode = 1
 
 [node name="Firewall39" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-16, 152)
+position = Vector2(-27, 162)
+angular_damp_mode = 1
 
 [node name="Firewall40" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-24, 152)
+position = Vector2(-35, 162)
+angular_damp_mode = 1
 
 [node name="Firewall41" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-24, 152)
+position = Vector2(-35, 162)
+angular_damp_mode = 1
 
 [node name="Firewall42" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-32, 152)
+position = Vector2(-43, 162)
+angular_damp_mode = 1
 
 [node name="Firewall43" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-40, 152)
+position = Vector2(-51, 162)
+angular_damp_mode = 1
 
 [node name="Firewall44" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-48, 152)
+position = Vector2(-59, 162)
+angular_damp_mode = 1
 
 [node name="Firewall45" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-56, 152)
+position = Vector2(-67, 162)
+angular_damp_mode = 1
 
 [node name="Firewall46" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-64, 152)
+position = Vector2(-75, 162)
+angular_damp_mode = 1
 
 [node name="Firewall47" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-64, 152)
+position = Vector2(-75, 162)
+angular_damp_mode = 1
 
 [node name="Firewall48" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(-72, 152)
+position = Vector2(-83, 162)
+angular_damp_mode = 1
 
 [node name="Firewall49" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(80, 152)
+position = Vector2(69, 162)
+angular_damp_mode = 1
 
 [node name="Firewall50" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(72, 152)
+position = Vector2(61, 162)
+angular_damp_mode = 1
 
 [node name="Firewall51" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(64, 152)
+position = Vector2(53, 162)
+angular_damp_mode = 1
 
 [node name="Firewall52" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(56, 152)
+position = Vector2(45, 162)
+angular_damp_mode = 1
 
 [node name="Firewall53" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(56, 152)
+position = Vector2(45, 162)
+angular_damp_mode = 1
 
 [node name="Firewall54" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(48, 152)
+position = Vector2(37, 162)
+angular_damp_mode = 1
 
 [node name="Firewall55" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(40, 152)
+position = Vector2(29, 162)
+angular_damp_mode = 1
 
 [node name="Firewall56" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(32, 152)
+position = Vector2(21, 162)
+angular_damp_mode = 1
 
 [node name="Firewall57" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(24, 152)
+position = Vector2(13, 162)
+angular_damp_mode = 1
 
 [node name="Firewall58" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(16, 152)
+position = Vector2(5, 162)
+angular_damp_mode = 1
 
 [node name="Firewall59" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(16, 152)
+position = Vector2(5, 162)
+angular_damp_mode = 1
 
 [node name="Firewall60" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(8, 152)
+position = Vector2(-3, 162)
+angular_damp_mode = 1
 
 [node name="Firewall61" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(160, 152)
+position = Vector2(149, 162)
+angular_damp_mode = 1
 
 [node name="Firewall62" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(152, 152)
+position = Vector2(141, 162)
+angular_damp_mode = 1
 
 [node name="Firewall63" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(144, 152)
+position = Vector2(133, 162)
+angular_damp_mode = 1
 
 [node name="Firewall64" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(136, 152)
+position = Vector2(125, 162)
+angular_damp_mode = 1
 
 [node name="Firewall65" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(136, 152)
+position = Vector2(125, 162)
+angular_damp_mode = 1
 
 [node name="Firewall66" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(128, 152)
+position = Vector2(117, 162)
+angular_damp_mode = 1
 
 [node name="Firewall67" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(120, 152)
+position = Vector2(109, 162)
+angular_damp_mode = 1
 
 [node name="Firewall68" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(112, 152)
+position = Vector2(101, 162)
+angular_damp_mode = 1
 
 [node name="Firewall69" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(104, 152)
+position = Vector2(93, 162)
+angular_damp_mode = 1
 
 [node name="Firewall70" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(96, 152)
+position = Vector2(85, 162)
+angular_damp_mode = 1
 
 [node name="Firewall71" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(96, 152)
+position = Vector2(85, 162)
+angular_damp_mode = 1
 
 [node name="Firewall72" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(88, 152)
-
-[node name="Firewall73" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(240, 152)
-
-[node name="Firewall74" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(232, 152)
-
-[node name="Firewall75" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(224, 152)
-
-[node name="Firewall76" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(216, 152)
-
-[node name="Firewall77" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(216, 152)
-
-[node name="Firewall78" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(208, 152)
-
-[node name="Firewall79" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(200, 152)
+position = Vector2(77, 162)
+angular_damp_mode = 1
 
 [node name="Firewall80" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(192, 152)
+position = Vector2(181, 162)
+angular_damp_mode = 1
 
 [node name="Firewall81" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(184, 152)
+position = Vector2(173, 162)
+angular_damp_mode = 1
 
 [node name="Firewall82" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(176, 152)
+position = Vector2(165, 162)
+angular_damp_mode = 1
 
 [node name="Firewall83" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(176, 152)
+position = Vector2(165, 162)
+angular_damp_mode = 1
 
 [node name="Firewall84" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(168, 152)
-
-[node name="Firewall85" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(320, 152)
-
-[node name="Firewall86" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(312, 152)
-
-[node name="Firewall87" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(304, 152)
-
-[node name="Firewall88" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(296, 152)
-
-[node name="Firewall89" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(296, 152)
-
-[node name="Firewall90" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(288, 152)
-
-[node name="Firewall91" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(280, 152)
-
-[node name="Firewall92" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(272, 152)
-
-[node name="Firewall93" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(264, 152)
-
-[node name="Firewall94" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(256, 152)
-
-[node name="Firewall95" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(256, 152)
-
-[node name="Firewall96" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
-position = Vector2(248, 152)
+position = Vector2(157, 162)
+angular_damp_mode = 1
 
 [node name="Skulls" type="Node2D" parent="."]
 
 [node name="skull" parent="Skulls" instance=ExtResource("4_uxhqa")]
-position = Vector2(456, 256)
+position = Vector2(392, 256)
+rotation = 3.14159
+scale = Vector2(1, -1)
+
+[node name="skull3" parent="Skulls" instance=ExtResource("4_uxhqa")]
+position = Vector2(392, 72)
 rotation = 3.14159
 scale = Vector2(1, -1)
 
 [node name="skull2" parent="Skulls" instance=ExtResource("4_uxhqa")]
-position = Vector2(8, 176)
+position = Vector2(88, 176)
+seconds_before_starting_emissions = 1.7
+
+[node name="skull4" parent="Skulls" instance=ExtResource("4_uxhqa")]
+position = Vector2(88, 0)
 seconds_before_starting_emissions = 1.7
 
 [node name="DroppableBlocks" type="Node2D" parent="."]
+position = Vector2(240, 104)
 
 [node name="DroppableBlock" parent="DroppableBlocks" instance=ExtResource("3_erwvd")]
-position = Vector2(120, 216)
+position = Vector2(-64, 0)
 
 [node name="DroppableBlock2" parent="DroppableBlocks" instance=ExtResource("3_erwvd")]
-position = Vector2(152, 216)
+position = Vector2(-32, 0)
 
 [node name="DroppableBlock3" parent="DroppableBlocks" instance=ExtResource("3_erwvd")]
-position = Vector2(136, 216)
+position = Vector2(-48, 0)
 
 [node name="DroppableBlock4" parent="DroppableBlocks" instance=ExtResource("3_erwvd")]
-position = Vector2(168, 216)
+position = Vector2(-16, 0)
 
 [node name="DroppableBlock5" parent="DroppableBlocks" instance=ExtResource("3_erwvd")]
-position = Vector2(200, 216)
+position = Vector2(16, 0)
 
 [node name="DroppableBlock6" parent="DroppableBlocks" instance=ExtResource("3_erwvd")]
-position = Vector2(184, 216)
 
 [node name="DroppableBlock7" parent="DroppableBlocks" instance=ExtResource("3_erwvd")]
-position = Vector2(216, 216)
+position = Vector2(32, 0)
 
 [node name="DroppableBlock8" parent="DroppableBlocks" instance=ExtResource("3_erwvd")]
-position = Vector2(248, 216)
+position = Vector2(64, 0)
 
 [node name="DroppableBlock9" parent="DroppableBlocks" instance=ExtResource("3_erwvd")]
-position = Vector2(232, 216)
+position = Vector2(48, 0)
+metadata/_edit_group_ = true
