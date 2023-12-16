@@ -10,9 +10,12 @@ signal on_death
 @onready var animations: AnimatedSprite2D = $Animations
 
 var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
-
+var is_dying: bool = false
 
 func _physics_process(delta: float) -> void:
+	if is_dying:
+		return
+
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
@@ -63,5 +66,9 @@ func _handle_collisions() -> void:
 
 
 func _die():
+	is_dying = true
+	animations.stop()
+	velocity.x = 0
+	velocity.y = 0
 	on_death.emit()
 	print("You have died")
