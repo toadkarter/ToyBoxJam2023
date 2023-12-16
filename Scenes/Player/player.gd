@@ -4,7 +4,10 @@ extends CharacterBody2D
 @export var speed: float = 300.0
 @export var jump_velocity: float = -400.0
 
+@onready var animations: AnimatedSprite2D = $Animations
+
 var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
+
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -14,6 +17,21 @@ func _physics_process(delta: float) -> void:
 		velocity.y = jump_velocity
 
 	_handle_move_input()
+
+	if velocity.x > 0 and animations.flip_h:
+		animations.flip_h = false
+	elif velocity.x < 0 and !animations.flip_h:
+		animations.flip_h = true
+
+	
+	if !is_on_floor():
+		animations.play("jump")
+	elif velocity.x == 0:
+		animations.play("default")
+	else:
+		animations.play("run")
+
+
 	move_and_slide()
 
 
