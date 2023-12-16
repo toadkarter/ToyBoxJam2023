@@ -11,8 +11,6 @@ extends StaticBody2D
 @onready var animations: AnimatedSprite2D = $AnimatedSprite2D
 @onready var projectile_spawn_location: Node2D = $ProjectileSpawnLocation
 
-var num_projectiles_emitted = 0
-
 
 func _ready() -> void:
 	animations.animation_finished.connect(_on_animation_finished)
