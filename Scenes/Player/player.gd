@@ -75,4 +75,3 @@ func _freeze_player() -> void:
 func _die():
 	_freeze_player()
 	on_death.emit()
-	print("You have died")

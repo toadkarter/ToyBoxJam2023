@@ -10,7 +10,6 @@ func _ready() -> void:
 
 
 func _on_hitbox_triggered(body: Node) -> void:
-	print("Something is here")
 	if body.is_in_group("Player"):
 		await get_tree().create_timer(seconds_before_falling).timeout
 		gravity_scale = 1.0

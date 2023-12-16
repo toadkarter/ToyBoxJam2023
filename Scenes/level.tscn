@@ -184,7 +184,7 @@ scroll_speed = 50.0
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(240, 232)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_kb2gi")]
+[node name="Player" parent="." instance=ExtResource("2_kb2gi")]
 position = Vector2(96, 264)
 
 [node name="[1] Beginner" type="Node2D" parent="."]
