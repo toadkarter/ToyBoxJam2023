@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=3 uid="uid://bhct83woj4glf"]
+
+[ext_resource type="Texture2D" uid="uid://br3238kxwqemf" path="res://Art/Sprites/tbj2_startcart2spr.png" id="1_k53sx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jil3y"]
+atlas = ExtResource("1_k53sx")
+region = Rect2(32, 104, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_obfau"]
+atlas = ExtResource("1_k53sx")
+region = Rect2(0, 104, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8aedt"]
+atlas = ExtResource("1_k53sx")
+region = Rect2(16, 104, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dkxe4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jil3y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_obfau")
+}, {
+"duration": 10.0,
+"texture": SubResource("AtlasTexture_8aedt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_obfau")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jil3y")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 15.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wvktg"]
+radius = 7.0
+height = 18.0
+
+[node name="Skull" type="StaticBody2D" groups=["Enemy"]]
+collision_layer = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_dkxe4")
+animation = &"attack"
+frame = 2
+frame_progress = 0.749647
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -1)
+shape = SubResource("CapsuleShape2D_wvktg")

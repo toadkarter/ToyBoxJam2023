@@ -14,6 +14,7 @@ collision_layer = 2
 gravity_scale = 0.0
 lock_rotation = true
 script = ExtResource("1_i470b")
+seconds_before_falling = 0.5
 
 [node name="Hitbox" type="Area2D" parent="."]
 
