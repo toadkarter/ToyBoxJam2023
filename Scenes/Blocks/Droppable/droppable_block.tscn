@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://b66s52nkr67ui"]
+
+[ext_resource type="Script" path="res://Scenes/Blocks/Droppable/droppable_block.gd" id="1_i470b"]
+[ext_resource type="Texture2D" uid="uid://br3238kxwqemf" path="res://Art/Sprites/tbj2_startcart2spr.png" id="1_ocnjj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n317e"]
+size = Vector2(16, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gaq1m"]
+size = Vector2(16, 16)
+
+[node name="DroppableBlock" type="RigidBody2D"]
+collision_layer = 2
+gravity_scale = 0.0
+lock_rotation = true
+script = ExtResource("1_i470b")
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="HitboxCollider" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(0, -7.5)
+shape = SubResource("RectangleShape2D_n317e")
+
+[node name="Collider" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gaq1m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ocnjj")
+region_enabled = true
+region_rect = Rect2(80, 8, 16, 16)
