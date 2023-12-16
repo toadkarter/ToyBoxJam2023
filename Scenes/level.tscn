@@ -207,4 +207,8 @@ position = Vector2(248, 216)
 position = Vector2(232, 216)
 
 [node name="skull" parent="." instance=ExtResource("4_uxhqa")]
-position = Vector2(168, 192)
+position = Vector2(168, 264)
+seconds_before_starting_emissions = 1.7
+
+[node name="skull2" parent="." instance=ExtResource("4_uxhqa")]
+position = Vector2(168, 240)
