@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dpb656nt13lxy"]
+[gd_scene load_steps=9 format=3 uid="uid://dpb656nt13lxy"]
 
 [ext_resource type="Texture2D" uid="uid://br3238kxwqemf" path="res://Art/Sprites/tbj2_startcart2spr.png" id="1_58vo4"]
 [ext_resource type="Script" path="res://Scenes/level.gd" id="2_7nbtq"]
 [ext_resource type="PackedScene" uid="uid://ctn5h44wck1vy" path="res://Scenes/Player/player.tscn" id="2_kb2gi"]
-[ext_resource type="PackedScene" uid="uid://bg13eeaihn685" path="res://Scenes/Enemies/Bat/bat.tscn" id="5_05hpr"]
+[ext_resource type="PackedScene" uid="uid://b66s52nkr67ui" path="res://Scenes/Blocks/Droppable/droppable_block.tscn" id="3_erwvd"]
 [ext_resource type="PackedScene" uid="uid://b4oqsl24gjuye" path="res://Scenes/Enemies/Projectiles/Firewall/firewall.tscn" id="6_6kv43"]
+[ext_resource type="PackedScene" uid="uid://dd0rki4hvdmcb" path="res://Scenes/Blocks/Regular/regular_body.tscn" id="7_e0ir6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qdxlv"]
 texture = ExtResource("1_58vo4")
@@ -176,9 +177,9 @@ sources/0 = SubResource("TileSetAtlasSource_qdxlv")
 [node name="Level" type="TileMap"]
 tile_set = SubResource("TileSet_ygvbg")
 format = 2
-layer_0/tile_data = PackedInt32Array(1114116, 65536, 0, 1114117, 65536, 0, 1114118, 65536, 0, 1114119, 65536, 0, 1114120, 65536, 0, 1114121, 65536, 0, 1114122, 65536, 0, 1114123, 65536, 0, 1114124, 65536, 0, 1114125, 65536, 0, 1114126, 65536, 0, 1114127, 65536, 0, 1114128, 65536, 0, 1114129, 65536, 0, 1114130, 65536, 0, 1114131, 65536, 0, 1114132, 65536, 0, 1114133, 65536, 0, 1114134, 65536, 0, 1114135, 65536, 0, 1114136, 65536, 0, 1114137, 65536, 0, 1048580, 327680, 0, 983044, 327680, 0, 917508, 327680, 0, 851972, 327680, 0, 786436, 327680, 0, 720900, 327680, 0, 655364, 327680, 0, 589828, 327680, 0, 524292, 327680, 0, 458756, 327680, 0, 393220, 327680, 0, 327684, 327680, 0, 262148, 327680, 0, 196612, 327680, 0, 131076, 327680, 0, 65540, 327680, 0, 4, 327680, 0, -196604, 327680, 0, -262140, 327680, 0, -327676, 327680, 0, -393212, 327680, 0, 1048601, 327680, 0, 983065, 327680, 0, 917529, 327680, 0, 851993, 327680, 0, 786457, 327680, 0, 720921, 327680, 0, 655385, 327680, 0, 589849, 327680, 0, 524313, 327680, 0, 458777, 327680, 0, 393241, 327680, 0, 327705, 327680, 0, 262169, 327680, 0, 196633, 327680, 0, 131097, 327680, 0, 65561, 327680, 0, 25, 327680, 0, -65511, 327680, 0, -131047, 327680, 0, -196583, 327680, 0, -262119, 327680, 0, -327655, 327680, 0, -393191, 327680, 0, -131068, 327680, 0, -65532, 327680, 0)
+layer_0/tile_data = PackedInt32Array(1114116, 65536, 0, 1114117, 65536, 0, 1114118, 65536, 0, 1114119, 65536, 0, 1114120, 65536, 0, 1114121, 65536, 0, 1114122, 65536, 0, 1114123, 65536, 0, 1114124, 65536, 0, 1114125, 65536, 0, 1114126, 65536, 0, 1114127, 65536, 0, 1114128, 65536, 0, 1114129, 65536, 0, 1114130, 65536, 0, 1114131, 65536, 0, 1114132, 65536, 0, 1114133, 65536, 0, 1114134, 65536, 0, 1114135, 65536, 0, 1114136, 65536, 0, 1114137, 65536, 0, 1048580, 327680, 0, 983044, 327680, 0, 917508, 327680, 0, 851972, 327680, 0, 786436, 327680, 0, 720900, 327680, 0, 655364, 327680, 0, 589828, 327680, 0, 524292, 327680, 0, 458756, 327680, 0, 393220, 327680, 0, 327684, 327680, 0, 262148, 327680, 0, 196612, 327680, 0, 131076, 327680, 0, 65540, 327680, 0, 4, 327680, 0, -196604, 327680, 0, -262140, 327680, 0, -327676, 327680, 0, -393212, 327680, 0, 1048601, 327680, 0, 983065, 327680, 0, 917529, 327680, 0, 851993, 327680, 0, 786457, 327680, 0, 720921, 327680, 0, 655385, 327680, 0, 589849, 327680, 0, 524313, 327680, 0, 458777, 327680, 0, 393241, 327680, 0, 327705, 327680, 0, 262169, 327680, 0, 196633, 327680, 0, 131097, 327680, 0, 65561, 327680, 0, 25, 327680, 0, -65511, 327680, 0, -131047, 327680, 0, -196583, 327680, 0, -262119, 327680, 0, -327655, 327680, 0, -393191, 327680, 0, -131068, 327680, 0, -65532, 327680, 0, -458748, 327680, 0, -524284, 327680, 0, -589820, 327680, 0, -655356, 327680, 0, -720892, 327680, 0, -786428, 327680, 0, -851964, 327680, 0, -917500, 327680, 0, -983036, 327680, 0, -1048572, 327680, 0, -1114108, 327680, 0, -1179644, 327680, 0, -1245180, 327680, 0, -1310716, 327680, 0, -1376252, 327680, 0, -1441788, 327680, 0, -1507324, 327680, 0, -1572860, 327680, 0, -1638396, 327680, 0, -1703932, 327680, 0, -1769468, 327680, 0, -1835004, 327680, 0, -1900540, 327680, 0, -1966076, 327680, 0, -2031612, 327680, 0, -2097148, 327680, 0, -2162684, 327680, 0, -2228220, 327680, 0, -2293756, 327680, 0, -2359292, 327680, 0, -458727, 327680, 0, -524263, 327680, 0, -589799, 327680, 0, -655335, 327680, 0, -720871, 327680, 0, -786407, 327680, 0, -851943, 327680, 0, -917479, 327680, 0, -983015, 327680, 0, -1048551, 327680, 0, -1114087, 327680, 0, -1179623, 327680, 0, -1245159, 327680, 0, -1310695, 327680, 0, -1376231, 327680, 0, -1441767, 327680, 0, -1507303, 327680, 0, -1572839, 327680, 0, -1638375, 327680, 0, -1703911, 327680, 0, -1769447, 327680, 0, -1834983, 327680, 0, -1900519, 327680, 0, -1966055, 327680, 0, -2031591, 327680, 0, -2097127, 327680, 0, -2162663, 327680, 0, -2228199, 327680, 0, -2293735, 327680, 0, -2359271, 327680, 0, -2424807, 327680, 0, -2490343, 327680, 0, -2555879, 327680, 0, -2621415, 327680, 0, -2686951, 327680, 0, -2752487, 327680, 0, -2818023, 327680, 0, -2883559, 327680, 0, -2949095, 327680, 0, -3014631, 327680, 0, -3080167, 327680, 0, -3145703, 327680, 0, -3211239, 327680, 0, -3276775, 327680, 0, -3342311, 327680, 0, -3407847, 327680, 0, -3473383, 327680, 0, -3538919, 327680, 0, -3604455, 327680, 0, -3669991, 327680, 0, -3735527, 327680, 0, -3801063, 327680, 0, -3866599, 327680, 0, -3932135, 327680, 0, -3997671, 327680, 0, -4063207, 327680, 0, -4128743, 327680, 0, -4194279, 327680, 0, -2424828, 327680, 0, -2490364, 327680, 0, -2555900, 327680, 0, -2621436, 327680, 0, -2686972, 327680, 0, -2752508, 327680, 0, -2818044, 327680, 0, -2883580, 327680, 0, -2949116, 327680, 0, -3014652, 327680, 0, -3080188, 327680, 0, -3145724, 327680, 0, -3211260, 327680, 0, -3276796, 327680, 0, -3342332, 327680, 0, -3407868, 327680, 0, -3473404, 327680, 0, -3538940, 327680, 0, -3604476, 327680, 0, -3670012, 327680, 0, -3735548, 327680, 0, -3801084, 327680, 0, -3866620, 327680, 0, -3932156, 327680, 0, -3997692, 327680, 0, -4063228, 327680, 0, -4128764, 327680, 0, -4194300, 327680, 0)
 script = ExtResource("2_7nbtq")
-scroll_speed = 10.0
+scroll_speed = 35.0
 
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(240, 232)
@@ -409,8 +410,350 @@ angular_damp_mode = 1
 position = Vector2(157, 162)
 angular_damp_mode = 1
 
+[node name="Firewall16" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-163, 147)
+angular_damp_mode = 1
+
+[node name="Firewall17" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-171, 147)
+angular_damp_mode = 1
+
+[node name="Firewall18" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-179, 147)
+angular_damp_mode = 1
+
+[node name="Firewall73" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-83, 147)
+angular_damp_mode = 1
+
+[node name="Firewall74" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-91, 147)
+angular_damp_mode = 1
+
+[node name="Firewall75" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-99, 147)
+angular_damp_mode = 1
+
+[node name="Firewall76" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-107, 147)
+angular_damp_mode = 1
+
+[node name="Firewall77" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-107, 147)
+angular_damp_mode = 1
+
+[node name="Firewall78" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-115, 147)
+angular_damp_mode = 1
+
+[node name="Firewall79" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-123, 147)
+angular_damp_mode = 1
+
+[node name="Firewall85" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-131, 147)
+angular_damp_mode = 1
+
+[node name="Firewall86" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-139, 147)
+angular_damp_mode = 1
+
+[node name="Firewall87" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-147, 147)
+angular_damp_mode = 1
+
+[node name="Firewall88" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-147, 147)
+angular_damp_mode = 1
+
+[node name="Firewall89" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-155, 147)
+angular_damp_mode = 1
+
+[node name="Firewall90" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-11, 147)
+angular_damp_mode = 1
+
+[node name="Firewall91" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-19, 147)
+angular_damp_mode = 1
+
+[node name="Firewall92" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-27, 147)
+angular_damp_mode = 1
+
+[node name="Firewall93" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-35, 147)
+angular_damp_mode = 1
+
+[node name="Firewall94" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-35, 147)
+angular_damp_mode = 1
+
+[node name="Firewall95" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-43, 147)
+angular_damp_mode = 1
+
+[node name="Firewall96" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-51, 147)
+angular_damp_mode = 1
+
+[node name="Firewall97" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-59, 147)
+angular_damp_mode = 1
+
+[node name="Firewall98" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-67, 147)
+angular_damp_mode = 1
+
+[node name="Firewall99" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-75, 147)
+angular_damp_mode = 1
+
+[node name="Firewall100" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-75, 147)
+angular_damp_mode = 1
+
+[node name="Firewall101" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-83, 147)
+angular_damp_mode = 1
+
+[node name="Firewall102" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(69, 147)
+angular_damp_mode = 1
+
+[node name="Firewall103" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(61, 147)
+angular_damp_mode = 1
+
+[node name="Firewall104" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(53, 147)
+angular_damp_mode = 1
+
+[node name="Firewall105" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(45, 147)
+angular_damp_mode = 1
+
+[node name="Firewall106" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(45, 147)
+angular_damp_mode = 1
+
+[node name="Firewall107" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(37, 147)
+angular_damp_mode = 1
+
+[node name="Firewall108" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(29, 147)
+angular_damp_mode = 1
+
+[node name="Firewall109" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(21, 147)
+angular_damp_mode = 1
+
+[node name="Firewall110" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(13, 147)
+angular_damp_mode = 1
+
+[node name="Firewall111" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(5, 147)
+angular_damp_mode = 1
+
+[node name="Firewall112" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(5, 147)
+angular_damp_mode = 1
+
+[node name="Firewall113" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-3, 147)
+angular_damp_mode = 1
+
+[node name="Firewall114" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(149, 147)
+angular_damp_mode = 1
+
+[node name="Firewall115" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(141, 147)
+angular_damp_mode = 1
+
+[node name="Firewall116" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(133, 147)
+angular_damp_mode = 1
+
+[node name="Firewall117" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(125, 147)
+angular_damp_mode = 1
+
+[node name="Firewall118" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(125, 147)
+angular_damp_mode = 1
+
+[node name="Firewall119" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(117, 147)
+angular_damp_mode = 1
+
+[node name="Firewall120" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(109, 147)
+angular_damp_mode = 1
+
+[node name="Firewall121" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(101, 147)
+angular_damp_mode = 1
+
+[node name="Firewall122" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(93, 147)
+angular_damp_mode = 1
+
+[node name="Firewall123" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(85, 147)
+angular_damp_mode = 1
+
+[node name="Firewall124" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(85, 147)
+angular_damp_mode = 1
+
+[node name="Firewall125" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(77, 147)
+angular_damp_mode = 1
+
+[node name="Firewall126" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(181, 147)
+angular_damp_mode = 1
+
+[node name="Firewall127" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(173, 147)
+angular_damp_mode = 1
+
+[node name="Firewall128" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(165, 147)
+angular_damp_mode = 1
+
+[node name="Firewall129" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(165, 147)
+angular_damp_mode = 1
+
+[node name="Firewall130" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(157, 147)
+angular_damp_mode = 1
+
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_kb2gi")]
 position = Vector2(96, 264)
 
-[node name="Bat" parent="." instance=ExtResource("5_05hpr")]
-position = Vector2(320, 168)
+[node name="Segment1" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="DroppableBlocks" type="Node2D" parent="Segment1"]
+
+[node name="DroppableBlock" parent="Segment1/DroppableBlocks" instance=ExtResource("3_erwvd")]
+position = Vector2(296, 40)
+
+[node name="DroppableBlock7" parent="Segment1/DroppableBlocks" instance=ExtResource("3_erwvd")]
+position = Vector2(312, 40)
+
+[node name="DroppableBlock8" parent="Segment1/DroppableBlocks" instance=ExtResource("3_erwvd")]
+position = Vector2(328, 40)
+
+[node name="DroppableBlock2" parent="Segment1/DroppableBlocks" instance=ExtResource("3_erwvd")]
+position = Vector2(280, 40)
+
+[node name="DroppableBlock3" parent="Segment1/DroppableBlocks" instance=ExtResource("3_erwvd")]
+position = Vector2(264, 40)
+
+[node name="DroppableBlock4" parent="Segment1/DroppableBlocks" instance=ExtResource("3_erwvd")]
+position = Vector2(184, 40)
+
+[node name="DroppableBlock9" parent="Segment1/DroppableBlocks" instance=ExtResource("3_erwvd")]
+position = Vector2(168, 40)
+
+[node name="DroppableBlock10" parent="Segment1/DroppableBlocks" instance=ExtResource("3_erwvd")]
+position = Vector2(152, 40)
+
+[node name="DroppableBlock5" parent="Segment1/DroppableBlocks" instance=ExtResource("3_erwvd")]
+position = Vector2(216, 40)
+
+[node name="DroppableBlock6" parent="Segment1/DroppableBlocks" instance=ExtResource("3_erwvd")]
+position = Vector2(200, 40)
+
+[node name="RegularBlocks" type="Node2D" parent="Segment1"]
+
+[node name="regular_body" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(216, 200)
+
+[node name="regular_body2" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(232, 200)
+
+[node name="regular_body9" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(240, 40)
+
+[node name="regular_body10" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(240, 56)
+
+[node name="regular_body11" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(240, 72)
+
+[node name="regular_body15" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(240, 88)
+
+[node name="regular_body12" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(240, 24)
+
+[node name="regular_body13" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(240, 8)
+
+[node name="regular_body14" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(240, -8)
+
+[node name="regular_body3" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(248, 200)
+
+[node name="regular_body4" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(192, -40)
+
+[node name="regular_body20" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(192, -56)
+
+[node name="regular_body21" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(192, -72)
+
+[node name="regular_body22" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(192, -88)
+
+[node name="regular_body23" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(192, -104)
+
+[node name="regular_body24" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(192, -120)
+
+[node name="regular_body16" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(88, -40)
+
+[node name="regular_body17" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(104, -40)
+
+[node name="regular_body18" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(120, -40)
+
+[node name="regular_body19" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(136, -40)
+
+[node name="regular_body5" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(344, 120)
+
+[node name="regular_body6" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(360, 120)
+
+[node name="regular_body7" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(376, 120)
+
+[node name="regular_body8" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(392, 120)
+
+[node name="regular_body25" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(344, -200)
+
+[node name="regular_body26" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(360, -200)
+
+[node name="regular_body27" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(376, -200)
+
+[node name="regular_body28" parent="Segment1/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(392, -200)
