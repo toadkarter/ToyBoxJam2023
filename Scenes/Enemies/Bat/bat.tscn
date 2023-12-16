@@ -45,17 +45,18 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_fycm3"]
-radius = 4.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_h8jwc"]
+radius = 6.08276
 
 [node name="bat" type="StaticBody2D" groups=["Enemy"]]
-scale = Vector2(2, 2)
 collision_layer = 2
+collision_mask = 3
 script = ExtResource("1_7booi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_tppa5")
-frame_progress = 0.4359
+frame_progress = 0.252539
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_fycm3")
+shape = SubResource("CircleShape2D_h8jwc")
