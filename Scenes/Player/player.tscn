@@ -89,3 +89,7 @@ animation = &"fall"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_g50ed")
+
+[node name="OffScreenNotifier" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-5, -5)
+rect = Rect2(0, 0, 10, 10)

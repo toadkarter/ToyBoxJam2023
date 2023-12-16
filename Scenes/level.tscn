@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dpb656nt13lxy"]
+[gd_scene load_steps=9 format=3 uid="uid://dpb656nt13lxy"]
 
 [ext_resource type="Texture2D" uid="uid://br3238kxwqemf" path="res://Art/Sprites/tbj2_startcart2spr.png" id="1_58vo4"]
 [ext_resource type="Script" path="res://Scenes/level.gd" id="2_7nbtq"]
 [ext_resource type="PackedScene" uid="uid://ctn5h44wck1vy" path="res://Scenes/Player/player.tscn" id="2_kb2gi"]
 [ext_resource type="PackedScene" uid="uid://b66s52nkr67ui" path="res://Scenes/Blocks/Droppable/droppable_block.tscn" id="3_erwvd"]
 [ext_resource type="PackedScene" uid="uid://bhct83woj4glf" path="res://Scenes/Enemies/Skull/skull.tscn" id="4_uxhqa"]
+[ext_resource type="PackedScene" uid="uid://b4oqsl24gjuye" path="res://Scenes/Enemies/Projectiles/Firewall/firewall.tscn" id="6_6kv43"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qdxlv"]
 texture = ExtResource("1_58vo4")
@@ -218,3 +219,293 @@ position = Vector2(168, 240)
 
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(240, 232)
+
+[node name="FirewallScenes" type="Node2D" parent="Camera"]
+
+[node name="Firewall" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-232, 152)
+
+[node name="Firewall2" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-240, 152)
+
+[node name="Firewall3" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-248, 152)
+
+[node name="Firewall4" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-256, 152)
+
+[node name="Firewall5" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-256, 152)
+
+[node name="Firewall6" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-264, 152)
+
+[node name="Firewall7" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-272, 152)
+
+[node name="Firewall8" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-280, 152)
+
+[node name="Firewall9" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-288, 152)
+
+[node name="Firewall10" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-296, 152)
+
+[node name="Firewall11" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-296, 152)
+
+[node name="Firewall12" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-304, 152)
+
+[node name="Firewall13" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-152, 152)
+
+[node name="Firewall14" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-160, 152)
+
+[node name="Firewall15" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-168, 152)
+
+[node name="Firewall16" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-176, 152)
+
+[node name="Firewall17" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-176, 152)
+
+[node name="Firewall18" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-184, 152)
+
+[node name="Firewall19" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-192, 152)
+
+[node name="Firewall20" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-200, 152)
+
+[node name="Firewall21" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-208, 152)
+
+[node name="Firewall22" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-216, 152)
+
+[node name="Firewall23" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-216, 152)
+
+[node name="Firewall24" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-224, 152)
+
+[node name="Firewall25" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-72, 152)
+
+[node name="Firewall26" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-80, 152)
+
+[node name="Firewall27" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-88, 152)
+
+[node name="Firewall28" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-96, 152)
+
+[node name="Firewall29" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-96, 152)
+
+[node name="Firewall30" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-104, 152)
+
+[node name="Firewall31" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-112, 152)
+
+[node name="Firewall32" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-120, 152)
+
+[node name="Firewall33" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-128, 152)
+
+[node name="Firewall34" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-136, 152)
+
+[node name="Firewall35" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-136, 152)
+
+[node name="Firewall36" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-144, 152)
+
+[node name="Firewall37" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(0, 152)
+
+[node name="Firewall38" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-8, 152)
+
+[node name="Firewall39" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-16, 152)
+
+[node name="Firewall40" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-24, 152)
+
+[node name="Firewall41" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-24, 152)
+
+[node name="Firewall42" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-32, 152)
+
+[node name="Firewall43" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-40, 152)
+
+[node name="Firewall44" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-48, 152)
+
+[node name="Firewall45" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-56, 152)
+
+[node name="Firewall46" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-64, 152)
+
+[node name="Firewall47" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-64, 152)
+
+[node name="Firewall48" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(-72, 152)
+
+[node name="Firewall49" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(80, 152)
+
+[node name="Firewall50" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(72, 152)
+
+[node name="Firewall51" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(64, 152)
+
+[node name="Firewall52" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(56, 152)
+
+[node name="Firewall53" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(56, 152)
+
+[node name="Firewall54" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(48, 152)
+
+[node name="Firewall55" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(40, 152)
+
+[node name="Firewall56" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(32, 152)
+
+[node name="Firewall57" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(24, 152)
+
+[node name="Firewall58" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(16, 152)
+
+[node name="Firewall59" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(16, 152)
+
+[node name="Firewall60" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(8, 152)
+
+[node name="Firewall61" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(160, 152)
+
+[node name="Firewall62" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(152, 152)
+
+[node name="Firewall63" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(144, 152)
+
+[node name="Firewall64" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(136, 152)
+
+[node name="Firewall65" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(136, 152)
+
+[node name="Firewall66" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(128, 152)
+
+[node name="Firewall67" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(120, 152)
+
+[node name="Firewall68" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(112, 152)
+
+[node name="Firewall69" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(104, 152)
+
+[node name="Firewall70" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(96, 152)
+
+[node name="Firewall71" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(96, 152)
+
+[node name="Firewall72" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(88, 152)
+
+[node name="Firewall73" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(240, 152)
+
+[node name="Firewall74" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(232, 152)
+
+[node name="Firewall75" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(224, 152)
+
+[node name="Firewall76" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(216, 152)
+
+[node name="Firewall77" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(216, 152)
+
+[node name="Firewall78" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(208, 152)
+
+[node name="Firewall79" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(200, 152)
+
+[node name="Firewall80" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(192, 152)
+
+[node name="Firewall81" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(184, 152)
+
+[node name="Firewall82" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(176, 152)
+
+[node name="Firewall83" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(176, 152)
+
+[node name="Firewall84" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(168, 152)
+
+[node name="Firewall85" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(320, 152)
+
+[node name="Firewall86" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(312, 152)
+
+[node name="Firewall87" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(304, 152)
+
+[node name="Firewall88" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(296, 152)
+
+[node name="Firewall89" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(296, 152)
+
+[node name="Firewall90" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(288, 152)
+
+[node name="Firewall91" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(280, 152)
+
+[node name="Firewall92" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(272, 152)
+
+[node name="Firewall93" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(264, 152)
+
+[node name="Firewall94" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(256, 152)
+
+[node name="Firewall95" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(256, 152)
+
+[node name="Firewall96" parent="Camera/FirewallScenes" instance=ExtResource("6_6kv43")]
+position = Vector2(248, 152)

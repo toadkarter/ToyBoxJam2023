@@ -52,7 +52,7 @@ script = ExtResource("1_clvry")
 position = Vector2(0, 4.76837e-07)
 rotation = -1.5708
 sprite_frames = SubResource("SpriteFrames_f83pt")
-frame_progress = 0.904664
+frame_progress = 0.455063
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, 0)
