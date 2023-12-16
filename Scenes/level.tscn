@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dpb656nt13lxy"]
+[gd_scene load_steps=5 format=3 uid="uid://dpb656nt13lxy"]
 
 [ext_resource type="Texture2D" uid="uid://br3238kxwqemf" path="res://Art/Sprites/tbj2_startcart2spr.png" id="1_58vo4"]
+[ext_resource type="PackedScene" uid="uid://ctn5h44wck1vy" path="res://Scenes/Player/player.tscn" id="2_kb2gi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qdxlv"]
 texture = ExtResource("1_58vo4")
@@ -171,4 +172,7 @@ sources/0 = SubResource("TileSetAtlasSource_qdxlv")
 [node name="level" type="TileMap"]
 tile_set = SubResource("TileSet_ygvbg")
 format = 2
-layer_0/tile_data = PackedInt32Array(262144, 65536, 0, 262145, 65536, 0, 262146, 65536, 0, 262147, 65536, 0, 262148, 65536, 0, 262149, 65536, 0, 262150, 65536, 0, 262151, 65536, 0, 262152, 65536, 0, 262153, 65536, 0, 262154, 65536, 0, 262155, 65536, 0, 262156, 65536, 0, 262157, 65536, 0, 262158, 65536, 0, 262159, 65536, 0, 262160, 65536, 0, 262161, 65536, 0, 262162, 65536, 0, 262163, 65536, 0, 262164, 65536, 0, 262165, 65536, 0, 262166, 65536, 0, 262167, 65536, 0, 262168, 65536, 0, 262169, 65536, 0, 262170, 65536, 0, 262171, 65536, 0, 262172, 65536, 0)
+layer_0/tile_data = PackedInt32Array(1114112, 65536, 0, 1114113, 65536, 0, 1114114, 65536, 0, 1114115, 65536, 0, 1114116, 65536, 0, 1114117, 65536, 0, 1114118, 65536, 0, 1114119, 65536, 0, 1114120, 65536, 0, 1114121, 65536, 0, 1114122, 65536, 0, 1114123, 65536, 0, 1114124, 65536, 0, 1114125, 65536, 0, 1114126, 65536, 0, 1114127, 65536, 0, 1114128, 65536, 0, 1114129, 65536, 0, 1114130, 65536, 0, 1114131, 65536, 0, 1114132, 65536, 0, 1114133, 65536, 0, 1114134, 65536, 0, 1114135, 65536, 0, 1114136, 65536, 0, 1114137, 65536, 0, 1114138, 65536, 0, 1114139, 65536, 0, 1114140, 65536, 0)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_kb2gi")]
+position = Vector2(36, 239)
