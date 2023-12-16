@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dd0rki4hvdmcb"]
+
+[ext_resource type="Texture2D" uid="uid://br3238kxwqemf" path="res://Art/Sprites/tbj2_startcart2spr.png" id="1_kvawb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_swrv7"]
+size = Vector2(16, 16)
+
+[node name="regular_body" type="StaticBody2D"]
+collision_layer = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_kvawb")
+region_enabled = true
+region_rect = Rect2(32, 8, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_swrv7")
