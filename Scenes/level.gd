@@ -32,9 +32,12 @@ func _process(delta: float) -> void:
 
 func _on_player_death() -> void:
 	scroll_level = false
+	await get_tree().create_timer(seconds_between_respawn).timeout
+	reset_level()
 
 
 func reset_level() -> void:
+	# TODO: Add UI message
 	if player != null:
 		player.queue_free()
 
