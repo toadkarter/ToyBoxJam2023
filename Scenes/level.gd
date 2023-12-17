@@ -3,14 +3,19 @@ extends TileMap
 
 const FIREWALL_OFFSET: float = 168.0 
 
-
+@export_group("Debug Options")
 @export var debug_stop_scrolling: bool = false
 @export var debug_start_at_checkpoint_number: int = -1
+
+@export_group("Timing")
 @export var scroll_speed: float = 50
 @export var seconds_between_respawn: float = 1.0
+
+@export_group("Scene References")
 @export var player_scene: PackedScene
 @export var checkpoints: Array[Area2D]
 
+@export_group("HUD Text")
 @export var death_texts: Array[String]
 @export var checkpoint_text: String
 
