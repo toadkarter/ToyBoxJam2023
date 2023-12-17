@@ -6,6 +6,7 @@ const FIREWALL_OFFSET: float = 168.0
 @export_group("Debug Options")
 @export var debug_stop_scrolling: bool = false
 @export var debug_start_at_checkpoint_number: int = -1
+@export var debug_stop_music: bool = false
 
 @export_group("Timing")
 @export var scroll_speed: float = 50
@@ -33,7 +34,8 @@ var scroll_level: bool = true
 
 
 func _ready() -> void:
-	music_player.play()
+	if !debug_stop_music:
+		music_player.play()
 	_init_debug_options()
 	_init_checkpoints()
 	reset_level()
