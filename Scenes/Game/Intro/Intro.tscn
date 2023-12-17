@@ -1,33 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://dbiyjbads78pw"]
+[gd_scene load_steps=13 format=3 uid="uid://dbiyjbads78pw"]
 
 [ext_resource type="Script" path="res://Scenes/Game/Intro/Intro.gd" id="1_b7egr"]
 [ext_resource type="FontFile" uid="uid://cg21k62fnhog5" path="res://Art/Sprites/vanilla_font_sprites.png" id="2_hvr0s"]
 [ext_resource type="Texture2D" uid="uid://br3238kxwqemf" path="res://Art/Sprites/tbj2_startcart2spr.png" id="3_41hcq"]
+[ext_resource type="FontFile" uid="uid://wqcvt7nm481m" path="res://Art/Sprites/golden_font_sprites.png" id="3_528m6"]
 [ext_resource type="Texture2D" uid="uid://8mxwquuegx8v" path="res://Art/Sprites/worldrooms.png" id="3_vla83"]
-
-[sub_resource type="Animation" id="Animation_wukrq"]
-resource_name = "press_start_fade_in_and_out"
-length = 1.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("HUD/PressStartLabel:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.7, 1.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
 
 [sub_resource type="Animation" id="Animation_e0x50"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("HUD/PressStartLabel:self_modulate")
+tracks/0/path = NodePath("HUD/TitleLabel:self_modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -36,11 +20,114 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HUD/SubtitleLabel:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sky:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.890196, 0.890196, 0.890196, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_xfx0v"]
+resource_name = "title_fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HUD/TitleLabel:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HUD/SubtitleLabel:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_t1piw"]
+resource_name = "sky_darken"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sky:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.890196, 0.890196, 0.890196, 1), Color(0, 0, 0, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ufb3y"]
 _data = {
 "RESET": SubResource("Animation_e0x50"),
-"press_start_fade_in_and_out": SubResource("Animation_wukrq")
+"sky_darken": SubResource("Animation_t1piw"),
+"title_fade": SubResource("Animation_xfx0v")
+}
+
+[sub_resource type="Animation" id="Animation_tu6a8"]
+resource_name = "sky_darken"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sky:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ocnkk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sky:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_47rfn"]
+_data = {
+"RESET": SubResource("Animation_ocnkk"),
+"sky_darken": SubResource("Animation_tu6a8")
 }
 
 [node name="Intro" type="Node2D"]
@@ -48,329 +135,4044 @@ script = ExtResource("1_b7egr")
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
-[node name="PressStartLabel" type="Label" parent="HUD"]
+[node name="TitleLabel" type="Label" parent="HUD"]
 self_modulate = Color(1, 1, 1, 0)
-anchors_preset = 7
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -102.0
-offset_top = -27.9999
-offset_right = 106.0
-offset_bottom = -4.99994
+anchor_bottom = 0.5
+offset_left = -44.8
+offset_top = -53.2
+offset_right = 51.2
+offset_bottom = -30.2
 grow_horizontal = 2
-grow_vertical = 0
-scale = Vector2(1.2, 1.2)
-pivot_offset = Vector2(106, 11)
-theme_override_fonts/font = ExtResource("2_hvr0s")
-text = "-- PRESS SPACE TO START --"
+grow_vertical = 2
+scale = Vector2(2.5, 2.5)
+pivot_offset = Vector2(48.8, 11.2)
+theme_override_fonts/font = ExtResource("3_528m6")
+text = "THE LAST SKY"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="SubtitleLabel" type="Label" parent="HUD"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.8001
+offset_top = -29.2
+offset_right = 111.2
+offset_bottom = -6.20001
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_hvr0s")
+text = "-- A GAME BY TOADKARTER --"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HUDAnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "title_fade"
 libraries = {
 "": SubResource("AnimationLibrary_ufb3y")
 }
 
-[node name="Roof" type="Node2D" parent="."]
+[node name="Tower" type="Node2D" parent="."]
 
-[node name="RoofPiece" type="Sprite2D" parent="Roof"]
+[node name="RoofPiece" type="Sprite2D" parent="Tower"]
 position = Vector2(48, 240)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(48, 8, 16, 16)
 
-[node name="RoofPiece2" type="Sprite2D" parent="Roof"]
+[node name="RoofPiece2" type="Sprite2D" parent="Tower"]
 position = Vector2(80, 240)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(48, 8, 16, 16)
 
-[node name="RoofPiece3" type="Sprite2D" parent="Roof"]
+[node name="RoofPiece3" type="Sprite2D" parent="Tower"]
 position = Vector2(112, 240)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(48, 8, 16, 16)
 
-[node name="RoofPiece4" type="Sprite2D" parent="Roof"]
+[node name="RoofPiece4" type="Sprite2D" parent="Tower"]
 position = Vector2(144, 240)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(48, 8, 16, 16)
 
-[node name="RoofPiece5" type="Sprite2D" parent="Roof"]
+[node name="RoofPiece5" type="Sprite2D" parent="Tower"]
 position = Vector2(176, 240)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(48, 8, 16, 16)
 
-[node name="RoofPiece6" type="Sprite2D" parent="Roof"]
+[node name="RoofPiece6" type="Sprite2D" parent="Tower"]
 position = Vector2(208, 240)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(48, 8, 16, 16)
 
-[node name="RoofPiece7" type="Sprite2D" parent="Roof"]
+[node name="RoofPiece7" type="Sprite2D" parent="Tower"]
 position = Vector2(240, 240)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(48, 8, 16, 16)
 
-[node name="RoofPiece8" type="Sprite2D" parent="Roof"]
+[node name="RoofPiece8" type="Sprite2D" parent="Tower"]
 position = Vector2(272, 240)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(48, 8, 16, 16)
 
-[node name="RoofPiece9" type="Sprite2D" parent="Roof"]
+[node name="RoofPiece9" type="Sprite2D" parent="Tower"]
 position = Vector2(304, 240)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(48, 8, 16, 16)
 
-[node name="RoofNeck" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck" type="Sprite2D" parent="Tower"]
 position = Vector2(80, 272)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(64, 8, 16, 16)
 
-[node name="RoofNeck2" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck2" type="Sprite2D" parent="Tower"]
 position = Vector2(112, 272)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(64, 8, 16, 16)
 
-[node name="RoofNeck3" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck3" type="Sprite2D" parent="Tower"]
 position = Vector2(144, 272)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(64, 8, 16, 16)
 
-[node name="RoofNeck4" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck4" type="Sprite2D" parent="Tower"]
 position = Vector2(176, 272)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(64, 8, 16, 16)
 
-[node name="RoofNeck5" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck5" type="Sprite2D" parent="Tower"]
 position = Vector2(208, 272)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(64, 8, 16, 16)
 
-[node name="RoofNeck6" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck6" type="Sprite2D" parent="Tower"]
 position = Vector2(240, 272)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(64, 8, 16, 16)
 
-[node name="RoofNeck7" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck7" type="Sprite2D" parent="Tower"]
 position = Vector2(272, 272)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(64, 8, 16, 16)
 
-[node name="RoofNeck8" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck8" type="Sprite2D" parent="Tower"]
 position = Vector2(48, 336)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(96, 8, 16, 16)
 
-[node name="RoofNeck24" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck24" type="Sprite2D" parent="Tower"]
 position = Vector2(16, 368)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(96, 8, 16, 16)
 
-[node name="RoofNeck16" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck37" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 400)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck16" type="Sprite2D" parent="Tower"]
 position = Vector2(304, 336)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(112, 8, 16, 16)
 
-[node name="RoofNeck25" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck25" type="Sprite2D" parent="Tower"]
 position = Vector2(336, 368)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(112, 8, 16, 16)
 
-[node name="RoofNeck9" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck68" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 400)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck9" type="Sprite2D" parent="Tower"]
 position = Vector2(112, 304)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(64, 8, 16, 16)
 
-[node name="RoofNeck15" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck15" type="Sprite2D" parent="Tower"]
 position = Vector2(80, 304)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(64, 8, 16, 16)
 
-[node name="RoofNeck10" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck10" type="Sprite2D" parent="Tower"]
 position = Vector2(144, 304)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(64, 8, 16, 16)
 
-[node name="RoofNeck11" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck11" type="Sprite2D" parent="Tower"]
 position = Vector2(176, 304)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(64, 8, 16, 16)
 
-[node name="RoofNeck12" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck12" type="Sprite2D" parent="Tower"]
 position = Vector2(208, 304)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(64, 8, 16, 16)
 
-[node name="RoofNeck13" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck13" type="Sprite2D" parent="Tower"]
 position = Vector2(240, 304)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(64, 8, 16, 16)
 
-[node name="RoofNeck14" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck14" type="Sprite2D" parent="Tower"]
 position = Vector2(272, 304)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(64, 8, 16, 16)
 
-[node name="RoofNeck17" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck17" type="Sprite2D" parent="Tower"]
 position = Vector2(112, 336)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(64, 8, 16, 16)
 
-[node name="RoofNeck18" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck18" type="Sprite2D" parent="Tower"]
 position = Vector2(80, 336)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(64, 8, 16, 16)
 
-[node name="RoofNeck19" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck19" type="Sprite2D" parent="Tower"]
 position = Vector2(144, 336)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(64, 8, 16, 16)
 
-[node name="RoofNeck20" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck20" type="Sprite2D" parent="Tower"]
 position = Vector2(176, 336)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(64, 8, 16, 16)
 
-[node name="RoofNeck21" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck21" type="Sprite2D" parent="Tower"]
 position = Vector2(208, 336)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(64, 8, 16, 16)
 
-[node name="RoofNeck22" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck22" type="Sprite2D" parent="Tower"]
 position = Vector2(240, 336)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(64, 8, 16, 16)
 
-[node name="RoofNeck23" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck23" type="Sprite2D" parent="Tower"]
 position = Vector2(272, 336)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(64, 8, 16, 16)
 
-[node name="RoofNeck26" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck26" type="Sprite2D" parent="Tower"]
 position = Vector2(112, 368)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(64, 8, 16, 16)
 
-[node name="RoofNeck27" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck27" type="Sprite2D" parent="Tower"]
 position = Vector2(80, 368)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(64, 8, 16, 16)
 
-[node name="RoofNeck34" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck34" type="Sprite2D" parent="Tower"]
 position = Vector2(48, 368)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(64, 8, 16, 16)
 
-[node name="RoofNeck28" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck28" type="Sprite2D" parent="Tower"]
 position = Vector2(144, 368)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(64, 8, 16, 16)
 
-[node name="RoofNeck29" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck29" type="Sprite2D" parent="Tower"]
 position = Vector2(176, 368)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(64, 8, 16, 16)
 
-[node name="RoofNeck30" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck30" type="Sprite2D" parent="Tower"]
 position = Vector2(208, 368)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(64, 8, 16, 16)
 
-[node name="RoofNeck31" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck31" type="Sprite2D" parent="Tower"]
 position = Vector2(240, 368)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(64, 8, 16, 16)
 
-[node name="RoofNeck32" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck32" type="Sprite2D" parent="Tower"]
 position = Vector2(272, 368)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
 region_rect = Rect2(64, 8, 16, 16)
 
-[node name="RoofNeck33" type="Sprite2D" parent="Roof"]
+[node name="RoofNeck33" type="Sprite2D" parent="Tower"]
 position = Vector2(304, 368)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck35" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 400)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck36" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 400)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck38" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 400)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck39" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 400)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck40" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 400)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck41" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 400)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck42" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 400)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck43" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 400)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck44" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 400)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck45" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck69" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck46" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck47" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck48" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck49" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck50" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck51" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck52" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck53" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck54" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 432)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck55" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 464)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck70" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 464)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck56" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 464)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck57" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 464)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck58" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 464)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck59" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 464)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck60" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 464)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck61" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 464)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck62" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 464)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck63" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 464)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck64" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 464)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck65" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 496)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck71" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 496)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck66" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 496)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck67" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 496)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck72" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 496)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck73" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 496)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck74" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 496)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck75" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 496)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck76" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 496)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck77" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 496)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck78" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 496)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck79" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 528)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck80" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 528)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck81" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 528)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck82" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 528)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck83" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 528)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck84" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 528)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck85" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 528)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck86" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 528)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck87" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 528)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck88" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 528)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck89" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 528)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck90" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 560)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck91" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 560)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck92" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 560)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck93" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 560)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck94" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 560)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck95" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 560)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck96" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 560)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck97" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 560)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck98" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 560)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck99" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 560)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck100" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 560)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck101" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 592)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck102" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 592)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck103" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 592)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck104" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 592)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck105" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 592)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck106" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 592)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck107" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 592)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck108" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 592)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck109" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 592)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck110" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 592)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck111" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 592)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck112" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 624)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck113" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 624)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck114" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 624)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck115" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 624)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck116" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 624)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck117" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 624)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck118" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 624)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck119" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 624)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck120" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 624)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck121" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 624)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck122" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 624)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck123" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 656)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck124" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 656)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck125" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 656)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck126" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 656)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck127" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 656)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck128" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 656)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck129" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 656)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck130" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 656)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck131" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 656)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck132" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 656)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck133" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 656)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck134" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 688)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck135" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 688)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck136" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 688)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck137" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 688)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck138" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 688)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck139" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 688)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck140" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 688)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck141" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 688)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck142" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 688)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck143" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 688)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck144" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 688)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck145" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 720)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck146" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 720)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck147" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 720)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck148" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 720)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck149" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 720)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck150" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 720)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck151" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 720)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck152" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 720)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck153" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 720)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck154" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 720)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck155" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 720)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck156" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 752)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck157" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 752)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck158" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 752)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck159" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 752)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck160" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 752)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck161" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 752)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck162" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 752)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck163" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 752)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck164" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 752)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck165" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 752)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck166" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 752)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck167" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 784)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck168" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 784)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck169" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 784)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck170" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 784)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck171" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 784)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck172" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 784)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck173" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 784)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck174" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 784)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck175" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 784)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck176" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 784)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck177" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 784)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck178" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 816)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck179" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 816)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck180" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 816)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck181" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 816)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck182" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 816)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck183" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 816)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck184" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 816)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck185" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 816)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck186" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 816)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck187" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 816)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck188" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 816)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck189" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 848)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck190" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 848)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck191" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 848)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck192" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 848)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck193" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 848)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck194" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 848)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck195" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 848)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck196" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 848)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck197" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 848)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck198" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 848)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck199" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 848)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck200" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 880)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck201" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 880)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck202" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 880)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck203" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 880)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck204" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 880)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck205" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 880)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck206" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 880)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck207" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 880)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck208" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 880)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck209" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 880)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck210" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 880)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck211" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 912)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck212" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 912)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck213" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 912)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck214" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 912)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck215" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 912)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck216" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 912)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck217" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 912)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck218" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 912)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck219" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 912)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck220" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 912)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck221" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 912)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck222" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 944)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck223" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 944)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck224" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 944)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck225" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 944)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck226" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 944)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck227" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 944)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck228" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 944)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck229" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 944)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck230" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 944)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck231" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 944)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck232" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 944)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck233" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 976)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck234" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 976)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck235" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 976)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck236" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 976)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck237" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 976)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck238" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 976)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck239" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 976)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck240" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 976)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck241" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 976)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck242" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 976)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck243" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 976)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck244" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 1008)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck245" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 1008)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck246" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 1008)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck247" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 1008)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck248" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 1008)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck249" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 1008)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck250" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 1008)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck251" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 1008)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck252" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 1008)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck253" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 1008)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck254" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 1008)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck255" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 1040)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck256" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 1040)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck257" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 1040)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck258" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 1040)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck259" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 1040)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck260" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 1040)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck261" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 1040)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck262" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 1040)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck263" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 1040)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck264" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 1040)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck265" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 1040)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck266" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 1072)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck267" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 1072)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck268" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 1072)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck269" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 1072)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck270" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 1072)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck271" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 1072)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck272" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 1072)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck273" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 1072)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck274" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 1072)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck275" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 1072)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck276" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 1072)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck277" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 1104)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck278" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 1104)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck279" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 1104)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck280" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 1104)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck281" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 1104)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck282" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 1104)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck283" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 1104)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck284" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 1104)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck285" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 1104)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck286" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 1104)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck287" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 1104)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck288" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 1136)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck289" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 1136)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck290" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 1136)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck291" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 1136)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck292" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 1136)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck293" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 1136)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck294" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 1136)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck295" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 1136)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck296" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 1136)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck297" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 1136)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck298" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 1136)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck299" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 1168)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck300" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 1168)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck301" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 1168)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck302" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 1168)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck303" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 1168)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck304" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 1168)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck305" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 1168)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck306" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 1168)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck307" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 1168)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck308" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 1168)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck309" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 1168)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck310" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 1200)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck311" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 1200)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck312" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 1200)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck313" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 1200)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck314" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 1200)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck315" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 1200)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck316" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 1200)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck317" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 1200)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck318" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 1200)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck319" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 1200)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck320" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 1200)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck321" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 1232)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck322" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 1232)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck323" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 1232)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck324" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 1232)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck325" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 1232)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck326" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 1232)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck327" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 1232)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck328" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 1232)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck329" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 1232)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck330" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 1232)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck331" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 1232)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck332" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 1264)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck333" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 1264)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck334" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 1264)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck335" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 1264)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck336" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 1264)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck337" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 1264)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck338" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 1264)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck339" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 1264)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck340" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 1264)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck341" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 1264)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck342" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 1264)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck343" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 1296)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck344" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 1296)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck345" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 1296)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck346" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 1296)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck347" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 1296)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck348" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 1296)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck349" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 1296)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck350" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 1296)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck351" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 1296)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck352" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 1296)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck353" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 1296)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck354" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 1328)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck355" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 1328)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck356" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 1328)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck357" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 1328)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck358" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 1328)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck359" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 1328)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck360" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 1328)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck361" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 1328)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck362" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 1328)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck363" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 1328)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck364" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 1328)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck365" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 1360)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck366" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 1360)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck367" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 1360)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck368" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 1360)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck369" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 1360)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck370" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 1360)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck371" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 1360)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck372" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 1360)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck373" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 1360)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck374" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 1360)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck375" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 1360)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck376" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 1392)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck377" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 1392)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck378" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 1392)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck379" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 1392)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck380" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 1392)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck381" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 1392)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck382" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 1392)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck383" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 1392)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck384" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 1392)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck385" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 1392)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck386" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 1392)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck387" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 1424)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck388" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 1424)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck389" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 1424)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck390" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 1424)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck391" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 1424)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck392" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 1424)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck393" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 1424)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck394" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 1424)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck395" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 1424)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck396" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 1424)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck397" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 1424)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck398" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 1456)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck399" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 1456)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck400" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 1456)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck401" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 1456)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck402" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 1456)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck403" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 1456)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck404" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 1456)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck405" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 1456)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck406" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 1456)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck407" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 1456)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck408" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 1456)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck409" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 1488)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck410" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 1488)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck411" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 1488)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck412" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 1488)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck413" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 1488)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck414" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 1488)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck415" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 1488)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck416" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 1488)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck417" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 1488)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck418" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 1488)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck419" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 1488)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck420" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 1520)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck421" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 1520)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck422" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 1520)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck423" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 1520)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck424" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 1520)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck425" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 1520)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck426" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 1520)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck427" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 1520)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck428" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 1520)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck429" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 1520)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck430" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 1520)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck431" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 1552)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck432" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 1552)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck433" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 1552)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck434" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 1552)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck435" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 1552)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck436" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 1552)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck437" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 1552)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck438" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 1552)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck439" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 1552)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck440" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 1552)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck441" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 1552)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck442" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 1584)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck443" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 1584)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck444" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 1584)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck445" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 1584)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck446" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 1584)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck447" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 1584)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck448" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 1584)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck449" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 1584)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck450" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 1584)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck451" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 1584)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck452" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 1584)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck453" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 1616)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck454" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 1616)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck455" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 1616)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck456" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 1616)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck457" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 1616)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck458" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 1616)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck459" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 1616)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck460" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 1616)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck461" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 1616)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck462" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 1616)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck463" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 1616)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck464" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 1648)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck465" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 1648)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck466" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 1648)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck467" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 1648)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck468" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 1648)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck469" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 1648)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck470" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 1648)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck471" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 1648)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck472" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 1648)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck473" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 1648)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck474" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 1648)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck475" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 1680)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck476" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 1680)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck477" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 1680)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck478" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 1680)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck479" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 1680)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck480" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 1680)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck481" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 1680)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck482" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 1680)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck483" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 1680)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck484" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 1680)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck485" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 1680)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck486" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 1712)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck487" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 1712)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck488" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 1712)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck489" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 1712)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck490" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 1712)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck491" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 1712)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck492" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 1712)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck493" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 1712)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck494" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 1712)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck495" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 1712)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck496" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 1712)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck497" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 1744)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck498" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 1744)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck499" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 1744)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck500" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 1744)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck501" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 1744)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck502" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 1744)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck503" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 1744)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck504" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 1744)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck505" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 1744)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck506" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 1744)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck507" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 1744)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck508" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 1776)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck509" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 1776)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck510" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 1776)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck511" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 1776)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck512" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 1776)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck513" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 1776)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck514" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 1776)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck515" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 1776)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck516" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 1776)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck517" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 1776)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck518" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 1776)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck519" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 1808)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck520" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 1808)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck521" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 1808)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck522" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 1808)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck523" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 1808)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck524" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 1808)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck525" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 1808)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck526" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 1808)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck527" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 1808)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck528" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 1808)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck529" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 1808)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck530" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 1840)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck531" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 1840)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck532" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 1840)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck533" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 1840)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck534" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 1840)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck535" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 1840)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck536" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 1840)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck537" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 1840)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck538" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 1840)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck539" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 1840)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck540" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 1840)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck541" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 1872)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck542" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 1872)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck543" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 1872)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck544" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 1872)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck545" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 1872)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck546" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 1872)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck547" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 1872)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck548" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 1872)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck549" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 1872)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck550" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 1872)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck551" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 1872)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck552" type="Sprite2D" parent="Tower"]
+position = Vector2(16, 1904)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(96, 8, 16, 16)
+
+[node name="RoofNeck553" type="Sprite2D" parent="Tower"]
+position = Vector2(336, 1904)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(112, 8, 16, 16)
+
+[node name="RoofNeck554" type="Sprite2D" parent="Tower"]
+position = Vector2(80, 1904)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck555" type="Sprite2D" parent="Tower"]
+position = Vector2(48, 1904)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck556" type="Sprite2D" parent="Tower"]
+position = Vector2(112, 1904)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck557" type="Sprite2D" parent="Tower"]
+position = Vector2(144, 1904)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck558" type="Sprite2D" parent="Tower"]
+position = Vector2(176, 1904)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck559" type="Sprite2D" parent="Tower"]
+position = Vector2(208, 1904)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck560" type="Sprite2D" parent="Tower"]
+position = Vector2(240, 1904)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck561" type="Sprite2D" parent="Tower"]
+position = Vector2(272, 1904)
+scale = Vector2(2, 2)
+texture = ExtResource("3_41hcq")
+region_enabled = true
+region_rect = Rect2(64, 8, 16, 16)
+
+[node name="RoofNeck562" type="Sprite2D" parent="Tower"]
+position = Vector2(304, 1904)
 scale = Vector2(2, 2)
 texture = ExtResource("3_41hcq")
 region_enabled = true
@@ -378,7 +4180,6 @@ region_rect = Rect2(64, 8, 16, 16)
 
 [node name="Sky" type="Sprite2D" parent="."]
 modulate = Color(0.593134, 0.593134, 0.593134, 1)
-self_modulate = Color(0.890196, 0.890196, 0.890196, 1)
 z_index = -1
 position = Vector2(176, 176)
 scale = Vector2(50.2857, 50.2857)
@@ -386,3 +4187,8 @@ texture = ExtResource("3_vla83")
 region_enabled = true
 region_rect = Rect2(32, 17, 7, 7)
 metadata/_edit_lock_ = true
+
+[node name="SkyAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_47rfn")
+}
