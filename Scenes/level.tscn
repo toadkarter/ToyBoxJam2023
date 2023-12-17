@@ -1009,5 +1009,5 @@ position = Vector2(48, 400)
 position = Vector2(104, 264)
 
 [node name="Checkpoint2" parent="." instance=ExtResource("7_n31si")]
-position = Vector2(104, -56)
-camera_position = -48.0
+position = Vector2(376, -216)
+camera_position = -250.0
