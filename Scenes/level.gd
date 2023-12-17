@@ -24,6 +24,7 @@ var player: CharacterBody2D
 
 func _ready() -> void:
 	music_player.play()
+	get_tree().call_group("Debug", "queue_free")
 	_init_checkpoints()
 	reset_level()
 

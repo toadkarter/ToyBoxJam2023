@@ -196,11 +196,11 @@ position = Vector2(240, 232)
 [node name="[1] Beginner" type="Node2D" parent="."]
 metadata/_edit_group_ = true
 
-[node name="Start" type="Line2D" parent="[1] Beginner"]
+[node name="Start" type="Line2D" parent="[1] Beginner" groups=["Debug"]]
 points = PackedVector2Array(80, 272, 400, 272)
 width = 1.0
 
-[node name="Start2" type="Line2D" parent="[1] Beginner"]
+[node name="Start2" type="Line2D" parent="[1] Beginner" groups=["Debug"]]
 position = Vector2(0, -320)
 points = PackedVector2Array(80, 272, 400, 272)
 width = 1.0
@@ -571,11 +571,11 @@ position = Vector2(376, -200)
 [node name="regular_body28" parent="[2] FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(392, -200)
 
-[node name="Start" type="Line2D" parent="[2] FirstTimeDroppableBlocks"]
+[node name="Start" type="Line2D" parent="[2] FirstTimeDroppableBlocks" groups=["Debug"]]
 points = PackedVector2Array(80, 272, 400, 272)
 width = 1.0
 
-[node name="Finish" type="Line2D" parent="[2] FirstTimeDroppableBlocks"]
+[node name="Finish" type="Line2D" parent="[2] FirstTimeDroppableBlocks" groups=["Debug"]]
 points = PackedVector2Array(400, -208, 80, -208)
 width = 1.0
 
@@ -584,12 +584,12 @@ width = 1.0
 [node name="[3] DroppableBlockEscape" type="Node2D" parent="."]
 position = Vector2(-16, -800)
 
-[node name="Start" type="Line2D" parent="[3] DroppableBlockEscape"]
+[node name="Start" type="Line2D" parent="[3] DroppableBlockEscape" groups=["Debug"]]
 position = Vector2(16, 0)
 points = PackedVector2Array(80, 272, 400, 272)
 width = 1.0
 
-[node name="Start2" type="Line2D" parent="[3] DroppableBlockEscape"]
+[node name="Start2" type="Line2D" parent="[3] DroppableBlockEscape" groups=["Debug"]]
 position = Vector2(16, -320)
 points = PackedVector2Array(80, 272, 400, 272)
 width = 1.0
