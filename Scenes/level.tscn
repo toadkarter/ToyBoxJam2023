@@ -187,6 +187,8 @@ checkpoints = [NodePath("Checkpoint1"), NodePath("Checkpoint2")]
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(240, 232)
 
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera"]
+
 [node name="[1] Beginner" type="Node2D" parent="."]
 metadata/_edit_group_ = true
 
