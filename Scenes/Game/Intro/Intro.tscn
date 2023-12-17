@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dbiyjbads78pw"]
+[gd_scene load_steps=15 format=3 uid="uid://dbiyjbads78pw"]
 
 [ext_resource type="Script" path="res://Scenes/Game/Intro/Intro.gd" id="1_b7egr"]
 [ext_resource type="FontFile" uid="uid://cg21k62fnhog5" path="res://Art/Sprites/vanilla_font_sprites.png" id="2_hvr0s"]
@@ -45,6 +45,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HUD/StoryText:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_xfx0v"]
 resource_name = "title_fade"
@@ -88,10 +100,27 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_scq7r"]
+resource_name = "story_text_fade_in"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HUD/StoryText:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ufb3y"]
 _data = {
 "RESET": SubResource("Animation_e0x50"),
 "fade_out": SubResource("Animation_cvxsg"),
+"story_text_fade_in": SubResource("Animation_scq7r"),
 "title_fade": SubResource("Animation_xfx0v")
 }
 
@@ -109,6 +138,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Tower:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.454902, 0.454902, 0.454902, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_ocnkk"]
 length = 0.001
@@ -124,6 +165,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Tower:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_47rfn"]
 _data = {
@@ -133,6 +186,7 @@ _data = {
 
 [node name="Intro" type="Node2D"]
 script = ExtResource("1_b7egr")
+intro_text = Array[String](["Hello this is a bit of text", "Yo, this is a second bit of text!"])
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
@@ -171,6 +225,26 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_hvr0s")
 text = "-- A GAME BY TOADKARTER --"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StoryText" type="Label" parent="HUD"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -156.0
+offset_top = -86.0
+offset_right = 156.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_hvr0s")
+text = "THIS IS A WHOLE BUNCH OF TEXT!
+I SURE HOPE THAT IT ALL LOADS PROPERLY!
+OTHERWISE I WILL BE KIND OF ANNOYED!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
