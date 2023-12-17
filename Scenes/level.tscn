@@ -1346,7 +1346,7 @@ points = PackedVector2Array(80, 272, 400, 272)
 width = 1.0
 
 [node name="Start2" type="Line2D" parent="[6] MovableWithBlocks" groups=["Debug"]]
-position = Vector2(0, -448)
+position = Vector2(0, -560)
 points = PackedVector2Array(80, 272, 400, 272)
 width = 1.0
 
@@ -1385,7 +1385,7 @@ position = Vector2(248, -24)
 [node name="DroppableBlock4" parent="[6] MovableWithBlocks/DroppableBlocks" instance=ExtResource("3_erwvd")]
 position = Vector2(264, -24)
 
-[node name="DroppableBlock5" parent="[6] MovableWithBlocks/DroppableBlocks" instance=ExtResource("3_erwvd")]
+[node name="DroppableBlock5" parent="[6] MovableWithBlocks/DroppableBlocks" groups=["Resettable"] instance=ExtResource("3_erwvd")]
 position = Vector2(280, -24)
 
 [node name="Firewall" parent="." instance=ExtResource("6_wqu57")]

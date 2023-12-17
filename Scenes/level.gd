@@ -65,6 +65,7 @@ func reset_level() -> void:
 
 	_create_player()
 	_reset_camera()
+	_reset_objects()
 
 
 func _create_player() -> void:
@@ -81,6 +82,12 @@ func _reset_camera() -> void:
 
 	if !debug_stop_scrolling:
 		scroll_level = true
+
+
+func _reset_objects() -> void:
+	for object in get_tree().get_nodes_in_group("Resettable"):
+		if object.has_method("reset_state"):
+			object.reset_state()
 
 
 func _init_checkpoints() -> void:
