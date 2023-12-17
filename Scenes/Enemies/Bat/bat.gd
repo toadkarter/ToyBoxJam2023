@@ -1,17 +1,19 @@
 extends StaticBody2D
 
-@export var speed: float = 40.0
-@export var distance: float = 200.0
+@export var offset: Vector2 = Vector2(0, -50)
+@export var duration = 3.0
 
-@onready var animations: AnimatedSprite2D = $AnimatedSprite2D
+@onready var animations: AnimatedSprite2D = $AnimatableBody2D/AnimatedSprite2D
+@onready var body: AnimatableBody2D = $AnimatableBody2D
 
-var forward: bool = true
 
 func _ready() -> void:
 	animations.play("default")
+	_start_movement()
 
 
-func _process(delta: float) -> void:
-	distance -= delta
-	print(distance)
-	position.x += speed * delta
+func _start_movement() -> void:
+	var tween = get_tree().create_tween().set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
+	tween.set_loops().set_parallel(false)
+	tween.tween_property(body, "position", offset, duration / 2)
+	tween.tween_property(body, "position", Vector2.ZERO, duration / 2)
