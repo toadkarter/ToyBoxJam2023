@@ -9,6 +9,7 @@ signal intro_finished
 @onready var hud: CanvasLayer = $HUD
 @onready var hud_animations: AnimationPlayer = $HUDAnimationPlayer
 @onready var sky_animations: AnimationPlayer = $SkyAnimationPlayer
+@onready var audio_player: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var tower: Node2D = $Tower
 
 
@@ -33,4 +34,5 @@ func _process(delta: float) -> void:
 func _start_intro() -> void:
 	hud_animations.play_backwards()
 	sky_animations.play("sky_darken")
+	audio_player.play()
 	scroll_has_started = true

@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://dbiyjbads78pw"]
+[gd_scene load_steps=14 format=3 uid="uid://dbiyjbads78pw"]
 
 [ext_resource type="Script" path="res://Scenes/Game/Intro/Intro.gd" id="1_b7egr"]
 [ext_resource type="FontFile" uid="uid://cg21k62fnhog5" path="res://Art/Sprites/vanilla_font_sprites.png" id="2_hvr0s"]
 [ext_resource type="Texture2D" uid="uid://br3238kxwqemf" path="res://Art/Sprites/tbj2_startcart2spr.png" id="3_41hcq"]
 [ext_resource type="FontFile" uid="uid://wqcvt7nm481m" path="res://Art/Sprites/golden_font_sprites.png" id="3_528m6"]
 [ext_resource type="Texture2D" uid="uid://8mxwquuegx8v" path="res://Art/Sprites/worldrooms.png" id="3_vla83"]
+[ext_resource type="AudioStream" uid="uid://c5quw3u3yajok" path="res://Art/Sound/Music/intro_bgm.wav" id="6_37fvd"]
 
 [sub_resource type="Animation" id="Animation_e0x50"]
 length = 0.001
@@ -4192,3 +4193,6 @@ metadata/_edit_lock_ = true
 libraries = {
 "": SubResource("AnimationLibrary_47rfn")
 }
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_37fvd")
