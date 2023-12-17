@@ -187,6 +187,8 @@ layer_0/tile_data = PackedInt32Array(1114116, 65536, 0, 1114117, 65536, 0, 11141
 script = ExtResource("2_7nbtq")
 player_scene = ExtResource("2_kb2gi")
 checkpoints = [NodePath("Checkpoint1"), NodePath("Checkpoint2")]
+death_texts = Array[String](["The will falters", "I must go on"])
+checkpoint_text = "My memory stirs..."
 
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(240, 232)

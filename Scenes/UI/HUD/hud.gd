@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 
-@export var notification_length_in_seconds: float = 0.7
+@export var notification_length_in_seconds: float = 1.2
 
 @onready var animations: AnimationPlayer = $AnimationPlayer
 @onready var central_notification: Label = $CentralNotification

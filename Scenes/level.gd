@@ -2,8 +2,6 @@ extends TileMap
 
 
 const FIREWALL_OFFSET: float = 168.0 
-const CHECKPOINT_TEXT: String = "My memory stirs..."
-const DEATH_TEXT: String = "The will falters..."
 
 
 @export var scroll_level: bool = true
@@ -11,6 +9,9 @@ const DEATH_TEXT: String = "The will falters..."
 @export var seconds_between_respawn: float = 1.0
 @export var player_scene: PackedScene
 @export var checkpoints: Array[Area2D]
+
+@export var death_texts: Array[String]
+@export var checkpoint_text: String
 
 @onready var camera: Camera2D = $Camera
 @onready var firewall: Node2D = $Firewall
@@ -39,7 +40,7 @@ func _process(delta: float) -> void:
 func _on_player_death() -> void:
 	scroll_level = false
 	sfx_player.play_death_sfx()
-	hud.show_central_notification(DEATH_TEXT, seconds_between_respawn)
+	hud.show_central_notification(death_texts.pick_random(), seconds_between_respawn)
 	await get_tree().create_timer(seconds_between_respawn).timeout
 	reset_level()
 
@@ -74,6 +75,6 @@ func _init_checkpoints() -> void:
 
 func _on_checkpoint_reached(checkpoint: Area2D) -> void:
 	if current_checkpoint != checkpoint:
-		hud.show_central_notification(CHECKPOINT_TEXT)
+		hud.show_central_notification(checkpoint_text)
 		sfx_player.play_checkpoint_sfx()
 		current_checkpoint = checkpoint
