@@ -21,6 +21,7 @@ const FIREWALL_OFFSET: float = 168.0
 @onready var current_checkpoint: Area2D = checkpoints[0]
 
 var player: CharacterBody2D
+var total_deaths: int = 0
 
 
 func _ready() -> void:
@@ -43,6 +44,9 @@ func _on_player_death() -> void:
 	hud.show_central_notification(death_texts.pick_random(), seconds_between_respawn)
 	await get_tree().create_timer(seconds_between_respawn).timeout
 	reset_level()
+
+	total_deaths += 1
+	hud.set_death_count_label(total_deaths)
 
 
 func reset_level() -> void:

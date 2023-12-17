@@ -187,7 +187,7 @@ layer_0/tile_data = PackedInt32Array(1114116, 65536, 0, 1114117, 65536, 0, 11141
 script = ExtResource("2_7nbtq")
 player_scene = ExtResource("2_kb2gi")
 checkpoints = [NodePath("Checkpoint1"), NodePath("Checkpoint2")]
-death_texts = Array[String](["The will falters", "I must go on"])
+death_texts = Array[String](["My will falters", "I must go on"])
 checkpoint_text = "My memory stirs..."
 
 [node name="Camera" type="Camera2D" parent="."]
@@ -271,34 +271,40 @@ position = Vector2(0, -320)
 [node name="DroppableBlocks" type="Node2D" parent="[2] FirstTimeDroppableBlocks"]
 
 [node name="DroppableBlock" parent="[2] FirstTimeDroppableBlocks/DroppableBlocks" instance=ExtResource("3_erwvd")]
-position = Vector2(296, 40)
+position = Vector2(304, 40)
 
 [node name="DroppableBlock7" parent="[2] FirstTimeDroppableBlocks/DroppableBlocks" instance=ExtResource("3_erwvd")]
-position = Vector2(312, 40)
+position = Vector2(320, 40)
 
 [node name="DroppableBlock8" parent="[2] FirstTimeDroppableBlocks/DroppableBlocks" instance=ExtResource("3_erwvd")]
-position = Vector2(328, 40)
+position = Vector2(336, 40)
 
 [node name="DroppableBlock2" parent="[2] FirstTimeDroppableBlocks/DroppableBlocks" instance=ExtResource("3_erwvd")]
-position = Vector2(280, 40)
+position = Vector2(288, 40)
 
 [node name="DroppableBlock3" parent="[2] FirstTimeDroppableBlocks/DroppableBlocks" instance=ExtResource("3_erwvd")]
-position = Vector2(264, 40)
+position = Vector2(272, 40)
+
+[node name="DroppableBlock11" parent="[2] FirstTimeDroppableBlocks/DroppableBlocks" instance=ExtResource("3_erwvd")]
+position = Vector2(256, 40)
 
 [node name="DroppableBlock4" parent="[2] FirstTimeDroppableBlocks/DroppableBlocks" instance=ExtResource("3_erwvd")]
-position = Vector2(184, 40)
+position = Vector2(176, 40)
 
 [node name="DroppableBlock9" parent="[2] FirstTimeDroppableBlocks/DroppableBlocks" instance=ExtResource("3_erwvd")]
-position = Vector2(168, 40)
+position = Vector2(160, 40)
 
 [node name="DroppableBlock10" parent="[2] FirstTimeDroppableBlocks/DroppableBlocks" instance=ExtResource("3_erwvd")]
-position = Vector2(152, 40)
+position = Vector2(144, 40)
 
 [node name="DroppableBlock5" parent="[2] FirstTimeDroppableBlocks/DroppableBlocks" instance=ExtResource("3_erwvd")]
-position = Vector2(216, 40)
+position = Vector2(208, 40)
+
+[node name="DroppableBlock12" parent="[2] FirstTimeDroppableBlocks/DroppableBlocks" instance=ExtResource("3_erwvd")]
+position = Vector2(224, 40)
 
 [node name="DroppableBlock6" parent="[2] FirstTimeDroppableBlocks/DroppableBlocks" instance=ExtResource("3_erwvd")]
-position = Vector2(200, 40)
+position = Vector2(192, 40)
 
 [node name="RegularBlocks" type="Node2D" parent="[2] FirstTimeDroppableBlocks"]
 
@@ -310,15 +316,6 @@ position = Vector2(232, 200)
 
 [node name="regular_body9" parent="[2] FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(240, 40)
-
-[node name="regular_body10" parent="[2] FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
-position = Vector2(240, 56)
-
-[node name="regular_body11" parent="[2] FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
-position = Vector2(240, 72)
-
-[node name="regular_body15" parent="[2] FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
-position = Vector2(240, 88)
 
 [node name="regular_body12" parent="[2] FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(240, 24)
@@ -974,6 +971,36 @@ position = Vector2(296, 72)
 [node name="DroppableBlock2" parent="[3] DroppableBlockEscape/DroppableBlocks" instance=ExtResource("3_erwvd")]
 position = Vector2(280, 72)
 
+[node name="Skulls" type="Node2D" parent="[3] DroppableBlockEscape"]
+
+[node name="Skull" parent="[3] DroppableBlockEscape/Skulls" instance=ExtResource("4_uxhqa")]
+position = Vector2(384, 320)
+rotation = 3.14159
+scale = Vector2(1, -1)
+num_projectiles_per_emission = 0
+seconds_between_emission = 0.0
+
+[node name="Skull4" parent="[3] DroppableBlockEscape/Skulls" instance=ExtResource("4_uxhqa")]
+position = Vector2(336, 320)
+rotation = 3.14159
+scale = Vector2(1, -1)
+num_projectiles_per_emission = 0
+seconds_between_emission = 0.0
+
+[node name="Skull2" parent="[3] DroppableBlockEscape/Skulls" instance=ExtResource("4_uxhqa")]
+position = Vector2(384, 368)
+rotation = 3.14159
+scale = Vector2(1, -1)
+num_projectiles_per_emission = 0
+seconds_between_emission = 0.0
+
+[node name="Skull3" parent="[3] DroppableBlockEscape/Skulls" instance=ExtResource("4_uxhqa")]
+position = Vector2(336, 368)
+rotation = 3.14159
+scale = Vector2(1, -1)
+num_projectiles_per_emission = 0
+seconds_between_emission = 0.0
+
 [node name="Firewall" parent="." instance=ExtResource("6_wqu57")]
 position = Vector2(48, 400)
 
@@ -983,27 +1010,3 @@ position = Vector2(104, 264)
 [node name="Checkpoint2" parent="." instance=ExtResource("7_n31si")]
 position = Vector2(104, -56)
 camera_position = -48.0
-
-[node name="Skull" parent="." instance=ExtResource("4_uxhqa")]
-position = Vector2(368, -480)
-scale = Vector2(-1, 1)
-num_projectiles_per_emission = 0
-seconds_between_emission = 0.0
-
-[node name="Skull4" parent="." instance=ExtResource("4_uxhqa")]
-position = Vector2(320, -480)
-scale = Vector2(-1, 1)
-num_projectiles_per_emission = 0
-seconds_between_emission = 0.0
-
-[node name="Skull2" parent="." instance=ExtResource("4_uxhqa")]
-position = Vector2(368, -432)
-scale = Vector2(-1, 1)
-num_projectiles_per_emission = 0
-seconds_between_emission = 0.0
-
-[node name="Skull3" parent="." instance=ExtResource("4_uxhqa")]
-position = Vector2(320, -432)
-scale = Vector2(-1, 1)
-num_projectiles_per_emission = 0
-seconds_between_emission = 0.0
