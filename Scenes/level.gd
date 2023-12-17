@@ -5,6 +5,7 @@ const FIREWALL_OFFSET: float = 168.0
 
 
 @export var debug_stop_scrolling: bool = false
+@export var debug_start_at_checkpoint_number: int = -1
 @export var scroll_speed: float = 50
 @export var seconds_between_respawn: float = 1.0
 @export var player_scene: PackedScene
@@ -26,11 +27,8 @@ var scroll_level: bool = true
 
 
 func _ready() -> void:
-	if debug_stop_scrolling:
-		scroll_level = false
-
 	music_player.play()
-	get_tree().call_group("Debug", "queue_free")
+	_init_debug_options()
 	_init_checkpoints()
 	reset_level()
 
@@ -87,3 +85,13 @@ func _on_checkpoint_reached(checkpoint: Area2D) -> void:
 		hud.show_central_notification(checkpoint_text)
 		sfx_player.play_checkpoint_sfx()
 		current_checkpoint = checkpoint
+
+
+func _init_debug_options() -> void:
+	get_tree().call_group("Debug", "queue_free")
+
+	if debug_stop_scrolling:
+		scroll_level = false
+
+	if debug_start_at_checkpoint_number != -1 and debug_start_at_checkpoint_number < checkpoints.size():
+		current_checkpoint = checkpoints[debug_start_at_checkpoint_number]
