@@ -7,18 +7,18 @@ const FIREWALL_OFFSET: float = 168.0
 @export var scroll_level: bool = true
 @export var scroll_speed: float = 50
 @export var seconds_between_respawn: float = 1.0
-@export var checkpoint_camera_location: float = 232.0
 @export var player_scene: PackedScene
-@export var default_checkpoint: Area2D
+@export var checkpoints: Array[Area2D]
 
 @onready var camera: Camera2D = $Camera
 @onready var firewall: Node2D = $Firewall
-@onready var current_checkpoint: Area2D = default_checkpoint
+@onready var current_checkpoint: Area2D = checkpoints[0]
 
 var player: CharacterBody2D
 
 
 func _ready() -> void:
+	_init_checkpoints()
 	reset_level()
 
 
@@ -54,7 +54,17 @@ func _create_player() -> void:
 
 
 func _reset_camera() -> void:
-	camera.position.y = checkpoint_camera_location
-	firewall.position.y = checkpoint_camera_location + FIREWALL_OFFSET
+	camera.position.y = current_checkpoint.camera_position
+	firewall.position.y = current_checkpoint.camera_position + FIREWALL_OFFSET
 
 	scroll_level = true
+
+
+func _init_checkpoints() -> void:
+	for checkpoint in checkpoints:
+		checkpoint.connect("on_player_entered", _on_checkpoint_reached)
+
+
+func _on_checkpoint_reached(checkpoint: Area2D) -> void:
+	if current_checkpoint != checkpoint:
+		current_checkpoint = checkpoint

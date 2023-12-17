@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cbbxv703gcviq"]
+[gd_scene load_steps=4 format=3 uid="uid://cbbxv703gcviq"]
 
+[ext_resource type="Script" path="res://Scenes/Game/Checkpoint/checkpoint.gd" id="1_226t4"]
 [ext_resource type="Texture2D" uid="uid://cnjq4iik0ot6o" path="res://Art/Sprites/ToyBoxJam3.png" id="1_vxjnu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tumn0"]
@@ -7,6 +8,7 @@ size = Vector2(8, 8)
 
 [node name="Area2D" type="Area2D"]
 scale = Vector2(2, 2)
+script = ExtResource("1_226t4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_vxjnu")
