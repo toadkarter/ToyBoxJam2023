@@ -75,3 +75,7 @@ func _freeze_player() -> void:
 func _die():
 	_freeze_player()
 	on_death.emit()
+
+
+func reset_death_state() -> void:
+	is_dying = false
