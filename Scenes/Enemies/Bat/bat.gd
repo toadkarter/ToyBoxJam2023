@@ -1,7 +1,7 @@
 extends StaticBody2D
 
 @export var offset: Vector2 = Vector2(0, -50)
-@export var duration = 3.0
+@export var duration: float = 3.0
 
 @onready var animations: AnimatedSprite2D = $AnimatableBody2D/AnimatedSprite2D
 @onready var body: AnimatableBody2D = $AnimatableBody2D

@@ -21,6 +21,7 @@ const FIREWALL_OFFSET: float = 168.0
 @onready var sfx_player: AudioStreamPlayer2D = $Camera/SFXPlayer
 @onready var current_checkpoint: Area2D = checkpoints[0]
 
+
 var player: CharacterBody2D
 var total_deaths: int = 0
 var scroll_level: bool = true
