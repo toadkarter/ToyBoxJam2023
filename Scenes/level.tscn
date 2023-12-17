@@ -972,18 +972,22 @@ camera_position = -48.0
 position = Vector2(368, -480)
 scale = Vector2(-1, 1)
 num_projectiles_per_emission = 0
+seconds_between_emission = 0.0
 
 [node name="Skull4" parent="." instance=ExtResource("4_uxhqa")]
 position = Vector2(320, -480)
 scale = Vector2(-1, 1)
 num_projectiles_per_emission = 0
+seconds_between_emission = 0.0
 
 [node name="Skull2" parent="." instance=ExtResource("4_uxhqa")]
 position = Vector2(368, -432)
 scale = Vector2(-1, 1)
 num_projectiles_per_emission = 0
+seconds_between_emission = 0.0
 
 [node name="Skull3" parent="." instance=ExtResource("4_uxhqa")]
 position = Vector2(320, -432)
 scale = Vector2(-1, 1)
 num_projectiles_per_emission = 0
+seconds_between_emission = 0.0
