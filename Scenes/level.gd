@@ -4,7 +4,7 @@ extends TileMap
 const FIREWALL_OFFSET: float = 168.0 
 
 
-@export var scroll_level: bool = true
+@export var debug_stop_scrolling: bool = false
 @export var scroll_speed: float = 50
 @export var seconds_between_respawn: float = 1.0
 @export var player_scene: PackedScene
@@ -22,9 +22,13 @@ const FIREWALL_OFFSET: float = 168.0
 
 var player: CharacterBody2D
 var total_deaths: int = 0
+var scroll_level: bool = true
 
 
 func _ready() -> void:
+	if debug_stop_scrolling:
+		scroll_level = false
+
 	music_player.play()
 	get_tree().call_group("Debug", "queue_free")
 	_init_checkpoints()
@@ -69,7 +73,8 @@ func _reset_camera() -> void:
 	camera.position.y = current_checkpoint.camera_position
 	firewall.position.y = current_checkpoint.camera_position + FIREWALL_OFFSET
 
-	scroll_level = true
+	if !debug_stop_scrolling:
+		scroll_level = true
 
 
 func _init_checkpoints() -> void:
