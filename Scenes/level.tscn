@@ -195,6 +195,14 @@ position = Vector2(240, 232)
 
 [node name="HUD" parent="Camera" instance=ExtResource("4_oap2e")]
 
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="Camera"]
+position = Vector2(-240, -232)
+stream = ExtResource("10_k51wc")
+
+[node name="SFXPlayer" parent="Camera" instance=ExtResource("11_6ckua")]
+position = Vector2(-240, -232)
+death_sfx = ExtResource("12_qyefm")
+
 [node name="[1] Beginner" type="Node2D" parent="."]
 metadata/_edit_group_ = true
 
@@ -999,9 +1007,3 @@ position = Vector2(320, -432)
 scale = Vector2(-1, 1)
 num_projectiles_per_emission = 0
 seconds_between_emission = 0.0
-
-[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("10_k51wc")
-
-[node name="SFXPlayer" parent="." instance=ExtResource("11_6ckua")]
-death_sfx = ExtResource("12_qyefm")
