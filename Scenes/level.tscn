@@ -189,12 +189,12 @@ layer_0/tile_data = PackedInt32Array(1114116, 65536, 0, 1114117, 65536, 0, 11141
 script = ExtResource("2_7nbtq")
 debug_start_at_checkpoint_number = 4
 player_scene = ExtResource("2_kb2gi")
-checkpoints = [NodePath("Checkpoint1"), NodePath("Checkpoint2"), NodePath("Checkpoint3"), NodePath("Checkpoint4"), NodePath("Checkpoint5")]
+checkpoints = [NodePath("Checkpoint1"), NodePath("Checkpoint2"), NodePath("Checkpoint3"), NodePath("Checkpoint4"), NodePath("Checkpoint5"), NodePath("Checkpoint6")]
 death_texts = Array[String](["My will falters", "I must go on"])
 checkpoint_text = "My memory stirs..."
 
 [node name="Camera" type="Camera2D" parent="."]
-position = Vector2(240, -1950)
+position = Vector2(240, -2630)
 
 [node name="HUD" parent="Camera" instance=ExtResource("4_oap2e")]
 
@@ -1399,7 +1399,7 @@ points = PackedVector2Array(80, 272, 400, 272)
 width = 1.0
 
 [node name="Start2" type="Line2D" parent="[7] SingleWithBats" groups=["Debug"]]
-position = Vector2(0, -624)
+position = Vector2(0, -688)
 points = PackedVector2Array(80, 272, 400, 272)
 width = 1.0
 
@@ -1429,6 +1429,30 @@ position = Vector2(216, -200)
 [node name="regular_body9" parent="[7] SingleWithBats/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(200, -200)
 
+[node name="regular_body10" parent="[7] SingleWithBats/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(168, -264)
+
+[node name="regular_body11" parent="[7] SingleWithBats/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(152, -264)
+
+[node name="regular_body12" parent="[7] SingleWithBats/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(136, -264)
+
+[node name="regular_body13" parent="[7] SingleWithBats/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(376, -328)
+
+[node name="regular_body14" parent="[7] SingleWithBats/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(360, -328)
+
+[node name="regular_body16" parent="[7] SingleWithBats/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(392, -408)
+
+[node name="regular_body17" parent="[7] SingleWithBats/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(376, -408)
+
+[node name="regular_body15" parent="[7] SingleWithBats/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(344, -328)
+
 [node name="regular_body4" parent="[7] SingleWithBats/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(248, -40)
 
@@ -1454,6 +1478,15 @@ position = Vector2(336, -160)
 offset = Vector2(-176, 0)
 duration = 1.5
 
+[node name="Skull" parent="[7] SingleWithBats/Enemies" instance=ExtResource("4_uxhqa")]
+position = Vector2(88, -216)
+
+[node name="Skull2" parent="[7] SingleWithBats/Enemies" instance=ExtResource("4_uxhqa")]
+position = Vector2(392, -344)
+scale = Vector2(-1, 1)
+seconds_between_emission = 6.0
+seconds_before_starting_emissions = 0.4
+
 [node name="Firewall" parent="." instance=ExtResource("6_wqu57")]
 position = Vector2(48, 400)
 
@@ -1475,3 +1508,7 @@ camera_position = -1190.0
 [node name="Checkpoint5" parent="." instance=ExtResource("7_n31si")]
 position = Vector2(248, -1944)
 camera_position = -1950.0
+
+[node name="Checkpoint6" parent="." instance=ExtResource("7_n31si")]
+position = Vector2(392, -2632)
+camera_position = -2630.0
