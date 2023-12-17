@@ -12,6 +12,7 @@ const FIREWALL_OFFSET: float = 168.0
 
 @onready var camera: Camera2D = $Camera
 @onready var firewall: Node2D = $Firewall
+@onready var hud: CanvasLayer = $Camera/HUD
 @onready var current_checkpoint: Area2D = checkpoints[0]
 
 var player: CharacterBody2D
@@ -20,7 +21,6 @@ var player: CharacterBody2D
 func _ready() -> void:
 	_init_checkpoints()
 	reset_level()
-
 
 func _process(delta: float) -> void:
 	if !scroll_level:
@@ -37,7 +37,6 @@ func _on_player_death() -> void:
 
 
 func reset_level() -> void:
-	# TODO: Add UI message
 	if player != null:
 		player.queue_free()
 
@@ -67,4 +66,5 @@ func _init_checkpoints() -> void:
 
 func _on_checkpoint_reached(checkpoint: Area2D) -> void:
 	if current_checkpoint != checkpoint:
+		hud.show_central_notification("Checkpoint reached")
 		current_checkpoint = checkpoint
