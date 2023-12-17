@@ -2,6 +2,8 @@ extends TileMap
 
 
 const FIREWALL_OFFSET: float = 168.0 
+const CHECKPOINT_TEXT: String = "My memory stirs..."
+const DEATH_TEXT: String = "The will falters..."
 
 
 @export var scroll_level: bool = true
@@ -32,6 +34,7 @@ func _process(delta: float) -> void:
 
 func _on_player_death() -> void:
 	scroll_level = false
+	hud.show_central_notification(DEATH_TEXT, seconds_between_respawn)
 	await get_tree().create_timer(seconds_between_respawn).timeout
 	reset_level()
 
@@ -66,5 +69,5 @@ func _init_checkpoints() -> void:
 
 func _on_checkpoint_reached(checkpoint: Area2D) -> void:
 	if current_checkpoint != checkpoint:
-		hud.show_central_notification("Checkpoint reached")
+		hud.show_central_notification(CHECKPOINT_TEXT)
 		current_checkpoint = checkpoint
