@@ -1,8 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://cq56ydj2uccy2"]
+[gd_scene load_steps=4 format=3 uid="uid://cq56ydj2uccy2"]
 
 [ext_resource type="Script" path="res://Scenes/Game/Audio/sfx_player.gd" id="1_2yla3"]
 [ext_resource type="AudioStream" uid="uid://dwnsha4pyixod" path="res://Art/Sound/SFX/checkpoint.wav" id="2_2ni8c"]
+[ext_resource type="AudioStream" uid="uid://d371usevk8gpt" path="res://Art/Sound/SFX/death2.wav" id="3_ovwvq"]
 
 [node name="SFXPlayer" type="AudioStreamPlayer2D"]
 script = ExtResource("1_2yla3")
 checkpoint_sfx = ExtResource("2_2ni8c")
+death_sfx = ExtResource("3_ovwvq")

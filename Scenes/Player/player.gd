@@ -8,6 +8,7 @@ signal on_death
 @export var jump_velocity: float = -400.0
 
 @onready var animations: AnimatedSprite2D = $Animations
+@onready var sfx_player: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 var is_dying: bool = false
@@ -21,6 +22,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y += gravity * delta
 
 	if Input.is_action_just_pressed("jump") and is_on_floor():
+		sfx_player.play()
 		velocity.y = jump_velocity
 
 	_handle_move_input()
