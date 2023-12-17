@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dpb656nt13lxy"]
+[gd_scene load_steps=13 format=3 uid="uid://dpb656nt13lxy"]
 
 [ext_resource type="Texture2D" uid="uid://br3238kxwqemf" path="res://Art/Sprites/tbj2_startcart2spr.png" id="1_58vo4"]
 [ext_resource type="Script" path="res://Scenes/level.gd" id="2_7nbtq"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c4imq877em6ya" path="res://Scenes/Enemies/Projectiles/Firewall/Firewall.tscn" id="6_wqu57"]
 [ext_resource type="PackedScene" uid="uid://dd0rki4hvdmcb" path="res://Scenes/Blocks/Regular/regular_body.tscn" id="7_e0ir6"]
 [ext_resource type="PackedScene" uid="uid://cbbxv703gcviq" path="res://Scenes/Game/Checkpoint/checkpoint.tscn" id="7_n31si"]
+[ext_resource type="AudioStream" uid="uid://8ubly5igki02" path="res://Art/Sound/Music/main_bgm.mp3" id="10_k51wc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qdxlv"]
 texture = ExtResource("1_58vo4")
@@ -994,3 +995,6 @@ position = Vector2(320, -432)
 scale = Vector2(-1, 1)
 num_projectiles_per_emission = 0
 seconds_between_emission = 0.0
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_k51wc")

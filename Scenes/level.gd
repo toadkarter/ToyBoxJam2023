@@ -15,12 +15,14 @@ const DEATH_TEXT: String = "The will falters..."
 @onready var camera: Camera2D = $Camera
 @onready var firewall: Node2D = $Firewall
 @onready var hud: CanvasLayer = $Camera/HUD
+@onready var music_player: AudioStreamPlayer2D = $MusicPlayer
 @onready var current_checkpoint: Area2D = checkpoints[0]
 
 var player: CharacterBody2D
 
 
 func _ready() -> void:
+	music_player.play()
 	_init_checkpoints()
 	reset_level()
 
