@@ -16,6 +16,7 @@ const DEATH_TEXT: String = "The will falters..."
 @onready var firewall: Node2D = $Firewall
 @onready var hud: CanvasLayer = $Camera/HUD
 @onready var music_player: AudioStreamPlayer2D = $MusicPlayer
+@onready var sfx_player: AudioStreamPlayer2D = $SFXPlayer
 @onready var current_checkpoint: Area2D = checkpoints[0]
 
 var player: CharacterBody2D
@@ -72,4 +73,5 @@ func _init_checkpoints() -> void:
 func _on_checkpoint_reached(checkpoint: Area2D) -> void:
 	if current_checkpoint != checkpoint:
 		hud.show_central_notification(CHECKPOINT_TEXT)
+		sfx_player.play_checkpoint_sfx()
 		current_checkpoint = checkpoint
