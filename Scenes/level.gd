@@ -5,15 +5,15 @@ const FIREWALL_OFFSET: float = 168.0
 
 
 @export var scroll_level: bool = true
-@export var scroll_speed: float = 5
+@export var scroll_speed: float = 50
 @export var seconds_between_respawn: float = 1.0
 @export var checkpoint_camera_location: float = 232.0
 @export var player_scene: PackedScene
+@export var default_checkpoint: Area2D
 
 @onready var camera: Camera2D = $Camera
 @onready var firewall: Node2D = $Firewall
-@onready var checkpoint: Node2D = $Checkpoint
-# @onready var player: CharacterBody2D = $Player # TODO: Access this dynamically
+@onready var current_checkpoint: Area2D = default_checkpoint
 
 var player: CharacterBody2D
 
@@ -48,7 +48,7 @@ func reset_level() -> void:
 func _create_player() -> void:
 	player = load(player_scene.resource_path).instantiate()
 	add_child(player)
-	player.position = checkpoint.position
+	player.position = current_checkpoint.position
 	player.connect("on_death", _on_player_death)
 	player.reset_death_state()
 
