@@ -190,12 +190,12 @@ script = ExtResource("2_7nbtq")
 debug_start_at_checkpoint_number = 2
 debug_stop_music = true
 player_scene = ExtResource("2_kb2gi")
-checkpoints = [NodePath("Checkpoint1"), NodePath("Checkpoint2"), NodePath("Checkpoint3")]
+checkpoints = [NodePath("Checkpoint1"), NodePath("Checkpoint2"), NodePath("Checkpoint3"), NodePath("Checkpoint4")]
 death_texts = Array[String](["My will falters", "I must go on"])
 checkpoint_text = "My memory stirs..."
 
 [node name="Camera" type="Camera2D" parent="."]
-position = Vector2(240, -850)
+position = Vector2(240, -1190)
 
 [node name="HUD" parent="Camera" instance=ExtResource("4_oap2e")]
 
@@ -1315,3 +1315,7 @@ camera_position = -250.0
 [node name="Checkpoint3" parent="." instance=ExtResource("7_n31si")]
 position = Vector2(392, -856)
 camera_position = -850.0
+
+[node name="Checkpoint4" parent="." instance=ExtResource("7_n31si")]
+position = Vector2(200, -1192)
+camera_position = -1190.0
