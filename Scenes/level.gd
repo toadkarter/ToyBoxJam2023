@@ -37,6 +37,7 @@ func _process(delta: float) -> void:
 
 func _on_player_death() -> void:
 	scroll_level = false
+	sfx_player.play_death_sfx()
 	hud.show_central_notification(DEATH_TEXT, seconds_between_respawn)
 	await get_tree().create_timer(seconds_between_respawn).timeout
 	reset_level()

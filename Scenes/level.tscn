@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dpb656nt13lxy"]
+[gd_scene load_steps=15 format=3 uid="uid://dpb656nt13lxy"]
 
 [ext_resource type="Texture2D" uid="uid://br3238kxwqemf" path="res://Art/Sprites/tbj2_startcart2spr.png" id="1_58vo4"]
 [ext_resource type="Script" path="res://Scenes/level.gd" id="2_7nbtq"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cbbxv703gcviq" path="res://Scenes/Game/Checkpoint/checkpoint.tscn" id="7_n31si"]
 [ext_resource type="AudioStream" uid="uid://8ubly5igki02" path="res://Art/Sound/Music/main_bgm.mp3" id="10_k51wc"]
 [ext_resource type="PackedScene" uid="uid://cq56ydj2uccy2" path="res://Scenes/Game/Audio/sfx_player.tscn" id="11_6ckua"]
+[ext_resource type="AudioStream" uid="uid://bahhxywukj5e4" path="res://Art/Sound/SFX/death.wav" id="12_qyefm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qdxlv"]
 texture = ExtResource("1_58vo4")
@@ -1001,3 +1002,4 @@ seconds_between_emission = 0.0
 stream = ExtResource("10_k51wc")
 
 [node name="SFXPlayer" parent="." instance=ExtResource("11_6ckua")]
+death_sfx = ExtResource("12_qyefm")
