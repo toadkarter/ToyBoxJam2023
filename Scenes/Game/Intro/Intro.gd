@@ -12,4 +12,3 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("jump"):
 		animations.stop()
-		print("We are starting the intro")
