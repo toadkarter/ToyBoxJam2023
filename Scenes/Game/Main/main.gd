@@ -26,3 +26,8 @@ func _on_intro_finished() -> void:
 		intro.queue_free()
 	level = level_scene.instantiate()
 	add_child(level)
+	level.connect("on_level_finished", _on_level_finished)
+
+
+func _on_level_finished() -> void:
+	print("Level is finished")

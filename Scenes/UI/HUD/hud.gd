@@ -31,3 +31,6 @@ func show_central_notification(message: String, length_in_seconds: float = 0.0):
 func set_death_count_label(num_deaths: int):
 	death_count_label.text = (DeathCountText % num_deaths).to_upper()
 
+
+func fade_to_white() -> void:
+	animations.play("fade_to_white")

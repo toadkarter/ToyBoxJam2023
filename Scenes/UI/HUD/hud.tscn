@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dtjm4gm4s1wla"]
+[gd_scene load_steps=8 format=3 uid="uid://dtjm4gm4s1wla"]
 
 [ext_resource type="FontFile" uid="uid://wqcvt7nm481m" path="res://Art/Sprites/golden_font_sprites.png" id="1_f21li"]
 [ext_resource type="Script" path="res://Scenes/UI/HUD/hud.gd" id="1_k4b2e"]
@@ -13,6 +13,18 @@ tracks/0/path = NodePath(".:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../WhiteFade:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -35,10 +47,27 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_f2ado"]
+resource_name = "fade_to_white"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../WhiteFade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_m3hjr"]
 _data = {
 "RESET": SubResource("Animation_hn37d"),
-"central_notification_fade_in": SubResource("Animation_6yhme")
+"central_notification_fade_in": SubResource("Animation_6yhme"),
+"fade_to_white": SubResource("Animation_f2ado")
 }
 
 [node name="CanvasLayer" type="CanvasLayer"]
@@ -79,3 +108,11 @@ theme_override_fonts/font = ExtResource("3_hrq43")
 text = "ARMORS USED:0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="WhiteFade" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)

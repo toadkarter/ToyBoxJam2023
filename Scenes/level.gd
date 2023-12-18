@@ -3,6 +3,8 @@ extends TileMap
 
 const FIREWALL_OFFSET: float = 168.0 
 
+signal on_level_finished
+
 @export_group("Debug Options")
 @export var debug_stop_scrolling: bool = false
 @export var debug_start_at_checkpoint_number: int = -1
@@ -26,6 +28,7 @@ const FIREWALL_OFFSET: float = 168.0
 @export var seconds_before_marker_appears: float = 5.0
 @export var seconds_before_flight: float = 2.0
 @export var flight_speed: float = -50.0
+@export var seconds_before_flight_finished = 3.0
 
 @onready var camera: Camera2D = $Camera
 @onready var firewall: Node2D = $Firewall
@@ -141,5 +144,9 @@ func _play_outro() -> void:
 func _play_flight_animation() -> void:
 	player.freeze()
 	player.enter_outro_state()
+	sfx_player.play_checkpoint_sfx()
 	await get_tree().create_timer(seconds_before_flight).timeout
 	outro_finishing = true
+	hud.fade_to_white()
+	await get_tree().create_timer(seconds_before_flight_finished).timeout
+	on_level_finished.emit()
