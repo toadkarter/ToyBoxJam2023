@@ -51,7 +51,7 @@ animations = [{
 radius = 7.0
 height = 18.0
 
-[node name="Skull" type="StaticBody2D" groups=["Enemy"]]
+[node name="Skull" type="StaticBody2D" groups=["Enemy", "Resettable"]]
 collision_layer = 2
 script = ExtResource("1_a8cha")
 projectile_scene = ExtResource("2_4tnh8")
