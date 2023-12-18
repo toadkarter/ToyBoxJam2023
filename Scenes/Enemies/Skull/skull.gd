@@ -53,6 +53,8 @@ func reset_state() -> void:
 
 
 func _run_timer(seconds: float) -> void:
+	if seconds == 0.0:
+		return
 	var timer: Timer = Timer.new()
 	add_child(timer)
 	timer.wait_time = seconds

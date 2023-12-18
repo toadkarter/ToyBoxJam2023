@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 window/size/viewport_width=700
 window/size/viewport_height=700
 window/stretch/scale=2.0
+window/main_scene="res://Scenes/Game/Intro/Intro.tscn"
 
 [input]
 
