@@ -67,7 +67,7 @@ func _handle_collisions() -> void:
 			_die()
 
 
-func _freeze_player() -> void:
+func freeze() -> void:
 	is_dying = true
 	animations.stop()
 	velocity.x = 0
@@ -75,9 +75,13 @@ func _freeze_player() -> void:
 	
 
 func _die():
-	_freeze_player()
+	freeze()
 	on_death.emit()
 
 
 func reset_death_state() -> void:
 	is_dying = false
+
+
+func enter_outro_state() -> void:
+	animations.play("jump")

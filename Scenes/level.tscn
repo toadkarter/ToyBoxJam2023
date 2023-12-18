@@ -197,6 +197,7 @@ checkpoints = [NodePath("Checkpoint1"), NodePath("Checkpoint2"), NodePath("Check
 death_texts = Array[String](["My will falters", "I must go on", "I long to see the sky"])
 checkpoint_text = "My memory stirs..."
 outro_marker_scene = ExtResource("4_mafo8")
+seconds_before_marker_appears = 2.5
 
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(233, -5032)

@@ -24,6 +24,8 @@ const FIREWALL_OFFSET: float = 168.0
 @export var outro_marker_scene: PackedScene
 @export var outro_camera_limit: float = -5032.0
 @export var seconds_before_marker_appears: float = 5.0
+@export var seconds_before_flight: float = 2.0
+@export var flight_speed: float = -50.0
 
 @onready var camera: Camera2D = $Camera
 @onready var firewall: Node2D = $Firewall
@@ -38,6 +40,7 @@ var player: CharacterBody2D
 var total_deaths: int = 0
 var scroll_level: bool = true
 var outro_started: bool = false
+var outro_finishing: bool = false
 
 
 func _ready() -> void:
@@ -48,6 +51,9 @@ func _ready() -> void:
 	reset_level()
 
 func _process(delta: float) -> void:
+	if outro_finishing:
+		player.position.y += flight_speed * delta
+
 	if !scroll_level:
 		return
 
@@ -133,5 +139,9 @@ func _play_outro() -> void:
 
 
 func _play_flight_animation() -> void:
-	print("Printing flight animation")
+	player.freeze()
+	player.enter_outro_state()
+	await get_tree().create_timer(seconds_before_flight).timeout
+	outro_finishing = true
+
 
