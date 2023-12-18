@@ -30,7 +30,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("jump"):
 		if scroll_has_started:
-			_finish_intro()
+			# Can't be having people skipping the intro lol
+			return
+			# _finish_intro()
 		else:
 			_start_intro()
 
