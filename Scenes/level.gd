@@ -20,6 +20,10 @@ const FIREWALL_OFFSET: float = 168.0
 @export var death_texts: Array[String]
 @export var checkpoint_text: String
 
+@export_group("Outro")
+@export var outro_limit: float = -5032.0
+@export var seconds_before_marker_appears: float = 5.0
+
 @onready var camera: Camera2D = $Camera
 @onready var firewall: Node2D = $Firewall
 @onready var hud: CanvasLayer = $Camera/HUD
@@ -31,6 +35,7 @@ const FIREWALL_OFFSET: float = 168.0
 var player: CharacterBody2D
 var total_deaths: int = 0
 var scroll_level: bool = true
+var outro_started: bool = false
 
 
 func _ready() -> void:
@@ -46,6 +51,9 @@ func _process(delta: float) -> void:
 
 	camera.position.y += -scroll_speed * delta
 	firewall.position.y += -scroll_speed * delta
+
+	if camera.position.y <= outro_limit:
+		_play_outro()
 
 
 func _on_player_death() -> void:
@@ -110,3 +118,8 @@ func _init_debug_options() -> void:
 
 	if debug_start_at_checkpoint_number != -1 and debug_start_at_checkpoint_number < checkpoints.size():
 		current_checkpoint = checkpoints[debug_start_at_checkpoint_number]
+
+
+func _play_outro() -> void:
+	scroll_level = false
+	print("We are starting the outro")
