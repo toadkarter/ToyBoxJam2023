@@ -22,6 +22,10 @@ signal on_level_finished
 @export var death_texts: Array[String]
 @export var checkpoint_text: String
 
+@export_group("Intro")
+@export var intro_notification_text: String = "I dream again..."
+@export var intro_notification_length: float = 3.0
+
 @export_group("Outro")
 @export var outro_marker_scene: PackedScene
 @export var outro_camera_limit: float = -5032.0
@@ -49,11 +53,26 @@ var resetting_state: bool = false
 
 
 func _ready() -> void:
-	if !debug_stop_music:
-		music_player.play()
 	_init_debug_options()
 	_init_checkpoints()
 	reset_level()
+
+	scroll_level = false
+	player.freeze()
+	player.animations.play("default")
+	await _play_intro()
+	player.unfreeze()
+	scroll_level = true
+	music_player.play()
+
+
+func _play_intro():
+	var fade_from_black_length = hud.animations.get_animation("fade_from_black").length
+	hud.fade_from_black()
+	await get_tree().create_timer(fade_from_black_length).timeout
+	hud.show_central_notification(intro_notification_text, intro_notification_length)
+	await get_tree().create_timer(intro_notification_length).timeout
+
 
 func _process(delta: float) -> void:
 	if outro_finishing:
@@ -131,11 +150,14 @@ func _on_checkpoint_reached(checkpoint: Area2D) -> void:
 func _init_debug_options() -> void:
 	get_tree().call_group("Debug", "queue_free")
 
-	if debug_stop_scrolling:
-		scroll_level = false
+	# if !debug_stop_music:
+	# 	music_player.play()
 
-	if debug_start_at_checkpoint_number != -1 and debug_start_at_checkpoint_number < checkpoints.size():
-		current_checkpoint = checkpoints[debug_start_at_checkpoint_number]
+	# if debug_stop_scrolling:
+	# 	scroll_level = false
+
+	# if debug_start_at_checkpoint_number != -1 and debug_start_at_checkpoint_number < checkpoints.size():
+	# 	current_checkpoint = checkpoints[debug_start_at_checkpoint_number]
 
 
 func _play_outro() -> void:

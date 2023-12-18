@@ -72,7 +72,11 @@ func freeze() -> void:
 	animations.stop()
 	velocity.x = 0
 	velocity.y = 0
-	
+
+
+func unfreeze() -> void:
+	is_dying = false
+
 
 func _die():
 	freeze()

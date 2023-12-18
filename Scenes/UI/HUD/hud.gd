@@ -34,3 +34,7 @@ func set_death_count_label(num_deaths: int):
 
 func fade_to_white() -> void:
 	animations.play("fade_to_white")
+
+
+func fade_from_black() -> void:
+	animations.play("fade_from_black")
