@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://csa7f3pt3x01b"]
+
+[ext_resource type="Script" path="res://Scenes/Game/OutroMarker/outro_marker.gd" id="1_m6axo"]
+[ext_resource type="Texture2D" uid="uid://cnjq4iik0ot6o" path="res://Art/Sprites/ToyBoxJam3.png" id="1_tmjib"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d5fs7"]
+size = Vector2(7, 7)
+
+[sub_resource type="Animation" id="Animation_7tqiy"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_trru4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ukq2w"]
+_data = {
+"RESET": SubResource("Animation_trru4"),
+"fade_in": SubResource("Animation_7tqiy")
+}
+
+[node name="OutroMarker" type="Area2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_m6axo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+texture = ExtResource("1_tmjib")
+region_enabled = true
+region_rect = Rect2(64, 24, 7, 7)
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_d5fs7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ukq2w")
+}

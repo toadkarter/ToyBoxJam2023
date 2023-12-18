@@ -21,8 +21,8 @@ const FIREWALL_OFFSET: float = 168.0
 @export var checkpoint_text: String
 
 @export_group("Outro")
-@export var outro_marker: PackedScene
-@export var outro_limit: float = -5032.0
+@export var outro_marker_scene: PackedScene
+@export var outro_camera_limit: float = -5032.0
 @export var seconds_before_marker_appears: float = 5.0
 
 @onready var camera: Camera2D = $Camera
@@ -54,7 +54,7 @@ func _process(delta: float) -> void:
 	camera.position.y += -scroll_speed * delta
 	firewall.position.y += -scroll_speed * delta
 
-	if camera.position.y <= outro_limit:
+	if camera.position.y <= outro_camera_limit:
 		_play_outro()
 
 
@@ -124,3 +124,14 @@ func _init_debug_options() -> void:
 
 func _play_outro() -> void:
 	scroll_level = false
+	await get_tree().create_timer(seconds_before_marker_appears).timeout
+	var outro_marker = load(outro_marker_scene.resource_path).instantiate()
+	add_child(outro_marker)
+	outro_marker.position = outro_marker_spawn_location.position
+	outro_marker.connect("on_player_entered", _play_flight_animation)
+	outro_marker.play_spawn_sequence()
+
+
+func _play_flight_animation() -> void:
+	print("Printing flight animation")
+
