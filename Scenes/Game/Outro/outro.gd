@@ -7,6 +7,7 @@ signal on_outro_finished
 @export var seconds_before_score = 2.0
 
 @onready var animations: AnimationPlayer = $AnimationPlayer
+@onready var sfx_player: AudioStreamPlayer2D = $SFXPlayer
 @onready var player_disappears_length = animations.get_animation("player_disappears").length
 @onready var show_score_length = animations.get_animation("show_score").length
 
@@ -37,3 +38,7 @@ func _process(_delta: float) -> void:
 
 func set_death_count(num_deaths_to_set: int):
 	num_deaths = num_deaths_to_set
+
+
+func play_death_sound() -> void:
+	sfx_player.play()

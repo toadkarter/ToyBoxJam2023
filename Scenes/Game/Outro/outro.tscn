@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://bwqjjjf0g4hl0"]
+[gd_scene load_steps=12 format=3 uid="uid://bwqjjjf0g4hl0"]
 
 [ext_resource type="Script" path="res://Scenes/Game/Outro/outro.gd" id="1_12n7g"]
 [ext_resource type="Texture2D" uid="uid://br3238kxwqemf" path="res://Art/Sprites/tbj2_startcart2spr.png" id="1_mdhjp"]
 [ext_resource type="Texture2D" uid="uid://8mxwquuegx8v" path="res://Art/Sprites/worldrooms.png" id="2_6cuvx"]
 [ext_resource type="FontFile" uid="uid://wqcvt7nm481m" path="res://Art/Sprites/golden_font_sprites.png" id="4_qtda1"]
 [ext_resource type="FontFile" uid="uid://cg21k62fnhog5" path="res://Art/Sprites/vanilla_font_sprites.png" id="5_p88vr"]
+[ext_resource type="AudioStream" uid="uid://dwnsha4pyixod" path="res://Art/Sound/SFX/checkpoint.wav" id="6_f8eex"]
 
 [sub_resource type="Animation" id="Animation_o8el1"]
 resource_name = "fade_from_white"
@@ -135,6 +136,20 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play_death_sound"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_1sqwt"]
@@ -1013,3 +1028,6 @@ scale = Vector2(2, 2)
 texture = ExtResource("1_mdhjp")
 region_enabled = true
 region_rect = Rect2(0, 56, 16, 16)
+
+[node name="SFXPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_f8eex")
