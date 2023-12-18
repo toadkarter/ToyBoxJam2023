@@ -18,6 +18,11 @@ func _ready() -> void:
 	_play_intro()
 
 
+func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("quit") and OS.get_name() != "Web":
+		get_tree().quit()
+
+
 func _play_intro() -> void:
 	if !skip_intro:
 		intro = intro_scene.instantiate()
