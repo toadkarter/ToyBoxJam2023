@@ -4,6 +4,21 @@
 [ext_resource type="Script" path="res://Scenes/UI/HUD/hud.gd" id="1_k4b2e"]
 [ext_resource type="FontFile" uid="uid://cg21k62fnhog5" path="res://Art/Sprites/vanilla_font_sprites.png" id="3_hrq43"]
 
+[sub_resource type="Animation" id="Animation_hn37d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_6yhme"]
 resource_name = "central_notification_fade_in"
 length = 0.1
@@ -18,21 +33,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_hn37d"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_m3hjr"]
@@ -71,9 +71,9 @@ libraries = {
 }
 
 [node name="DeathCountLabel" type="Label" parent="."]
-offset_left = 16.0
+offset_left = 24.0
 offset_top = 8.0
-offset_right = 120.0
+offset_right = 128.0
 offset_bottom = 31.0
 theme_override_fonts/font = ExtResource("3_hrq43")
 text = "ARMORS USED:0"

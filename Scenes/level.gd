@@ -143,5 +143,3 @@ func _play_flight_animation() -> void:
 	player.enter_outro_state()
 	await get_tree().create_timer(seconds_before_flight).timeout
 	outro_finishing = true
-
-

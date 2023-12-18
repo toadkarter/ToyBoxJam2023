@@ -10,6 +10,7 @@ signal on_player_entered
 
 
 func _ready() -> void:
+	hitbox.disabled = true
 	connect("body_entered", _on_body_entered)
 
 
