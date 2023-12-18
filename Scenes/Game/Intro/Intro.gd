@@ -62,7 +62,6 @@ func _finish_intro() -> void:
 
 func _show_text() -> void:
 	for paragraph in intro_text:
-		print("We are setting some text")
 		story_text.text = paragraph.to_upper()
 		await _fade_text_in_out("story_text_fade_in")
 
