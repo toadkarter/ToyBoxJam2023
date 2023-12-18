@@ -270,7 +270,6 @@ position = Vector2(136, -40)
 
 [node name="[2] FirstTimeDroppableBlocks" type="Node2D" parent="."]
 position = Vector2(0, -320)
-metadata/_edit_group_ = true
 
 [node name="DroppableBlocks" type="Node2D" parent="[2] FirstTimeDroppableBlocks"]
 
@@ -405,14 +404,8 @@ position = Vector2(360, -88)
 [node name="regular_body48" parent="[2] FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(376, -88)
 
-[node name="regular_body50" parent="[2] FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
-position = Vector2(264, -104)
-
 [node name="regular_body59" parent="[2] FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(248, -104)
-
-[node name="regular_body51" parent="[2] FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
-position = Vector2(280, -104)
 
 [node name="regular_body52" parent="[2] FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(296, -104)
@@ -425,12 +418,6 @@ position = Vector2(392, -88)
 
 [node name="regular_body60" parent="[2] FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(248, -120)
-
-[node name="regular_body61" parent="[2] FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
-position = Vector2(264, -120)
-
-[node name="regular_body62" parent="[2] FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
-position = Vector2(280, -120)
 
 [node name="regular_body63" parent="[2] FirstTimeDroppableBlocks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(296, -120)
@@ -594,7 +581,6 @@ width = 1.0
 
 [node name="[3] DroppableBlockEscape" type="Node2D" parent="."]
 position = Vector2(-16, -800)
-metadata/_edit_group_ = true
 
 [node name="Start" type="Line2D" parent="[3] DroppableBlockEscape" groups=["Debug"]]
 position = Vector2(16, 0)
@@ -746,12 +732,6 @@ position = Vector2(328, 72)
 [node name="regular_body36" parent="[3] DroppableBlockEscape/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(312, 72)
 
-[node name="regular_body49" parent="[3] DroppableBlockEscape/RegularBlocks" instance=ExtResource("7_e0ir6")]
-position = Vector2(264, 184)
-
-[node name="regular_body50" parent="[3] DroppableBlockEscape/RegularBlocks" instance=ExtResource("7_e0ir6")]
-position = Vector2(248, 184)
-
 [node name="regular_body51" parent="[3] DroppableBlockEscape/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(264, 168)
 
@@ -806,29 +786,11 @@ position = Vector2(264, 40)
 [node name="regular_body68" parent="[3] DroppableBlockEscape/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(248, 40)
 
-[node name="regular_body72" parent="[3] DroppableBlockEscape/RegularBlocks" instance=ExtResource("7_e0ir6")]
-position = Vector2(232, 184)
-
-[node name="regular_body73" parent="[3] DroppableBlockEscape/RegularBlocks" instance=ExtResource("7_e0ir6")]
-position = Vector2(216, 184)
-
 [node name="regular_body74" parent="[3] DroppableBlockEscape/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(232, 168)
 
 [node name="regular_body75" parent="[3] DroppableBlockEscape/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(216, 168)
-
-[node name="regular_body76" parent="[3] DroppableBlockEscape/RegularBlocks" instance=ExtResource("7_e0ir6")]
-position = Vector2(232, 152)
-
-[node name="regular_body77" parent="[3] DroppableBlockEscape/RegularBlocks" instance=ExtResource("7_e0ir6")]
-position = Vector2(216, 152)
-
-[node name="regular_body78" parent="[3] DroppableBlockEscape/RegularBlocks" instance=ExtResource("7_e0ir6")]
-position = Vector2(232, 136)
-
-[node name="regular_body79" parent="[3] DroppableBlockEscape/RegularBlocks" instance=ExtResource("7_e0ir6")]
-position = Vector2(216, 136)
 
 [node name="regular_body80" parent="[3] DroppableBlockEscape/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(232, 120)
@@ -836,41 +798,11 @@ position = Vector2(232, 120)
 [node name="regular_body81" parent="[3] DroppableBlockEscape/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(216, 120)
 
-[node name="regular_body82" parent="[3] DroppableBlockEscape/RegularBlocks" instance=ExtResource("7_e0ir6")]
-position = Vector2(232, 104)
-
-[node name="regular_body83" parent="[3] DroppableBlockEscape/RegularBlocks" instance=ExtResource("7_e0ir6")]
-position = Vector2(216, 104)
-
-[node name="regular_body84" parent="[3] DroppableBlockEscape/RegularBlocks" instance=ExtResource("7_e0ir6")]
-position = Vector2(232, 88)
-
-[node name="regular_body85" parent="[3] DroppableBlockEscape/RegularBlocks" instance=ExtResource("7_e0ir6")]
-position = Vector2(216, 88)
-
 [node name="regular_body86" parent="[3] DroppableBlockEscape/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(232, 72)
 
 [node name="regular_body87" parent="[3] DroppableBlockEscape/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(216, 72)
-
-[node name="regular_body88" parent="[3] DroppableBlockEscape/RegularBlocks" instance=ExtResource("7_e0ir6")]
-position = Vector2(232, 56)
-
-[node name="regular_body89" parent="[3] DroppableBlockEscape/RegularBlocks" instance=ExtResource("7_e0ir6")]
-position = Vector2(216, 56)
-
-[node name="regular_body90" parent="[3] DroppableBlockEscape/RegularBlocks" instance=ExtResource("7_e0ir6")]
-position = Vector2(232, 40)
-
-[node name="regular_body91" parent="[3] DroppableBlockEscape/RegularBlocks" instance=ExtResource("7_e0ir6")]
-position = Vector2(216, 40)
-
-[node name="regular_body92" parent="[3] DroppableBlockEscape/RegularBlocks" instance=ExtResource("7_e0ir6")]
-position = Vector2(200, 184)
-
-[node name="regular_body93" parent="[3] DroppableBlockEscape/RegularBlocks" instance=ExtResource("7_e0ir6")]
-position = Vector2(184, 184)
 
 [node name="regular_body94" parent="[3] DroppableBlockEscape/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(200, 168)
@@ -989,6 +921,27 @@ scale = Vector2(1, -1)
 num_projectiles_per_emission = 0
 seconds_between_emission = 0.0
 
+[node name="Skull6" parent="[3] DroppableBlockEscape/Skulls" instance=ExtResource("4_uxhqa")]
+position = Vector2(224, 48)
+rotation = 3.14159
+scale = Vector2(-1, -1)
+num_projectiles_per_emission = 0
+seconds_between_emission = 0.0
+
+[node name="Skull7" parent="[3] DroppableBlockEscape/Skulls" instance=ExtResource("4_uxhqa")]
+position = Vector2(224, 96)
+rotation = 3.14159
+scale = Vector2(-1, -1)
+num_projectiles_per_emission = 0
+seconds_between_emission = 0.0
+
+[node name="Skull8" parent="[3] DroppableBlockEscape/Skulls" instance=ExtResource("4_uxhqa")]
+position = Vector2(224, 144)
+rotation = 3.14159
+scale = Vector2(-1, -1)
+num_projectiles_per_emission = 0
+seconds_between_emission = 0.0
+
 [node name="Skull2" parent="[3] DroppableBlockEscape/Skulls" instance=ExtResource("4_uxhqa")]
 position = Vector2(384, 368)
 rotation = 3.14159
@@ -998,6 +951,13 @@ seconds_between_emission = 0.0
 
 [node name="Skull3" parent="[3] DroppableBlockEscape/Skulls" instance=ExtResource("4_uxhqa")]
 position = Vector2(336, 368)
+rotation = 3.14159
+scale = Vector2(1, -1)
+num_projectiles_per_emission = 0
+seconds_between_emission = 0.0
+
+[node name="Skull5" parent="[3] DroppableBlockEscape/Skulls" instance=ExtResource("4_uxhqa")]
+position = Vector2(288, 368)
 rotation = 3.14159
 scale = Vector2(1, -1)
 num_projectiles_per_emission = 0
