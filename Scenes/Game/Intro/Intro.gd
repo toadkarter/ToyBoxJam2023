@@ -13,6 +13,8 @@ signal intro_finished
 @onready var story_text: Label = $HUD/StoryText
 @onready var hud_animations: AnimationPlayer = $HUDAnimationPlayer
 @onready var sky_animations: AnimationPlayer = $SkyAnimationPlayer
+@onready var title_label: Label = $HUD/TitleLabel
+@onready var subtitle_label: Label = $HUD/SubtitleLabel
 @onready var audio_player: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var tower: Node2D = $Tower
 
@@ -44,6 +46,9 @@ func _start_intro() -> void:
 	var title_fade_length: float = hud_animations.get_animation("title_fade").length
 	await get_tree().create_timer(title_fade_length).timeout
 
+	title_label.modulate.a = 0
+	subtitle_label.modulate.a = 0
+
 	_show_text()
 
 
@@ -55,16 +60,18 @@ func _finish_intro() -> void:
 
 
 func _show_text() -> void:
-	var fade_seconds = hud_animations.get_animation("story_text_fade_in").length
-
 	for paragraph in intro_text:
 		print("We are setting some text")
 		story_text.text = paragraph.to_upper()
-		hud_animations.play("story_text_fade_in")
-		await get_tree().create_timer(seconds_for_text_on_screen).timeout
-		hud_animations.play_backwards()
-		await get_tree().create_timer(fade_seconds + seconds_between_text).timeout
+		await _fade_text_in_out("story_text_fade_in")
 
+	await _fade_text_in_out("stinger_text_fade_in")
 	_finish_intro()
 
 
+func _fade_text_in_out(animation_name: String):
+	var text_fade_seconds = hud_animations.get_animation(animation_name).length
+	hud_animations.play(animation_name)
+	await get_tree().create_timer(seconds_for_text_on_screen).timeout
+	hud_animations.play_backwards()
+	await get_tree().create_timer(text_fade_seconds + seconds_between_text).timeout
