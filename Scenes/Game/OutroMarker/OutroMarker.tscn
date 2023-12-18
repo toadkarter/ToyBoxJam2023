@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://csa7f3pt3x01b"]
+
+[ext_resource type="Texture2D" uid="uid://cnjq4iik0ot6o" path="res://Art/Sprites/ToyBoxJam3.png" id="1_tmjib"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d5fs7"]
+size = Vector2(6, 6)
+
+[node name="OutroMarker" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_tmjib")
+region_enabled = true
+region_rect = Rect2(64, 24, 7, 7)
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_d5fs7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

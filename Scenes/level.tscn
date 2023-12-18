@@ -1,10 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://dpb656nt13lxy"]
+[gd_scene load_steps=18 format=3 uid="uid://dpb656nt13lxy"]
 
 [ext_resource type="Texture2D" uid="uid://br3238kxwqemf" path="res://Art/Sprites/tbj2_startcart2spr.png" id="1_58vo4"]
 [ext_resource type="Script" path="res://Scenes/level.gd" id="2_7nbtq"]
 [ext_resource type="PackedScene" uid="uid://ctn5h44wck1vy" path="res://Scenes/Player/player.tscn" id="2_kb2gi"]
 [ext_resource type="PackedScene" uid="uid://b66s52nkr67ui" path="res://Scenes/Blocks/Droppable/droppable_block.tscn" id="3_erwvd"]
 [ext_resource type="PackedScene" uid="uid://dtjm4gm4s1wla" path="res://Scenes/UI/HUD/hud.tscn" id="4_oap2e"]
+[ext_resource type="PackedScene" uid="uid://csa7f3pt3x01b" path="res://Scenes/Game/OutroMarker/OutroMarker.tscn" id="4_ope5f"]
 [ext_resource type="PackedScene" uid="uid://bhct83woj4glf" path="res://Scenes/Enemies/Skull/skull.tscn" id="4_uxhqa"]
 [ext_resource type="PackedScene" uid="uid://c4imq877em6ya" path="res://Scenes/Enemies/Projectiles/Firewall/Firewall.tscn" id="6_wqu57"]
 [ext_resource type="PackedScene" uid="uid://dd0rki4hvdmcb" path="res://Scenes/Blocks/Regular/regular_body.tscn" id="7_e0ir6"]
@@ -195,6 +196,7 @@ player_scene = ExtResource("2_kb2gi")
 checkpoints = [NodePath("Checkpoint1"), NodePath("Checkpoint2"), NodePath("Checkpoint3"), NodePath("Checkpoint4"), NodePath("Checkpoint5"), NodePath("Checkpoint6"), NodePath("Checkpoint7"), NodePath("Checkpoint8"), NodePath("Checkpoint9"), NodePath("DebugCheckpointForOutro")]
 death_texts = Array[String](["My will falters", "I must go on", "I long to see the sky"])
 checkpoint_text = "My memory stirs..."
+outro_marker = ExtResource("4_ope5f")
 
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(233, -5032)
@@ -2765,6 +2767,21 @@ position = Vector2(280, -264)
 [node name="regular_body5" parent="[11] SpinningSticks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(288, -56)
 
+[node name="Skull" parent="[11] SpinningSticks/RegularBlocks" instance=ExtResource("4_uxhqa")]
+position = Vector2(88, -240)
+projectile_speed = 60.0
+
+[node name="Skull2" parent="[11] SpinningSticks/RegularBlocks" instance=ExtResource("4_uxhqa")]
+position = Vector2(88, -216)
+projectile_speed = 60.0
+
+[node name="Skull3" parent="[11] SpinningSticks/RegularBlocks" instance=ExtResource("4_uxhqa")]
+position = Vector2(88, -192)
+projectile_speed = 60.0
+
+[node name="DroppableBlock" parent="[11] SpinningSticks/RegularBlocks" instance=ExtResource("3_erwvd")]
+position = Vector2(392, -232)
+
 [node name="regular_body7" parent="[11] SpinningSticks/RegularBlocks" instance=ExtResource("7_e0ir6")]
 position = Vector2(320, -56)
 
@@ -2817,17 +2834,5 @@ camera_position = -4272.0
 position = Vector2(113, -5048)
 camera_position = -4904.0
 
-[node name="Skull" parent="." instance=ExtResource("4_uxhqa")]
-position = Vector2(89, -4784)
-projectile_speed = 60.0
-
-[node name="Skull2" parent="." instance=ExtResource("4_uxhqa")]
-position = Vector2(89, -4760)
-projectile_speed = 60.0
-
-[node name="Skull3" parent="." instance=ExtResource("4_uxhqa")]
-position = Vector2(89, -4736)
-projectile_speed = 60.0
-
-[node name="DroppableBlock" parent="." instance=ExtResource("3_erwvd")]
-position = Vector2(393, -4776)
+[node name="OutroMarkerSpawnLocation" type="Node2D" parent="."]
+position = Vector2(249, -5048)

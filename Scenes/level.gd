@@ -21,6 +21,7 @@ const FIREWALL_OFFSET: float = 168.0
 @export var checkpoint_text: String
 
 @export_group("Outro")
+@export var outro_marker: PackedScene
 @export var outro_limit: float = -5032.0
 @export var seconds_before_marker_appears: float = 5.0
 
@@ -29,6 +30,7 @@ const FIREWALL_OFFSET: float = 168.0
 @onready var hud: CanvasLayer = $Camera/HUD
 @onready var music_player: AudioStreamPlayer2D = $Camera/MusicPlayer
 @onready var sfx_player: AudioStreamPlayer2D = $Camera/SFXPlayer
+@onready var outro_marker_spawn_location: Node2D = $OutroMarkerSpawnLocation
 @onready var current_checkpoint: Area2D = checkpoints[0]
 
 
@@ -122,4 +124,3 @@ func _init_debug_options() -> void:
 
 func _play_outro() -> void:
 	scroll_level = false
-	print("We are starting the outro")
