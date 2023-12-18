@@ -41,15 +41,15 @@ func _on_intro_finished() -> void:
 
 
 func _on_level_finished() -> void:
-	var deaths_to_set = level.total_deaths
+	var deaths_to_set = level.get_deaths()
 	if level != null:
 		level.queue_free()
 
 	outro = outro_scene.instantiate()
-	outro.set_death_count(deaths_to_set)
 	add_child(outro)
 	
 	outro.connect("on_outro_finished", _on_outro_finished)
+	outro.set_death_count(deaths_to_set)
 
 
 func _on_outro_finished() -> void:

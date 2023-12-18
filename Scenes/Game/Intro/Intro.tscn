@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dbiyjbads78pw"]
+[gd_scene load_steps=17 format=3 uid="uid://dbiyjbads78pw"]
 
 [ext_resource type="Script" path="res://Scenes/Game/Intro/Intro.gd" id="1_b7egr"]
 [ext_resource type="FontFile" uid="uid://cg21k62fnhog5" path="res://Art/Sprites/vanilla_font_sprites.png" id="2_hvr0s"]
@@ -80,6 +80,18 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AudioStreamPlayer2D:volume_db")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [5.0]
 }
 
 [sub_resource type="Animation" id="Animation_cvxsg"]
@@ -168,9 +180,26 @@ tracks/1/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_bhqj8"]
+resource_name = "audio_fade_out"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer2D:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [5.0, -80.0]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ufb3y"]
 _data = {
 "RESET": SubResource("Animation_e0x50"),
+"audio_fade_out": SubResource("Animation_bhqj8"),
 "fade_out": SubResource("Animation_cvxsg"),
 "stinger_text_fade_in": SubResource("Animation_xq8v5"),
 "story_text_fade_in": SubResource("Animation_scq7r"),

@@ -229,7 +229,7 @@ layer_0/tile_data = PackedInt32Array(1114116, 65536, 0, 1114117, 65536, 0, 11141
 script = ExtResource("2_7nbtq")
 debug_start_at_checkpoint_number = 9
 player_scene = ExtResource("2_kb2gi")
-checkpoints = [NodePath("Checkpoint1"), NodePath("Checkpoint2"), NodePath("Checkpoint3"), NodePath("Checkpoint4"), NodePath("Checkpoint5"), NodePath("Checkpoint6"), NodePath("Checkpoint7"), NodePath("Checkpoint8"), NodePath("Checkpoint9"), NodePath("DebugCheckpointForOutro")]
+checkpoints = [NodePath("Checkpoint1"), NodePath("Checkpoint2"), NodePath("Checkpoint3"), NodePath("Checkpoint4"), NodePath("Checkpoint5"), NodePath("Checkpoint6"), NodePath("Checkpoint7"), NodePath("Checkpoint8"), NodePath("Checkpoint9")]
 death_texts = Array[String](["My will falters", "I must go on", "I long to see the sky"])
 checkpoint_text = "My memory stirs..."
 outro_marker_scene = ExtResource("4_mafo8")
@@ -249,7 +249,6 @@ stream = ExtResource("10_k51wc")
 position = Vector2(-240, -232)
 
 [node name="[1] Beginner" type="Node2D" parent="."]
-metadata/_edit_group_ = true
 
 [node name="Start" type="Line2D" parent="[1] Beginner" groups=["Debug"]]
 points = PackedVector2Array(80, 272, 400, 272)
@@ -2695,9 +2694,6 @@ speed = -2.0
 position = Vector2(200, 40)
 speed = -2.0
 
-[node name="regular_body6" parent="[11] SpinningSticks/RegularBlocks" instance=ExtResource("7_e0ir6")]
-position = Vector2(232, 4584)
-
 [node name="Firestick5" parent="[11] SpinningSticks/RegularBlocks" instance=ExtResource("14_etr6s")]
 position = Vector2(233, 40)
 speed = -2.0
@@ -2866,10 +2862,6 @@ camera_position = -4000.0
 [node name="Checkpoint9" parent="." instance=ExtResource("7_n31si")]
 position = Vector2(344, -4280)
 camera_position = -4272.0
-
-[node name="DebugCheckpointForOutro" parent="." instance=ExtResource("7_n31si")]
-position = Vector2(113, -5048)
-camera_position = -4904.0
 
 [node name="OutroMarkerSpawnLocation" type="Node2D" parent="."]
 position = Vector2(249, -5048)

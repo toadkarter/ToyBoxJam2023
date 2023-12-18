@@ -152,3 +152,7 @@ func _play_flight_animation() -> void:
 	hud.fade_to_white()
 	await get_tree().create_timer(seconds_before_flight_finished).timeout
 	on_level_finished.emit()
+
+
+func get_deaths() -> int:
+	return total_deaths

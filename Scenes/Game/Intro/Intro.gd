@@ -52,6 +52,9 @@ func _start_intro() -> void:
 
 
 func _finish_intro() -> void:
+	var audio_fade_length: float = hud_animations.get_animation("fade_out").length
+	hud_animations.play("audio_fade_out")
+	await get_tree().create_timer(audio_fade_length).timeout
 	var seconds_to_wait: float = hud_animations.get_animation("fade_out").length
 	hud_animations.play("fade_out")
 	await get_tree().create_timer(seconds_to_wait).timeout

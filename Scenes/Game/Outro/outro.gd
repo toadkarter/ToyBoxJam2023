@@ -7,12 +7,12 @@ signal on_outro_finished
 
 @onready var animations: AnimationPlayer = $AnimationPlayer
 @onready var sfx_player: AudioStreamPlayer2D = $SFXPlayer
+@onready var score_num_text: Label = $HUD/ScoreNumText
 @onready var player_disappears_length = animations.get_animation("player_disappears").length
 @onready var show_score_length = animations.get_animation("show_score").length
 
 var outro_animations_finished: bool = false
 var is_returning_to_title: bool = false
-var num_deaths: int = 0
 
 func _ready() -> void:
 	await get_tree().create_timer(seconds_before_player_animation).timeout
@@ -36,8 +36,7 @@ func _process(_delta: float) -> void:
 
 
 func set_death_count(num_deaths_to_set: int):
-	num_deaths = num_deaths_to_set
-
+	score_num_text.text = "%d" % num_deaths_to_set
 
 func play_death_sound() -> void:
 	sfx_player.play()
