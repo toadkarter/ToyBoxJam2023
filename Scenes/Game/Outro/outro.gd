@@ -2,7 +2,6 @@ extends Node2D
 
 signal on_outro_finished
 
-
 @export var seconds_before_player_animation = 4.0
 @export var seconds_before_score = 2.0
 

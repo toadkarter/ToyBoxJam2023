@@ -1,11 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://brxorhpm1bdi0"]
+[gd_scene load_steps=5 format=3 uid="uid://brxorhpm1bdi0"]
 
 [ext_resource type="Script" path="res://Scenes/Game/Main/main.gd" id="1_uc3ia"]
 [ext_resource type="PackedScene" uid="uid://dpb656nt13lxy" path="res://Scenes/level.tscn" id="2_fg751"]
 [ext_resource type="PackedScene" uid="uid://dbiyjbads78pw" path="res://Scenes/Game/Intro/Intro.tscn" id="3_rvtb3"]
+[ext_resource type="PackedScene" uid="uid://bwqjjjf0g4hl0" path="res://Scenes/Game/Outro/outro.tscn" id="4_wwh2o"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_uc3ia")
-skip_intro = true
 level_scene = ExtResource("2_fg751")
 intro_scene = ExtResource("3_rvtb3")
+outro_scene = ExtResource("4_wwh2o")

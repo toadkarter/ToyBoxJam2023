@@ -7,12 +7,18 @@ extends Node2D
 @export_group("Scene References")
 @export var level_scene: PackedScene
 @export var intro_scene: PackedScene
+@export var outro_scene: PackedScene
 
 var intro: Node2D
 var level: Node2D
+var outro: Node2D
 
 
 func _ready() -> void:
+	_play_intro()
+
+
+func _play_intro() -> void:
 	if !skip_intro:
 		intro = intro_scene.instantiate()
 		add_child(intro)
@@ -30,4 +36,18 @@ func _on_intro_finished() -> void:
 
 
 func _on_level_finished() -> void:
-	print("Level is finished")
+	var deaths_to_set = level.total_deaths
+	if level != null:
+		level.queue_free()
+
+	outro = outro_scene.instantiate()
+	outro.set_death_count(deaths_to_set)
+	add_child(outro)
+	
+	outro.connect("on_outro_finished", _on_outro_finished)
+
+
+func _on_outro_finished() -> void:
+	if outro != null:
+		outro.queue_free()
+	_play_intro()
