@@ -190,12 +190,12 @@ script = ExtResource("2_7nbtq")
 debug_start_at_checkpoint_number = 6
 debug_stop_music = true
 player_scene = ExtResource("2_kb2gi")
-checkpoints = [NodePath("Checkpoint1"), NodePath("Checkpoint2"), NodePath("Checkpoint3"), NodePath("Checkpoint4"), NodePath("Checkpoint5"), NodePath("Checkpoint6"), NodePath("Checkpoint7"), NodePath("Checkpoint8")]
+checkpoints = [NodePath("Checkpoint1"), NodePath("Checkpoint2"), NodePath("Checkpoint3"), NodePath("Checkpoint4"), NodePath("Checkpoint5"), NodePath("Checkpoint6"), NodePath("Checkpoint7"), NodePath("Checkpoint8"), NodePath("Checkpoint9")]
 death_texts = Array[String](["My will falters", "I must go on", "I long to see the sky"])
 checkpoint_text = "My memory stirs..."
 
 [node name="Camera" type="Camera2D" parent="."]
-position = Vector2(240, -4000)
+position = Vector2(248, -4272)
 
 [node name="HUD" parent="Camera" instance=ExtResource("4_oap2e")]
 DeathCountText = "Nightmares:%d"
@@ -2296,6 +2296,293 @@ position = Vector2(312, -240)
 [node name="DroppableBlock20" parent="[9] SkullGauntlet/DroppableBlocks" instance=ExtResource("3_erwvd")]
 position = Vector2(328, -240)
 
+[node name="[10] NarrowProjectileDodge" type="Node2D" parent="."]
+position = Vector2(0, -4272)
+
+[node name="Start" type="Line2D" parent="[10] NarrowProjectileDodge" groups=["Debug"]]
+points = PackedVector2Array(80, 272, 400, 272)
+width = 1.0
+
+[node name="Start2" type="Line2D" parent="[10] NarrowProjectileDodge" groups=["Debug"]]
+position = Vector2(0, -272)
+points = PackedVector2Array(80, 272, 400, 272)
+width = 1.0
+
+[node name="RegularBlocks" type="Node2D" parent="[10] NarrowProjectileDodge"]
+
+[node name="regular_body" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(328, 200)
+
+[node name="regular_body2" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(344, 200)
+
+[node name="regular_body3" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(360, 200)
+
+[node name="regular_body4" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(376, 200)
+
+[node name="regular_body21" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(264, 200)
+
+[node name="regular_body22" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(280, 200)
+
+[node name="regular_body23" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(296, 200)
+
+[node name="regular_body24" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(312, 200)
+
+[node name="regular_body25" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(200, 200)
+
+[node name="regular_body26" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(216, 200)
+
+[node name="regular_body27" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(232, 200)
+
+[node name="regular_body28" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(248, 200)
+
+[node name="regular_body29" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(136, 200)
+
+[node name="regular_body30" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(152, 200)
+
+[node name="regular_body34" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(104, 200)
+
+[node name="regular_body36" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(88, 200)
+
+[node name="regular_body35" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(120, 200)
+
+[node name="regular_body56" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(136, 152)
+
+[node name="regular_body57" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(120, 152)
+
+[node name="regular_body54" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(88, 152)
+
+[node name="regular_body55" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(104, 152)
+
+[node name="regular_body58" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(224, 152)
+
+[node name="regular_body59" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(208, 152)
+
+[node name="regular_body60" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(176, 152)
+
+[node name="regular_body61" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(192, 152)
+
+[node name="regular_body62" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(312, 152)
+
+[node name="regular_body63" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(296, 152)
+
+[node name="regular_body64" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(264, 152)
+
+[node name="regular_body65" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(280, 152)
+
+[node name="regular_body67" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(392, 152)
+
+[node name="regular_body68" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(360, 152)
+
+[node name="regular_body69" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(376, 152)
+
+[node name="regular_body66" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(136, 56)
+
+[node name="regular_body70" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(120, 56)
+
+[node name="regular_body71" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(88, 56)
+
+[node name="regular_body72" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(104, 56)
+
+[node name="regular_body73" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(224, 56)
+
+[node name="regular_body74" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(208, 56)
+
+[node name="regular_body75" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(176, 56)
+
+[node name="regular_body76" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(192, 56)
+
+[node name="regular_body77" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(312, 56)
+
+[node name="regular_body78" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(296, 56)
+
+[node name="regular_body79" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(264, 56)
+
+[node name="regular_body80" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(280, 56)
+
+[node name="regular_body81" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(392, 56)
+
+[node name="regular_body82" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(360, 56)
+
+[node name="regular_body83" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(376, 56)
+
+[node name="regular_body31" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(168, 200)
+
+[node name="regular_body32" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(184, 200)
+
+[node name="regular_body5" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(344, 104)
+
+[node name="regular_body6" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(360, 104)
+
+[node name="regular_body7" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(376, 104)
+
+[node name="regular_body8" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(392, 104)
+
+[node name="regular_body9" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(280, 104)
+
+[node name="regular_body10" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(296, 104)
+
+[node name="regular_body11" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(312, 104)
+
+[node name="regular_body12" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(328, 104)
+
+[node name="regular_body13" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(216, 104)
+
+[node name="regular_body14" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(232, 104)
+
+[node name="regular_body15" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(248, 104)
+
+[node name="regular_body16" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(264, 104)
+
+[node name="regular_body17" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(152, 104)
+
+[node name="regular_body33" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(136, 104)
+
+[node name="regular_body18" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(168, 104)
+
+[node name="regular_body19" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(184, 104)
+
+[node name="regular_body20" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(200, 104)
+
+[node name="Skull" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("4_uxhqa")]
+position = Vector2(88, 176)
+projectile_speed = 60.0
+seconds_between_emission = 4.0
+
+[node name="Skull2" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("4_uxhqa")]
+position = Vector2(88, 136)
+projectile_speed = 60.0
+seconds_between_emission = 4.0
+seconds_before_starting_emissions = 2.0
+
+[node name="regular_body37" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(296, 8)
+
+[node name="regular_body38" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(312, 8)
+
+[node name="regular_body39" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(328, 8)
+
+[node name="regular_body40" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(344, 8)
+
+[node name="regular_body41" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(232, 8)
+
+[node name="regular_body42" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(248, 8)
+
+[node name="regular_body43" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(264, 8)
+
+[node name="regular_body44" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(280, 8)
+
+[node name="regular_body45" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(168, 8)
+
+[node name="regular_body46" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(184, 8)
+
+[node name="regular_body47" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(200, 8)
+
+[node name="regular_body48" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(216, 8)
+
+[node name="regular_body49" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(104, 8)
+
+[node name="regular_body50" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(88, 8)
+
+[node name="regular_body51" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(120, 8)
+
+[node name="regular_body52" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(136, 8)
+
+[node name="regular_body53" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("7_e0ir6")]
+position = Vector2(152, 8)
+
+[node name="Skull3" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("4_uxhqa")]
+position = Vector2(392, 80)
+scale = Vector2(-1, 1)
+projectile_speed = 60.0
+seconds_between_emission = 4.0
+
+[node name="Skull4" parent="[10] NarrowProjectileDodge/RegularBlocks" instance=ExtResource("4_uxhqa")]
+position = Vector2(392, 40)
+scale = Vector2(-1, 1)
+projectile_speed = 60.0
+seconds_between_emission = 4.0
+seconds_before_starting_emissions = 2.0
+
 [node name="Firewall" parent="." instance=ExtResource("6_wqu57")]
 position = Vector2(48, 400)
 
@@ -2329,3 +2616,7 @@ camera_position = -3200.0
 [node name="Checkpoint8" parent="." instance=ExtResource("7_n31si")]
 position = Vector2(392, -4008)
 camera_position = -4000.0
+
+[node name="Checkpoint9" parent="." instance=ExtResource("7_n31si")]
+position = Vector2(344, -4280)
+camera_position = -4272.0
