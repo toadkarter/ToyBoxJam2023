@@ -5,10 +5,6 @@ extends Node2D
 @onready var original_rotation: float = rotation 
 
 
-func _ready() -> void:
-	pass # Replace with function body.
-
-
 func _process(delta: float) -> void:
 	rotation += speed * delta
 
