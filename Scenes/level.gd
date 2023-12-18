@@ -35,6 +35,7 @@ signal on_level_finished
 @onready var hud: CanvasLayer = $Camera/HUD
 @onready var music_player: AudioStreamPlayer2D = $Camera/MusicPlayer
 @onready var sfx_player: AudioStreamPlayer2D = $Camera/SFXPlayer
+@onready var animations: AnimationPlayer = $AnimationPlayer
 @onready var outro_marker_spawn_location: Node2D = $OutroMarkerSpawnLocation
 @onready var current_checkpoint: Area2D = checkpoints[0]
 
@@ -133,6 +134,7 @@ func _init_debug_options() -> void:
 
 func _play_outro() -> void:
 	scroll_level = false
+	animations.play("bgm_fade_out")
 	await get_tree().create_timer(seconds_before_marker_appears).timeout
 	var outro_marker = load(outro_marker_scene.resource_path).instantiate()
 	add_child(outro_marker)
