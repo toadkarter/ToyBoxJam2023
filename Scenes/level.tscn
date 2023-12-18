@@ -196,6 +196,7 @@ checkpoint_text = "My memory stirs..."
 position = Vector2(240, -2630)
 
 [node name="HUD" parent="Camera" instance=ExtResource("4_oap2e")]
+DeathCountText = "Armors Wasted:%d"
 
 [node name="MusicPlayer" type="AudioStreamPlayer2D" parent="Camera"]
 position = Vector2(-240, -232)
