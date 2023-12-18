@@ -43,7 +43,7 @@ animations = [{
 radius = 4.0
 height = 12.0
 
-[node name="Fireball" type="StaticBody2D" groups=["Enemy"]]
+[node name="Fireball" type="StaticBody2D" groups=["Enemy", "Resettable"]]
 collision_layer = 2
 script = ExtResource("1_clvry")
 

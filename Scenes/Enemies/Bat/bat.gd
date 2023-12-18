@@ -5,6 +5,7 @@ extends StaticBody2D
 
 @onready var animations: AnimatedSprite2D = $AnimatableBody2D/AnimatedSprite2D
 @onready var body: AnimatableBody2D = $AnimatableBody2D
+@onready var original_position: Vector2 = position
 
 
 func _ready() -> void:
@@ -17,3 +18,7 @@ func _start_movement() -> void:
 	tween.set_loops().set_parallel(false)
 	tween.tween_property(body, "position", offset, duration / 2)
 	tween.tween_property(body, "position", Vector2.ZERO, duration / 2)
+
+
+func reset_state() -> void:
+	position = original_position

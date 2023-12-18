@@ -16,3 +16,7 @@ func _process(delta: float) -> void:
 
 func push(speed_to_set: float):
 	speed = speed_to_set
+
+
+func reset_state():
+	queue_free()
