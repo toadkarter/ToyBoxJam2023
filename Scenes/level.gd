@@ -45,6 +45,7 @@ var total_deaths: int = 0
 var scroll_level: bool = true
 var outro_started: bool = false
 var outro_finishing: bool = false
+var resetting_state: bool = false
 
 
 func _ready() -> void:
@@ -69,6 +70,10 @@ func _process(delta: float) -> void:
 
 
 func _on_player_death() -> void:
+	if resetting_state:
+		return
+
+	resetting_state = true
 	scroll_level = false
 	sfx_player.play_death_sfx()
 	hud.show_central_notification(death_texts.pick_random(), seconds_between_respawn)
@@ -86,6 +91,7 @@ func reset_level() -> void:
 	_create_player()
 	_reset_camera()
 	_reset_objects()
+	resetting_state = false
 
 
 func _create_player() -> void:

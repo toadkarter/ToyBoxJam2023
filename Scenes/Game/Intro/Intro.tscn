@@ -277,17 +277,12 @@ And yet the tower where I lay buried
 still looms far on the horizon. ", "Far below the tower's surface, 
 past the frigid crypts and 
 twisting catacombs,
-my spirit lies sleeping.", "I can feel my presence waning... 
-Memories of battles long ago feel 
-like whispers in the wind. 
-
-I dream and know that each 
-dream could be my last. ", "Before my spirit is gone,
-I long for one last dream.
-
-A dream where once again I 
+my spirit lies dreaming.", "I can feel my presence waning... 
+My time is near.
+Before my spirit is no more,
+I long for one last dream.", "A dream where once again I 
 don my armor and escape these 
-cramped hallways.
+cramped and rotting hallways.
 
 A dream where I leave this tower..."])
 
@@ -378,12 +373,12 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 228.0
 offset_top = 175.0
-offset_right = 252.0
+offset_right = 260.0
 offset_bottom = 185.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_528m6")
-text = "SKY"
+text = "SKY."
 horizontal_alignment = 1
 vertical_alignment = 1
 
