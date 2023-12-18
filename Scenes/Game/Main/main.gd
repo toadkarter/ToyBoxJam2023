@@ -1,6 +1,10 @@
 extends Node2D
 
 
+@export_group("Debug")
+@export var skip_intro: bool = false
+
+@export_group("Scene References")
 @export var level_scene: PackedScene
 @export var intro_scene: PackedScene
 
@@ -9,13 +13,16 @@ var level: Node2D
 
 
 func _ready() -> void:
-	intro = intro_scene.instantiate()
-	add_child(intro)
-
-	intro.connect("intro_finished", _on_intro_finished)
+	if !skip_intro:
+		intro = intro_scene.instantiate()
+		add_child(intro)
+		intro.connect("intro_finished", _on_intro_finished)
+	else:
+		_on_intro_finished()
 
 
 func _on_intro_finished() -> void:
-	intro.queue_free()
+	if intro != null:
+		intro.queue_free()
 	level = level_scene.instantiate()
 	add_child(level)

@@ -6,5 +6,6 @@
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_uc3ia")
+skip_intro = true
 level_scene = ExtResource("2_fg751")
 intro_scene = ExtResource("3_rvtb3")
