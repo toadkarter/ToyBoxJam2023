@@ -11,7 +11,7 @@ extends StaticBody2D
 
 func _ready() -> void:
 	if is_moving:
-		var tween = get_tree().create_tween().set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
+		var tween = create_tween().set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
 		tween.set_loops().set_parallel(false)
 		tween.tween_property(body, "position", offset, duration / 2)
 		tween.tween_property(body, "position", Vector2.ZERO, duration / 2)
