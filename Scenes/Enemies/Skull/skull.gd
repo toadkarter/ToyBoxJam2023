@@ -7,6 +7,7 @@ extends StaticBody2D
 @export var seconds_between_projectile: float = 0.4
 @export var seconds_between_emission: float = 3
 @export var seconds_before_starting_emissions: float = 0.0
+@export var seconds_before_projectile_removal: float = 7.0
 
 @onready var animations: AnimatedSprite2D = $AnimatedSprite2D
 @onready var projectile_spawn_location: Node2D = $ProjectileSpawnLocation
@@ -34,6 +35,7 @@ func _spawn_projectile() -> void:
 	add_child(projectile)
 	projectile.position = projectile_spawn_location.position
 	projectile.push(projectile_speed)
+	projectile.remove_after_seconds(seconds_before_projectile_removal)
 
 
 func _init_projectiles() -> void:

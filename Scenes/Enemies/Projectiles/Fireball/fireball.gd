@@ -20,3 +20,8 @@ func push(speed_to_set: float):
 
 func reset_state():
 	queue_free()
+
+
+func remove_after_seconds(seconds: float):
+	await get_tree().create_timer(seconds).timeout
+	queue_free()
