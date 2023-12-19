@@ -150,14 +150,14 @@ func _on_checkpoint_reached(checkpoint: Area2D) -> void:
 func _init_debug_options() -> void:
 	get_tree().call_group("Debug", "queue_free")
 
-	# if !debug_stop_music:
-	# 	music_player.play()
+	if !debug_stop_music:
+		music_player.play()
 
-	# if debug_stop_scrolling:
-	# 	scroll_level = false
+	if debug_stop_scrolling:
+		scroll_level = false
 
-	# if debug_start_at_checkpoint_number != -1 and debug_start_at_checkpoint_number < checkpoints.size():
-	# 	current_checkpoint = checkpoints[debug_start_at_checkpoint_number]
+	if debug_start_at_checkpoint_number != -1 and debug_start_at_checkpoint_number < checkpoints.size():
+		current_checkpoint = checkpoints[debug_start_at_checkpoint_number]
 
 
 func _play_outro() -> void:
