@@ -39,4 +39,5 @@ func set_death_count(num_deaths_to_set: int):
 	score_num_text.text = "%d" % num_deaths_to_set
 
 func play_death_sound() -> void:
-	sfx_player.play()
+	pass
+	# sfx_player.play()
